@@ -15,14 +15,23 @@
       </button>
     </div>
 
-<div id="main">
-<h1>Gratis lærebøker i matematikk</h1>
-Bøkene i OpenMathbooks-serien er gratis og fri for reklame. Bøkene dekker kompetansemålene fra grunnskolen og fra VGS-fagene 1P, 1T, 2P, R1 og R2.
-
-<h1>Åpen kildekode</h1>
-Bøkene har åpen kildekode og er lisensiert under CC BY-NC-SA 4.0. Dette betyr at den som vil kan lage sin egen kopi av boka og redigere kopien som de vil.
+<div id="container">
 
 </div>
 
 </body>
+
+<script>
+  tasks = {
+    "test": {
+      "tags": ["calculation", "addition"],
+      "content": `<p>Regn ut:</p>
+        <math><mn>1</mn><mo>+</mo><mn>1</mn><mo>`
+    }
+  }
+
+  const main = document.getElementById("container")
+  main.innerHTML = tasks["test"]["content"]
+
+</script>
 </html>

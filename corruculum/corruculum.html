@@ -1,66 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang='no'>
 <head id="general">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/openmathbooks/styles/menu_styles.css">
+        <link rel="stylesheet" href="../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <head>
-  <title>
-    Kompetansemål
-  </title>
+  <title>Eksamensløsninger</title>
   <style>
-      :root {
-      --selected-color: rgb(6, 104, 50);
-      --unselected-color: rgb(25, 131, 122);
-    }
-    table {
+    .grade {
+      width: 100px;
+      background-color: rgb(25, 131, 122);
+      color: #f2f2f2;
+      padding: 5px 5px;
+      margin-left: 8px;
       margin-top: 10px;
-      font-family: arial, sans-serif;
+      text-decoration: none;
+    }
+
+    .selected-button {
+      background-color: rgb(6, 104, 50);
+    }
+
+    .selected-curruculum {
+      visibility: visible;
+    }
+    .exams a {
+      text-decoration: none;
+      display: block;
+      padding-bottom: 10px;
+    }
+    .info{
+      margin: auto;
+      width: 500px;
+    }
+    .curruculum {
       border-collapse: collapse;
-      width: 100%;
+      display: none;
     }
-
-    thead {
-      background-color: rgba(5, 172, 172, 0.664);
+    .curruculum td {
+      border: 1pt solid black;
     }
-
-    td, th {
-      border: 1px solid #000000;
+    .curruculum tbody tr:nth-child(even){
+      background-color: greenyellow;
+    }
+    .curruculum td:nth-child(n+2){
       text-align: center;
-      padding: 8px;
     }
 
-    tr:nth-child(even) {
-      background-color: #dddddd;
+    #grades-container {
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
     }
-
-    td:nth-child(1) {
-      text-align: left;
+    @media screen and (max-width: 600px) {
+      #main {
+        width: 100%;
+        padding-left: 0px;
+      }
     }
   </style>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="./books/books.html">Bøker</a>
-  <a href="./exams/exams.html">Eksamensløsninger</a>
-  <a href="#contact">Pensum</a>
-  <button class="icon" onclick="myFunction()">
-    Meny
-  </button>
-</div>
+<div class="topnav">
+      <a href="http://127.0.0.1:3000/mathweb/index.html" class="menu-button">Home</a>
+      <a href="http://127.0.0.1:3000/mathweb/books/books.html" class="menu-button">Bøker</a>
+      <a href="http://127.0.0.1:3000/mathweb/corruculum/corruculum.html" class="menu-button">Pensum</a>
+      <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamener</a>
+      <button class="icon" onclick="myFunction()">
+        Meny
+      </button>
+    </div>
 
 <div id="main">
 
-<h1>Kompetansemål</h1>
-<div>
-I tabellene under vises de trinnvise kompetansemålene definert av Udir, og hvilke kapitler fra
-bøkene i OpenMathBooks-serien som dekker disse. Merk at begge ”Anvendt”-bøkene har et
-vedlegg som gir lenker til relevante tekster. I kompetansemål som nevner innhenting av informasjon fra tekster er det underforstått at disse vedleggene er med på å dekke kompetansemålet.
-I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det også underforstått at kapittel
-8 og kapittel 4 i henholdsvis Anvendt matematikk 1 og 2 er med på å dekke kompetansemålet.
+<div class="info">
+  <h1>Kompetansemål</h1>
+  <div>
+  I tabellene under vises de trinnvise kompetansemålene definert av Udir, og hvilke kapitler fra
+  bøkene i OpenMathBooks-serien som dekker disse. Merk at begge ”Anvendt”-bøkene har et
+  vedlegg som gir lenker til relevante tekster. I kompetansemål som nevner innhenting av informasjon fra tekster er det underforstått at disse vedleggene er med på å dekke kompetansemålet.
+  I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det også underforstått at kapittel
+  8 og kapittel 4 i henholdsvis Anvendt matematikk 1 og 2 er med på å dekke kompetansemålet.
+  </div>
 </div>
 
+<div class="container">
 <button class="grade" data-reference="5">5. klasse</button>
 <button class="grade" data-reference="6">6. klasse</button>
 <button class="grade" data-reference="7">7. klasse</button>
@@ -74,7 +98,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
 <button class="grade" data-reference="r2">R2</button>
 
 
-<table class="curruculum" id="5" hidden>
+<table class="curruculum" id="5">
   <thead>
   <tr>
     <th>Kompetansemål for 5. trinn</th>
@@ -82,6 +106,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     <th>AM1</th>
   </tr>
   </thead>
+  <tbody>
     <tr>
       <td>
         utforske og forklare sammenhenger mellom brøker,
@@ -95,7 +120,6 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
         3
       </td>
     </tr>
-  <tbody>
     <tr>
       <td>
       beskrive brøk som del av en hel, som del av en mengde
@@ -197,7 +221,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
   </tbody>
 </table>
 
-<table class="curruculum" id="6"  hidden>
+<table class="curruculum" id="6" >
   <thead>
     <tr>
       <th>Kompetansemål 6. trinn</th>
@@ -253,7 +277,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="7"  hidden>
+<table class="curruculum" id="7" >
   <thead>
     <tr>
       <th>Kompetansemål 7. trinn</th>
@@ -314,7 +338,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="8"  hidden>
+<table class="curruculum" id="8" >
   <thead>
     <tr>
       <th>Kompetansemål 8. trinn</th>
@@ -380,7 +404,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="9"  hidden>
+<table class="curruculum" id="9" >
   <thead>
     <tr>
       <th>Kompetansemål 9. trinn</th>
@@ -441,7 +465,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="10"  hidden>
+<table class="curruculum" id="10" >
   <thead>
     <tr>
       <th>Kompetansemål 10. trinn</th>
@@ -497,7 +521,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="1p"  hidden>
+<table class="curruculum" id="1p" >
   <thead>
     <tr>
       <th>Kompetansemål 1P</th>
@@ -568,7 +592,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="2p"  hidden>
+<table class="curruculum" id="2p" >
   <thead>
     <tr>
       <th>Kompetansemål 2P</th>
@@ -614,7 +638,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="1t"  hidden>
+<table class="curruculum" id="1t" >
   <thead>
     <tr>
       <th>Kompetansemål 1T</th>
@@ -695,7 +719,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="r1"  hidden>
+<table class="curruculum" id="r1" >
   <thead>
     <tr>
       <th>Kompetansemål R1</th>
@@ -804,7 +828,7 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="r2"  hidden>
+<table class="curruculum" id="r2" >
   <thead>
     <tr>
       <th>Kompetansemål R2</th>
@@ -915,33 +939,29 @@ I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det og
     </tr>
   </tbody>
 </table>
-
 </div>
+</div>
+<script id="menu-script"></script>
 <script>
-
   for(let gradeButton of document.getElementsByClassName("grade")){
     gradeButton.addEventListener("click", selectGrade)
   }
 
   let selectedGrade = null
-  const root = document.documentElement
-  const selectedColor = getComputedStyle(root).getPropertyValue("--selected-color")
-  const unselectedColor = getComputedStyle(root).getPropertyValue("--unselected-color")
 
   function selectGrade() {
-    if (this.style.backgroundColor == selectedColor){ 
-      this.style.backgroundColor = unselectedColor
-      document.getElementById(this.dataset.reference).hidden = true
-      selectedGrade = null
-    } else {
-      document.getElementById(this.dataset.reference).hidden = false
-      this.style.backgroundColor = selectedColor
-      if (selectedGrade) {
-        document.getElementById(selectedGrade.dataset.reference).hidden = true
-        selectedGrade.style.backgroundColor = unselectedColor
-      }
-      selectedGrade = this
+    if (selectedGrade){
+      selectedGrade.classList.toggle("selected-button")
+      document.getElementById(selectedGrade.dataset.reference).classList.toggle("selected-curruculum")
+      document.getElementById(this.dataset.reference).style.visibility = "visible"
     }
+    if (selectedGrade == this) {
+      return
+    }
+    this.classList.toggle("selected-button")
+    document.getElementById(this.dataset.reference).style.display = "block"
+    console.log(document.getElementById(this.dataset.reference).classList)
+    selectedGrade = this
   }
 </script>
 </body>

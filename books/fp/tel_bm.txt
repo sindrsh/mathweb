@@ -8,11 +8,13 @@
 
 <h3 class="subsection-title">Likhetstegnet</h3>
 Som navnet tilsier, viser <span class="outline">likhetstegnet</span>  
-<math class="inline-math"><mo>=</mo></math> 
-til at noe er likt. I hvilken grad og når man kan si at noe er likt er en filosofisk diskusjon, så i starten er vi prisgitt dette: <i>Hvilken likhet <span class="symbol"> $=$ </i> sikter til må bli forstått ut ifra konteksten tegnet blir brukt i</span>. Slik kan vi studere noen grunnleggende egenskaper for tallene våre, og så komme tilbake til mer presise betydninger av tegnet. 
+<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
+til at noe er likt. I hvilken grad og når man kan si at noe er likt er en filosofisk diskusjon, så i starten er vi prisgitt dette: <i>Hvilken likhet
+<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
+sikter til må bli forstått ut ifra konteksten tegnet blir brukt i </i>. Slik kan vi studere noen grunnleggende egenskaper for tallene våre, og så komme tilbake til mer presise betydninger av tegnet. 
 <div class="language-box">
 Vanlige måter å si 
-<math class="inline-math"><mo>=</mo></math> 
+<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
 på er
 <ul>
 	<li>''er lik'' 
@@ -46,23 +48,40 @@ Andre tall vil da være definert ut ifra hvor mange ''enerruter'' (''enere'') vi
 Vi skal straks se at tall ikke nødvendigvis trenger å være <i>hele </i> antall enere, men tallene som <i>er </i> det har et eget navn:
 
 <div class="rule"><h4>Positive heltall</h4> 
-Tall som er et helt antall enere kalles <span class="outline">positive\footnotemark heltall</span>. De positive heltallene er
-\[ 1, 2, 3, 4, 5 <mtext> og så videre.</mtext> \]
+Tall som er et helt antall enere kalles 
+<span class='outline'>positive<button class='footnote-button' data-reference='posintoutl'>*</button><div class='footnote' id='posintoutl' hidden>hva ordet 'positiv' betyr skal vi se på i <span class='reference-chapter' index-reference=''> </span></div> heltall </span>
+De positive heltallene er
+<math class="display-math" display="block"><mrow>
+    <mn>1</mn>
+    <mo>,</mo>
+    <mn>2</mn>
+    <mo>,</mo>
+    <mn>3</mn>
+    <mo>,</mo>
+    <mn>4</mn>
+    <mo>,</mo>
+    <mn>5</mn>
+    <mo>,</mo>
+    <mtext> og så videre.</mtext>
+  </mrow></math>
 Positive heltall blir også kalt <span class="outline">naturlige tal</span>.
 </div>
 <div class="info"> <h4>Hva med 0?</h4> 
 Noen forfattere inkluderer også 0 i begrepet naturlige tal. I noen sammenhenger vil dette lønne seg, i andre ikke.
 </div>
-\footnotetext{Hva ordet 'positiv' innebærer skal vi se i <span class="reference-chapter" index-reference=""> </span>.}
 
 
-<h2 class="section-title">\talsifverd</h2>
-Tallene våre er bygd opp av <span class="outline">sifrene</span> $ 0, 1, 2 , 3, 4, 5, 6, 7, 8 $ og $ 9 $, og <i>plasseringen </i> av dem. Sifrene og deres plassering definerer\footnote{Etter hvert skal vi også se at <i>fortegn</i> er med på å definere verdien til tallet (se <span class="reference-chapter" index-reference=""> </span>).} <span class="outline">verdien</span>  til tallet.
+
+<h2 class="section-title">Tall, siffer og verdi</h2>
+Tallene våre er bygd opp av <span class="outline">sifrene</span> 
+0, 1, 2, 3, 4, 5, 6, 7, 8 og 9, og <i>plasseringen </i> av dem. Sifrene og deres plassering definerer
+<button class="footnote-button" data-reference="10pos">*</button><div class="footnote" id="10pos" hidden>Etter hvert skal vi også se at <i>fortegn</i> er med på å definere verdien til tallet (se <span class='reference-chapter' data-reference='Negtal'>).</div>
+<span class="outline">verdien</span>  til tallet.
 <h3 class="subsection-title">Heltall større enn 9</h3>
 La oss som et eksempel skrive tallet 'fjorten' ved hjelp av sifrene våre.
 <div class="figure"> <img src="./fig/tel.svg"> </div>
 En gruppe med ti enere kaller vi en ''tier''. Av fjorten kan vi lage 1 tier, og i tillegg har vi da 4 enere. Da skriver vi 'fjorten' slik:
-\[ <mtext>fjorten</mtext>=14 \]
+<math class="display-math" display="block"><mn>14</mn></math>
 <div class="figure"> <img src="./fig/tel2_bm.svg"> </div>
 
 <div class="figure"> <img src="./fig/tel2t.svg"> </div>
@@ -77,12 +96,7 @@ Så deler vi eneren vår inn i 10 mindre biter:
 Siden vi har delt 1 inn i 10 biter, kaller vi en slik bit for ''en tidel'':
 <div class="figure"> <img src="./fig/maal1a_bm.svg"> </div>
 <div class="figure"> <img src="./fig/des1b_bm.svg"> </div>
-\begin{comment}
-<div class="example">
-	<div class="figure"> <img src="./fig/maal2.svg"> </div>
-	<div class="figure"> <img src="./fig/des2.svg"> </div>
-</div>
-\end{comment}
+
 Tideler skriver vi ved hjelp av  <span class="outline">desimaltegnet</span> <span class="symbol"> ,</span>  :
 <div class="figure"> <img src="./fig/maal1b.svg"> </div>
 <div class="figure"> <img src="./fig/des1c.svg"> </div>
@@ -92,17 +106,14 @@ Tideler skriver vi ved hjelp av  <span class="outline">desimaltegnet</span> <spa
 </div>
 <div class="language-box">
 På engelsk bruker man punktum <span class="symbol"> .</span> som desimaltegn:
-\alg{
-	3,5&\quad(norsk) 
-	3.5&\quad (english)
+<table style='margin: auto'><tr><td>3,5</td><td>(norsk)</tr><tr><td>3.5</td><td>(engelsk)</tr></table>
 </div>
-}
 
 <h3 class="subsection-title">Titallsystemet</h3>
 Vi har nå sett hvordan vi kan uttrykke verdien til tall ved å plassere siffer etter antall tiere, enere og tideler, og det stopper selvsagt ikke der: 
 
 <div class="rule"><h4>Titallsystemet </h4> 
-Verdien til et tall er gitt av sifrene $ 0, 1, 2, 3, 4, 5, 6, 7, 8  $ og $ 9 $, og plasseringen av dem. Med sifferet som angir enere som utgangspunkt vil
+Verdien til et tall er gitt av sifrene 0, 1, 2, 3, 4, 5, 6, 7, 8 og 9, og plasseringen av dem. Med sifferet som angir enere som utgangspunkt vil
 <ul>
 	<li>siffer til venstre (i rekkefølge) indikere antall tiere, hundrere, tusener og så videre.
 	</li><li>siffer til høyre (i rekkefølge) indikere antall tideler, hundredeler, tusendeler og så videre.
@@ -122,23 +133,31 @@ Heltall som har 1, 3, 5, 7 eller 9 på enerplassen kalles <span class="outline">
 </div>
 <div class="example">
 De ti første (positive) partallene er
-\[ <mtext>0, 2, 4, 6, 8, 10, 12, 14, 16, og 18</mtext> \]
+<math class="display-math" display="block"><mtext>0, 2, 4, 6, 8, 10, 12, 14, 16, og 18</mtext></math>
 De ti første (positive) oddetallene er
-\[ <mtext>1, 3, 5, 7, 9, 11, 13, 15, 17, og 19</mtext> \]
+<math class="display-math" display="block"><mtext>1, 3, 5, 7, 9, 11, 13, 15, 17, og 19</mtext></math>
 </div>
 
 
-<h2 class="section-title">\koordsys </h2>
-
-\prbxl{0.5}{I mange tilfeller er det nyttig å bruke to tallinjer samtidig. Dette kaller vi et <span class="outline">koordinatsystem</span>. Vi plasserer da én tallinje (en akse) som går <i>horisontalt </i> og én som går <i>vertikalt </i>. En plassering i et koordinatsystem kaller vi et <span class="outline">punkt</span>. 
- }\qquad
-\prbxr{0.4}{Strengt tatt finnes det mange typer koordinatsystem, men i denne boka bruker vi ordet om bare én sort, nemlig det <span class="outline">kartesiske koordinatsystem</span>. Det er oppkalt etter den franske filosofen og matematikeren René Descartes.}
+<h2 class="section-title">Koordinatsystem </h2>
+I mange tilfeller er det nyttig å bruke to tallinjer samtidig. Dette kaller vi et <span class="outline">koordinatsystem</span>
+<button class="footnote-button" data-reference="coord">*</button><div class="footnote" id="coord" hidden>Strengt tatt finnes det mange typer koordinatsystem, men i denne boka bruker vi ordet om bare én sort, nemlig det <span class="outline">kartesiske koordinatsystem</span>. Det er oppkalt etter den franske filosofen og matematikeren René Descartes.</div>
+. Vi plasserer da én tallinje (en akse) som går <i>horisontalt </i> og én som går <i>vertikalt </i>. En plassering i et koordinatsystem kaller vi et <span class="outline">punkt</span>. 
 <div class="statement">Et punkt skriver vi som to tall inni en parentes. De to tallene blir kalt <span class="outline">førstekoordinaten</span> og <span class="outline">andrekoordinaten</span> til punktet.
 	<ul>
 		<li>Førstekoordinaten forteller oss hvor langt vi skal gå langs horisontalaksen.
 		</li><li>Andrekoordinaten forteller oss hvor langt vi skal gå langs vertikalaksen.
 </li></ul>
-I figuren ser vi punktene $ (2, 3) $, $ (5, 1) $ og $ (0, 0) $. Punktet der aksene møtes, altså $ (0, 0) $, kalles <span class="outline">origo</span>.
+I figuren ser vi punktene 
+<math class="inline-math"><mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>)</mo></math>
+,
+<math class="inline-math"><mo>(</mo><mn>5</mn><mo>,</mo><mn>1</mn><mo>)</mo></math>
+ og 
+<math class="inline-math"><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo></math>
+.
+Punktet der aksene møtes, altså
+<math class="inline-math"><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo></math>
+, kalles <span class="outline">origo</span>.
 <div class="figure"> <img src="./fig/kord.svg"> </div>
 </div>
 

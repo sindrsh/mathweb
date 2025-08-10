@@ -1,7 +1,11 @@
+import sys
 import re
-from indx import *
+filename = "rekar_bm"
+book = "fp"
+sys.path.append("/home/sindre/web/mathweb/books/"+ book)
+from  rekar_indx import *
 
-f = open("/home/sindre/openmathbooks/MB/tel/tel_bm.tex", "r")
+f = open("/home/sindre/openmathbooks/MB/rekar/"+filename+".tex", "r")
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 substitutes = [
     ['\\\\label{ ( [^}]* ) }', ''],
@@ -16,7 +20,7 @@ substitutes = [
     ['\\\\rref{ ( [^}]* ) }', 'regel ??'],
     ['\\\\outl{ ( [^}]* ) }', r'<span class="outline">\1</span>'],
     ['\\\\textit{ ( [^}]* ) }', r'<i>\1</i>'],
-    ['\\\\textsl{ ( [^}]* ) }', r'<i>\1 </i>'],
+    ['\\\\textsl{ ( [^}]* ) }', r'<span class="slant">\1 </span>'],
     ['\\\\text{ ( [^}]* ) }', r'<mtext>\1</mtext>'],
     ['\\\\sym{ ( [^}]* ) }', r'<span class="symbol"> \1</span>'],
     ['\\\\fig{ ( [^}]* ) }', r'<div class="figure"> <img src="./fig/\1.svg"> </div>'],
@@ -37,12 +41,19 @@ substitutes = [
     ['\\\\eks\\[5\\]{ ( [^}]* ) }', r'<div class="example">\1</div>'],
     ['\\\\eks\\[6\\]{ ( [^}]* ) }', r'<div class="example">\1</div>'],
     ['\\\\eks\\[7\\]{ ( [^}]* ) }', r'<div class="example">\1</div>'],
-
 ]
 
 content = f.read()
+text_handler = re.compile(r"%id\{([^}]+)\}\s*(.*?)\s*%\\id", re.DOTALL)
+content = text_handler.sub( r'<id>\1</id>', content)
 
-text_handler = re.compile(r'\\begin\{comment\}(.*?)\\end\{comment\}', re.VERBOSE)
+text_handler = re.compile(r'\\begin\{comment\}(.*?)\\end\{comment\}', re.DOTALL)
+content = text_handler.sub( r'', content)
+text_handler = re.compile(r'\\refkap{(.*?)}', re.VERBOSE)
+content = text_handler.sub('', content)
+text_handler = re.compile(r'\\sec{(.*?)}', re.VERBOSE)
+content = text_handler.sub('', content)
+text_handler = re.compile(r'\\footnotetext{(.*?)}', re.VERBOSE)
 content = text_handler.sub( r'', content)
 
 
@@ -58,9 +69,8 @@ content = content.replace("\\vs", "")
 content = content.replace("\\sv", '<p class="answer-title"></p>')
 content = content.replace("\\regv", "")
 content = content.replace("\\newpage", "")
+content = content.replace("\\!", "")
 
-text_handler = re.compile(r"%id\{([^}]+)\}\s*(.*?)\s*%\\id", re.DOTALL)
-content = text_handler.sub( r'<id>\1</id>', content)
 
 for substitution in substitutes:
     text_handler = re.compile(substitution[0], re.VERBOSE)
@@ -74,17 +84,19 @@ matches = re.findall(r'<id>(.*?)</id>', content)
 
 for id in matches:
     if id in index:
-        if "math" in index[id]:
-            if "display" in index[id]:
-                if not index[id]["display"]:
-                    content = content.replace(r'<id>%s</id>' % id , r'<math class="inline-math">%s</math>' % index[id]["math"])
-                else:
+        if isinstance(index[id], dict):
+            if "math" in index[id]:
+                if "display" in index[id]:
                     content = content.replace(r'<id>%s</id>' % id , r'<math class="display-math" display="block">%s</math>' % index[id]["math"])
-        if "footnote" in index[id]:
-            content = content.replace(r'<id>%s</id>' % id , r'<button class="footnote-button" data-reference="%s">*</button><div class="footnote" id="%s" hidden>%s</div>' % (id, id, index[id]["footnote"]))
+                else:
+                    content = content.replace(r'<id>%s</id>' % id , r'<math class="inline-math">%s</math>' % index[id]["math"])
+            if "footnote" in index[id]:
+                content = content.replace(r'<id>%s</id>' % id , r'<button class="footnote-button" data-reference="%s">*</button><div class="footnote" id="%s" hidden>%s</div>' % (id, id, index[id]["footnote"]))
+        else:
+            content = content.replace(r'<id>%s</id>' % id , r'%s' % index[id])
     else:
         print("! Missing id:", id)
 
-outfile = open("converted_html.txt", "w")
+outfile = open("/home/sindre/web/mathweb/books/"+ book + "/" + filename+ ".txt", "w")
 outfile.write(content)
 outfile.close

@@ -1,0 +1,429 @@
+
+
+
+
+
+
+<h2 class="section-title">Addisjon </h2>	
+<h3 class="subsection-title">Addisjon med mengder; å legge til</h3>
+Når vi har en mengde og skal legge til mer, bruker vi <span class="outline">plusstegnet</span> 
+<span class='symbol'><math class='inline-math'><mo>+</mo></math></span>
+. Har vi 2 og skal legge til 3, skriver vi 
+<math class="display-math" display="block">{'<mn>2</mn>\n    <mo>+</mo>\n    <mn>3</mn>\n    <mo>=</mo>\n    <mn>5</mn>\n    '}</math>
+<div class="figure"> <img src="./fig/plusm1.svg"> </div>
+Rekkefølgen vi legger sammen tallene på har ikke  noe å si; å starte med 2 og så legge til 3 er det samme som å starte med 3 og så legge til 2:
+<math class="display-math" display="block">{'<mn>3</mn>\n    <mo>+</mo>\n    <mn>2</mn>\n    <mo>=</mo>\n    <mn>5</mn>\n    '}</math>
+<div class="figure"> <img src="./fig/plusm1a.svg"> </div>
+<div class="language-box">
+	Et addisjonsstykke består av to eller flere <span class="outline">ledd</span> og én <span class="outline">sum</span>. I regnestykket
+	<math class="display-math" display="block">{'<mn>2</mn>\n    <mo>+</mo>\n    <mn>3</mn>\n    <mo>=</mo>\n    <mn>5</mn>\n    '}</math>
+	er både 2 og 3 ledd, mens 5 er summen.
+	
+	Vanlige måter å si 
+	<math class="inline-math">{'<mn>2</mn>\n    <mo>+</mo>\n    <mn>3</mn>\n    <mo>=</mo>\n    <mn>5</mn>\n    '}</math>
+	på er
+	<ul>
+		<li>''2 pluss 3''
+		</li><li>''2 addert med 3''
+	 	</li><li>''2 og 3 lagt sammen''
+	</li></ul>
+Det å legge sammen tall kalles også <span class="outline">å summere</span>.
+</div> 
+
+<div class="rule"><h4>Addisjon er kommutativ </h4> 
+Summen er den samme uansett rekkefølge på leddene.
+</div>
+<div class="example">  
+<math class="display-math" display="block"><mtable displaystyle="true" class="tml-jot">
+    <mtr>
+      <mtd class="tml-right" style="padding-left:0em;padding-right:0em;">
+        <mrow>
+          <mn>2</mn>
+          <mo>+</mo>
+          <mn>5</mn>
+        </mrow>
+      </mtd>
+      <mtd class="tml-left" style="padding-left:0em;padding-right:0em;">
+        <mrow>
+          <mo>=</mo>
+          <mn>7</mn>
+          <mo>=</mo>
+          <mn>5</mn>
+          <mo>+</mo>
+          <mn>2</mn>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd class="tml-right" style="padding-left:0em;padding-right:0em;">
+        <mrow>
+          <mn>6</mn>
+          <mo>+</mo>
+          <mn>3</mn>
+        </mrow>
+      </mtd>
+      <mtd class="tml-left" style="padding-left:0em;padding-right:0em;">
+        <mrow>
+          <mo>=</mo>
+          <mn>9</mn>
+          <mo>=</mo>
+          <mn>3</mn>
+          <mo>+</mo>
+          <mn>6</mn>
+        </mrow>
+      </mtd>
+    </mtr>
+  </mtable>
+  </math>
+</div>
+
+<h3 class="subsection-title">Addisjon på tallinja; vandring mot høyre</h3>
+På en tallinje vil addisjon med positive tall  innebære vandring <span class="slant">mot høyre </span>:
+<div class="example"> 
+<math class="display-math" display="block">{'<mn>2</mn>\n    <mo>+</mo>\n    <mn>7</mn>\n    <mo>=</mo>\n    <mn>9</mn>\n    '}</math>
+<div class="figure"> <img src="./fig/plus2.svg"> </div>
+</div>
+<div class="example"> 
+<math class="display-math" display="block">{'<mn>4</mn>\n    <mo>+</mo>\n    <mn>11</mn>\n    <mo>=</mo>\n    <mn>15</mn>\n    '}</math>
+<div class="figure"> <img src="./fig/plus3.svg"> </div>
+</div>
+<div class="info"> <h4>Betydningen av 
+<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
+</h4> 
+<span class='symbol'><math class='inline-math'><mo>+</mo></math></span>
+gir oss muligheten til å uttrykke tall på mange forskjellige måter, for eksempel er 
+<math class="inline-math"><mn>5</mn><mo>=</mo><mn>2</mn><mo>+</mo><mn>3</mn></math> 
+og 
+<math class="inline-math"><mn>5</mn><mo>=</mo><mn>2</mn><mo>+</mo><mn>3</mn></math>
+. I denne sammenhengen vil 
+<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
+bety ''har samme verdi som''. Dette gjelder også ved subtraksjon, multiplikasjon og divisjon, som vi skal se på i de neste tre seksjonene.
+
+</div>
+
+<h2 class="section-title">\sub </h2>
+<h3 class="subsection-title">Subtraksjon med mengder: Å trekke ifra</h3>
+Når vi har en mengde og tar bort en del av den, bruker vi <span class="outline">minustegnet</span> <span class="symbol"> $ - $</span>. Har vi 5 og skal ta bort 3, skriver vi
+<math class="display-math" display="block"><mn>5</mn><mo>−</mo><mn clas='minus'>3</mn><mo>=</mo><mn>2</mn></math>
+<div class="figure"> <img src="./fig/min1c.svg"> </div>
+
+<div class="language-box">
+	Et subtraksjonsstykke består av to eller flere <span class="outline">ledd</span>  og én <span class="outline">differanse</span>. I subtraksjonsstykket
+	<math class="display-math" display="block"><mn>5</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>2</mn></math>
+	er både 5 og 3 ledd, mens 2 er differansen. 
+	
+	Vanlige måter å si 
+	<math class="inline-math"><mn>5</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>2</mn></math>
+	 på er
+	<ul>
+		<li>''5 minus 3'' 
+		</li><li>''5 fratrekt 3''
+		</li><li>''3 subtrahert fra 5''
+	</li></ul>
+</div>  
+
+<div class="info"> <h4>En ny tolkning av 0</h4> 
+	Innledningsvis i denne boka nevnte vi at 0 kan tolkes som ''ingenting''. Subtraksjon gir oss muligheten til å uttrykke 0 via andre tall. For eksempel er 
+	<math class="inline-math"><mn>7</mn><mo>−</mo><mn>7</mn><mo>=</mo><mn>0</mn></math>
+	og 
+	<math class="inline-math"><mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn></math>
+	.
+</div> 
+
+
+
+<h3 class="subsection-title">Subtraksjon på tallinja: Vandring mot venstre</h3>
+I <span class="reference-section" index-reference=""> </span> har vi sett at 
+<span class='symbol'><math class='inline-math'><mo>+</mo></math></span> 
+(med positive tall) innebærer at vi skal gå <span class="slant">mot høyre </span> langs tallinja. Med 
+<span class='symbol'><math class='inline-math'><mo>−</mo></math></span>
+gjør vi omvendt, vi går <span class="slant">mot venstre </span>
+<button class="footnote-button" data-reference="arrow">*</button><div class="footnote" id="arrow" hidden>I figurer med tallinjer vil rødfargede piler indikere at man starter ved pilspissen og vandrer til andre enden.</div>
+ 
+<div class="info"> <h4>Merk</h4> 
+	I <span class="slant">Eksempel 1 </span> og <span class="slant">Eksempel 2 </span> under går vi i motsatt retning av den som pila peker i. Dette kan først virke litt rart, men spesielt i  vil det lønne seg å tenke slik.
+</div> 
+<div class="example"> 
+	<math class="display-math" display="block"><mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn></math>
+	<div class="figure"> <img src="./fig/mint.svg"> </div>
+</div>
+<div class="example"> 
+	<math class="display-math" display="block"><mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn></math>
+	<div class="figure"> <img src="./fig/mint2.svg"> </div>
+</div>
+<div class="info"> <h4>Å kansellere ledd</h4> 
+Om vi har et uttrykk hvor tall med lik verdi er addert like mange ganger som det er subtrahert, sier vi at de <span class="outline">kansellerer</span> hverandre. I uttrykket
+<math class="display-math" display="block"><mn>4</mn><mo>+</mo><mn>3</mn><mo>−</mo><mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>−</mo><mn>4</mn><mo>+</mo><mn>1</mn></math>
+har vi like mange 4-ere addert som vi har 4-ere subtrahert. Dermed kansellerer 4-erene  hverandre, og vi kan forenkle uttrykket vårt til
+<math class="display-math" display="block"><mn>3</mn><mo>+</mo><mn>7</mn><mo>+</mo><mn>1</mn></math>
+<span class="slant">Obs! </span> I  vil ordet <i>kansellering</i> ha en annen betydning. 
+</div>
+
+<h2 class="section-title">Ganging  </h2>
+
+<h3 class="subsection-title">Ganging med heltall; innledende definisjon</h3>
+Når vi legger sammen like tall, kan vi bruke <span class="outline">gangetegnet</span> 
+<span class='symbol'><math class='inline-math'><mo>⋅</mo></math></span>
+for å skrive regnestykkene våre kortere: 
+<div class="example">
+	<math class="display-math" display="block"><mtable>
+        <mtr>
+          <mtd>
+            <mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>4</mn>
+          </mtd>
+          <mtd> <mo>=</mo></mtd>
+          <mtd><mn>4</mn><mo>⋅</mo><mn>3</mn></mtd>
+        </mtr>
+        <mtr>
+          <mtd></mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>8</mn><mo>+</mo><mn>8</mn>
+          </mtd>
+          <mtd> <mo>=</mo></mtd>
+          <mtd><mn>8</mn><mo>⋅</mo><mn>2</mn></mtd>
+        </mtr>
+        <mtr>
+          <mtd></mtd>
+        </mtr>
+        <mtr>
+          <mtd><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mn>1</mn><mo>⋅</mo><mn>5</mn></mtd>
+        </mtr>
+      </mtable></math>
+</div> 
+<div class="language-box">
+	Et gangestykke består av to eller flere <span class="outline">faktorer</span> og ett <span class="outline">produkt</span>. I gangestykket
+	<math class="display-math" display="block"><mn>4</mn><mo>⋅</mo> <mn>3</mn><mo>=</mo><mn>12</mn></math>
+	er 4 og 3 faktorer, mens 12 er produktet. 
+	
+	Vanlige måter å si 
+	<math class="inline-math"><mn>4</mn><mo>⋅</mo> <mn>3</mn><mo>=</mo><mn>12</mn></math>
+	på er
+	<ul>
+		<li>''4 ganger 3''  
+		</li><li>''4 ganget med 3''
+		</li><li>''4 multiplisert med 3''
+	</li></ul>
+	
+	Mange nettsteder og bøker på engelsk bruker symbolet 
+	<span class='symbol'><math class='inline-math'><mo>&times;</mo></math></span>
+	i steden for 
+	<span class='symbol'><math class='inline-math'><mo>⋅</mo></math></span>
+	symbolet for multiplikasjon.
+</div>
+
+
+<h3 class='subsection-title' id='amounttimes'>Ganging av mengder</h3>
+La oss nå bruke en figur for å se for oss gangestykket 
+<math class="inline-math"><mn>2</mn><mo>⋅</mo> <mn>3</mn></math>
+:
+<div class="figure"> <img src="./fig/2t3.svg"> </div>
+Og så kan vi legge merke til produktet av 
+<math class="inline-math"><mn>3</mn><mo>⋅</mo> <mn>2</mn></math>
+:
+<div class="figure"> <img src="./fig/3t2.svg"> </div>
+<div class="rule"><h4>Multiplikasjon er kommutativ </h4> 
+	Produktet er det samme uansett rekkefølge på faktorene.
+</div>
+<div class="example">
+	<math class="display-math" display="block"><mtable>
+        <mtr>
+          <mtd>
+            <mn>3</mn><mo>⋅</mo><mn>4</mn>
+          </mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mn>12</mn><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3</mn></mtd>
+        </mtr>
+        <mtr> <mtd></mtd></mtr>
+        <mtr>
+          <mtd>
+            <mn>2</mn><mo>⋅</mo><mn>7</mn>
+          </mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mn>14</mn><mo>=</mo><mn>7</mn><mo>⋅</mo><mn>2</mn></mtd>
+        </mtr>
+        <mtr><mtd></mtd></mtr>
+        <mtr>
+          <mtd>
+            <mn>8</mn><mo>⋅</mo><mn>10</mn>
+          </mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mn>80</mn><mo>=</mo><mn>10</mn><mo>⋅</mo><mn>8</mn></mtd>
+        </mtr>
+      </mtable></math>
+</div>
+
+<h3 class="subsection-title">Ganging på tallinja</h3>
+Vi kan også bruke tallinja for å regne ut gangestykker. For eksempel kan vi finne hva 
+<math class="inline-math"><mn>2</mn><mo>⋅</mo><mn>4</mn></math>
+ er ved å tenke slik:
+<p style="text-align: center;"> <math><mn>2</mn><mo>⋅</mo><mn>4</mn></math> betyr å vandre 2 plasser <span class="slant">mot høyre</span>, 4 ganger.</p>
+<math class="display-math" display="block"><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>8</mn></math>
+<div class="figure"> <img src="./fig/2t4l.svg"> </div>
+Også tallinja kan vi bruke for å overbevise oss om at rekkefølgen av faktorene ikke har noe å si:
+<p style="text-align: center;"> <math><mn>4</mn><mo>⋅</mo><mn>2</mn></math> betyr å vandre 4 plasser <span class="slant">mot høyre</span>, 2 ganger.</p>
+<math class="display-math" display="block"><mn>4</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>8</mn></math>
+<div class="figure"> <img src="./fig/4t2l.svg"> </div>
+
+<h3 class="subsection-title">Endelig definisjon av ganging med positive heltall</h3>
+Det ligger kanskje nærmest å tolke ''2 ganger 3'' som ''3, 2 ganger''. Da er
+<math class="display-math" display="block"><mtext>''2 ganger 3''</mtext><mo>=</mo><mn>3</mn><mo>+</mo><mn>3</mn></math>
+<a href="#amounttimes">Her</a>
+presenterete vi 
+<math class="inline-math"><mn>2</mn><mo>⋅</mo> <mn>3</mn></math>
+, altså ''2 ganger 3'', som 
+<math class="inline-math"><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn></math>
+. Med denne tolkningen vil 
+<math class="inline-math"><mn>3</mn><mo>+</mo><mn>3</mn></math>
+svare til 
+<math class="inline-math"><mn>3</mn><mo>⋅</mo> <mn>2</mn></math>
+, men nettopp det at multiplikasjon er en kommutativ operasjon (regel ??) gjør at den ene tolkningen ikke utelukker den andre; 
+<math class="inline-math"><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn></math>
+$ og 
+<math class="inline-math"><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>3</mn><mo>+</mo><mn>3</mn></math>
+er to uttrykk med samme verdi.
+
+<div class="rule"><h4>Ganging som gjentatt addisjon </h4> 
+	Ganging med et positivt heltal kan uttrykkes som gjentatt addisjon.
+</div>
+<div class="example">
+	<math class="display-math" display="block"><mtable>
+        <mtr>
+        <mtd>
+          <mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>4</mn>
+        </mtd>
+        <mtd><mo>=</mo></mtd>
+        <mtd><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>3</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>3</mn></mtd>
+        </mtr>
+        <mtr><mtd></mtd></mtr>
+        <mtr>
+          <mtd>
+            <mn>8</mn><mo>+</mo><mn>8</mn>
+          </mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mn>8</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn></mtd>
+        </mtr>
+        <mtr><mtd></mtd></mtr>
+        <mtr>
+          <mtd><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mn>1</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>5</mn></mtd>
+        </mtr>
+      </mtable></math>
+</div>
+<div class="info"> <h4>Merk</h4> 
+	At ganging med positive heltal kan uttrykkes som gjentatt addisjon, utelukker ikke andre uttrykk. Det er ikke feil å skrive at 
+	<math class="inline-math"><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>1</mn><mo>+</mo><mn>5</mn></math>
+	.
+</div>
+
+<h2 class="section-title">Divisjon </h2>
+<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
+er <span class="outline">divisjonstegnet</span>.
+I praksis har divisjon tre forskjellige betydninger, her eksemplifisert ved regnestykket 
+<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn></math>
+:
+
+<div class="rule"><h4>Divisjon sine tre betydninger</h4>  
+	    <ul>
+      <li> <b>Inndeling av mengder</b>
+      <math class="display-math">  <mn>12</mn><mo> :</mo><mn>3</mn> <mo>=</mo> <mtext>''Antallet i hver gruppe når 12 deles inn i 3 like store grupper'' </mtext> </math> </li>
+      <li> <b>Antall ganger et tall går på et annet</b>
+      <math class="display-math">  <mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mtext>''Antall ganger 3 går på 12''</mtext>  </math> </li>
+      <li> <b> Omvendt operasjon av multiplikasjon </b>
+      <math class="display-math">  <mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mtext>''Tallet man må gange 3 med for å få 12''</mtext>  </math> </li>
+    </ul> 
+</div> 
+
+<div class="language-box"> 
+	Et divisjonsstykke består av en <span class="outline">dividend</span>, en <span class="outline">divisor</span> og en <span class="outline">kvotient</span>.	
+	I divisjonstykket
+	<math class="display-math" display="block"><mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn></math>
+	er 12 dividenden, 3 er divisoren og 4 er kvotienten.
+	
+	Vanlige måter å uttale 
+	<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn></math>
+	på er
+	<ul>
+		<li>''12 delt med/på 3''
+		</li><li>''12 dividert med/på 3''
+		</li><li>''12 på 3''
+	</li></ul>
+	I noen sammenhenger blir 
+	<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn></math>
+	kalt ''<span class="outline">forholdet</span> mellom 12 og 3''. Da er 4 <span class="outline">forholdstallet</span>. 
+	
+	Ofte brukes 
+	<span class='symbol'><math class='inline-math'><mo>/</mo></math></span>
+	 i steden for 
+	 <span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
+	 , spesielt i programmeringsspråk.
+</div>
+
+<h3 class="subsection-title">Divisjon av mengder</h3>
+Regnestykket 
+<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn></math>
+forteller oss at vi skal dele 12 inn i 3 like store grupper:
+<div class="figure"> <img src="./fig/del1.svg"> </div>
+Vi ser at hver gruppe inneholder 4 ruter, dette betyr at
+<math class="display-math" display="block"><mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn></math>
+
+
+<h3 class="subsection-title">Antall ganger</h3>
+<div class="figure"> <img src="./fig/del2.svg"> </div>
+3 går 4 ganger på 12, altså er 
+<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn></math>
+.
+
+
+<h3 class="subsection-title">Omvendt operasjon av multiplikasjon</h3>
+Vi har sett at hvis vi deler 12 inn i 3 like grupper, får vi 4 i hver gruppe. Altså er 
+<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn></math>
+. Om vi legger sammen igjen disse gruppene, får vi naturligvis 12: 
+<div class="figure"> <img src="./fig/del1b.svg"> </div>
+Men dette er det samme som å gange 4 med 3. Altså;
+om vi vet at 
+<math class="inline-math"><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>12</mn></math>
+, så vet vi også at 
+<math class="inline-math"><mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn></math>
+. 
+<div class="figure"> <img src="./fig/del1a.svg"> </div>
+
+
+<div class="example">Siden 
+	<math class="inline-math"><mn>6</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>18</mn></math>
+	, er
+	<math class="display-math" display="block">      <mtable>
+        <mtr>
+          <mtd> <mn>18</mn><mo> : </mo><mn>6</mn></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd>3</mtd>
+        </mtr>
+        <mtr>
+          <mtd> <mn>18</mn><mo> : </mo><mn>3</mn></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd>6</mtd>
+        </mtr>
+      </mtable></math>
+</div>
+<div class="example">
+	Siden 
+	<math class="inline-math"><mn>5</mn><mo>⋅</mo><mn>7</mn><mo>=</mo><mn>35</mn></math>
+	, er
+	<math class="display-math" display="block"><mtable>
+        <mtr>
+          <mtd> <mn>35</mn><mo> : </mo><mn>5</mn></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd>7</mtd>
+        </mtr>
+        <mtr>
+          <mtd> <mn>35</mn><mo> : </mo><mn>7</mn></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd>5</mtd>
+        </mtr>
+      </mtable></math>
+</div>
+

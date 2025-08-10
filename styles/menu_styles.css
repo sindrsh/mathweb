@@ -68,6 +68,7 @@ body {
 }
 
 #main {
-  max-width: 800px;
+  margin: auto;
+  max-width: 810px;
   padding-left: 100px;
 }

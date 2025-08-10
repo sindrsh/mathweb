@@ -101,10 +101,12 @@ math {
 
 
 .footnote {
+    color: black;
     margin-top: 10px;
     margin-bottom: 10px;
     border-top-style: solid;
     border: 1pt solid;
+    font-weight: normal;
 }
 
 .abc-list li::marker {
