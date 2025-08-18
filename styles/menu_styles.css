@@ -5,7 +5,24 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #006699;
+}
+
+.select-button {
+  background-color: #006699;
+  color: white;
+}
+.selected-button {
+  background-color: #04AA6D;
+  color: white;
+}
+.select-button a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+h1 {
+  color: #005580;
 }
 
 .topnav a {
@@ -26,11 +43,19 @@ body {
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
+  margin: auto;
+}
+
+#project-title {
+  padding-top:10px;
+  font-size: 20px;
+  color: white;
+  float: right;
 }
 
 .topnav span {
-  display: block;
   height: 100%;
+  width: 200px;
 }
 
 .topnav .icon {
@@ -38,10 +63,14 @@ body {
   color: white;
   background-color: #333;
   border: none;
+  float: right;
   display: none;
 }
 
 @media screen and (max-width: 600px) {
+  #project-title {
+    float: left;
+  }
   .topnav a:not(:first-child) {display: none;}
   .topnav button.icon {
     float: right;
@@ -50,9 +79,6 @@ body {
   #main {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;

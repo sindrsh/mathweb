@@ -9,16 +9,10 @@
   <style>
     .grade {
       width: 100px;
-      background-color: rgb(25, 131, 122);
-      color: #f2f2f2;
       padding: 5px 5px;
       margin-left: 8px;
       margin-top: 10px;
       text-decoration: none;
-    }
-
-    .selected-button {
-      background-color: rgb(6, 104, 50);
     }
 
     .selected-curruculum {
@@ -31,8 +25,12 @@
     }
     .info{
       margin: auto;
-      width: 500px;
     }
+
+    .curruculum-container {
+      margin-top: 20px;
+    }
+
     .curruculum {
       border-collapse: collapse;
       display: none;
@@ -40,9 +38,21 @@
     .curruculum td {
       border: 1pt solid black;
     }
-    .curruculum tbody tr:nth-child(even){
-      background-color: greenyellow;
+    .curruculum th:nth-child(n) {
+      border: 1pt solid black;
+      padding: 2px;
     }
+    .curruculum tbody td:nth-child(1){
+      padding-left: 5px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    .curruculum tbody tr:nth-child(even){
+      background-color: #ebf9fd;
+    }
+    .curruculum tbody tr:nth-child(odd){
+      background-color: #06a71b1f;
+    }    
     .curruculum td:nth-child(n+2){
       text-align: center;
     }
@@ -57,6 +67,10 @@
         width: 100%;
         padding-left: 0px;
       }
+    }
+    #main{
+      width: 500px;
+      height: 2000px;
     }
   </style>
 </head>
@@ -76,15 +90,23 @@
 <div class="info">
   <h1>Kompetansemål</h1>
   <div>
-  I tabellene under vises de trinnvise kompetansemålene definert av Udir, og hvilke kapitler fra
-  bøkene i OpenMathBooks-serien som dekker disse. Merk at begge ”Anvendt”-bøkene har et
+  <p>
+    I tabellene under vises de trinnvise kompetansemålene definert av Udir, og hvilke kapitler fra
+  bøkene i OpenMathBooks-serien som dekker disse.
+  </p>
+  <p>
+    Begge <i>Anvendt</i>-bøkene har et
   vedlegg som gir lenker til relevante tekster. I kompetansemål som nevner innhenting av informasjon fra tekster er det underforstått at disse vedleggene er med på å dekke kompetansemålet.
-  I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det også underforstått at kapittel
-  8 og kapittel 4 i henholdsvis Anvendt matematikk 1 og 2 er med på å dekke kompetansemålet.
+  </p>
+  <p>
+    I alle kompetansemål hvor det nevnes anvendelse/praktiske situasjoner er det underforstått at kapittel
+  8 og kapittel 4 i henholdsvis <i>Anvendt matematikk 1</i> og <i>2</i> er med på å dekke kompetansemålet.
+  </p>
   </div>
 </div>
 
 <div class="container">
+
 <button class="grade" data-reference="5">5. klasse</button>
 <button class="grade" data-reference="6">6. klasse</button>
 <button class="grade" data-reference="7">7. klasse</button>
@@ -92,12 +114,12 @@
 <button class="grade" data-reference="9">9. klasse</button>
 <button class="grade" data-reference="10">10. klasse</button>
 <button class="grade" data-reference="1p">1P</button>
-<button class="grade" data-reference="2p">2P klasse</button>
+<button class="grade" data-reference="2p">2P</button>
 <button class="grade" data-reference="1t">1T</button>
 <button class="grade" data-reference="r1">R1</button>
 <button class="grade" data-reference="r2">R2</button>
 
-
+<div class="curruculum-container"></div>
 <table class="curruculum" id="5">
   <thead>
   <tr>
@@ -941,7 +963,16 @@
 </table>
 </div>
 </div>
-<script id="menu-script"></script>
+</div>
+<script id="menu-script">
+  for (let menuButton of document.getElementsByClassName("menu-button")){
+    if (menuButton.href == window.location.href) {
+      menuButton.classList.toggle("active")
+    } else if (menuButton.classList.contains("active")){
+      menuButton.classList.toggle("active")
+    }
+  }
+</script>
 <script>
   for(let gradeButton of document.getElementsByClassName("grade")){
     gradeButton.addEventListener("click", selectGrade)
@@ -953,9 +984,10 @@
     if (selectedGrade){
       selectedGrade.classList.toggle("selected-button")
       document.getElementById(selectedGrade.dataset.reference).classList.toggle("selected-curruculum")
-      document.getElementById(this.dataset.reference).style.visibility = "visible"
+      document.getElementById(selectedGrade.dataset.reference).style.display = "none"
     }
     if (selectedGrade == this) {
+      selectedGrade = null
       return
     }
     this.classList.toggle("selected-button")

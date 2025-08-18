@@ -73,7 +73,7 @@ index = {
   """,
     "display": True
     },
-    "2plus9": {
+    "2plus7": {
         "math": {
             """<mn>2</mn>
     <mo>+</mo>

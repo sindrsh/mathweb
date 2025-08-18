@@ -7,15 +7,9 @@
 <head>
   <title>Eksamensløsninger</title>
   <style>
-    :root {
-      --selected-color: rgb(6, 104, 50);
-      --unselected-color: rgb(25, 131, 122);
-    }
     .grades {
       width: 100px;
-      background-color: var(--unselected-color);
-      color: #f2f2f2;
-      padding: 14px 16px;
+      padding: 10px 10px;
       margin-left: 8px;
       margin-top: 10px;
       text-decoration: none;
@@ -45,7 +39,7 @@
       <a href="http://127.0.0.1:3000/mathweb/index.html" class="menu-button">Home</a>
       <a href="http://127.0.0.1:3000/mathweb/books/books.html" class="menu-button">Bøker</a>
       <a href="http://127.0.0.1:3000/mathweb/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamener</a>
+      <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamensløsninger</a>
       <button class="icon" onclick="myFunction()">
         Meny
       </button>
@@ -59,29 +53,54 @@
   <button class="grades" data-reference="r1">R1</button>
   <button class="grades" data-reference="r2">R2</button>
 </div>
-<div class="exams" id="g">
-  <h2>Eksamener for grunnskolen</h2>
-  <a href="#">Våren 2025</a>
-  <a href="#">Våren 2025</a>
-  <a href="#">Våren 2025</a>
-  <a href="#">Våren 2025</a>
-
+<div class="exams" id="g" hidden>
+  <h2>Eksamensløsninger for grunnskolen</h2>
+  <a href="./g/GV25.pdf">Våren 2025</a>
+  <a href="./g/GV24.pdf">Våren 2024</a>
+  <a href="./g/GV23.pdf">Våren 2025</a>
 </div>
 <div class="exams" id="1p" hidden>
-  <h2>Eksamener for 1P</h2>
-  <a href="#">Våren 2025</a>
+  <h2>Eksamensløsninger for 1P</h2>
+  <a href="./1p/1pv25.pdf">Våren 2025</a>
+  <a href="./1p/1PV24.pdf">Våren 2024</a>
 </div>
+<div class="exams" id="2p" hidden>
+  <h2>Eksamensløsninger for 2P</h2>
+  <a href="./2p/2pv25.pdf">Våren 2025</a>
+  <a href="./2p/2PV24.pdf">Våren 2024</a>
+</div>
+<div class="exams" id="1t" hidden>
+  <h2>Eksamensløsninger for 1T</h2>
+  <a href="./1t/1TV25.pdf">Våren 2025</a>
+  <a href="./1t/1TV24.pdf">Våren 2024</a>
+</div>
+<div class="exams" id="r1" hidden>
+  <h2>Eksamensløsninger for R1</h2>
+  <a href="./r1/R1V25.pdf">Våren 2025</a>
+  <a href="./r1/R1V24.pdf">Våren 2024</a>
+  <a href="./r1/R1H23.pdf">Høsten 2023</a>  
+</div>
+<div class="exams" id="r2" hidden>
+  <h2>Eksamensløsninger for R2</h2>
+  <a href="./r2/R2V25.pdf">Våren 2025</a>
+  <a href="./r2/R2V24.pdf">Våren 2024</a>
+  <a href="./r2/R2H23.pdf">Høsten 2023</a>
 </div>
 </body>
+<script id="menu-script">
+  for (let menuButton of document.getElementsByClassName("menu-button")){
+    if (menuButton.href == window.location.href) {
+      menuButton.classList.toggle("active")
+    } else if (menuButton.classList.contains("active")){
+      menuButton.classList.toggle("active")
+    }
+  }
+</script>
 <script>
-  
   let selectedGrade = null
   const root = document.documentElement
-  const selectedColor = getComputedStyle(root).getPropertyValue("--selected-color")
-  const unselectedColor = getComputedStyle(root).getPropertyValue("--unselected-color")
 
   for(let gradeButton of document.getElementsByClassName("grades")){
-    console.log(gradeButton)
     gradeButton.addEventListener("click", selectGrade)
   }
 
@@ -100,5 +119,21 @@
       selectedGrade = this
     }
   }
+
+  function selectGrade() {
+    if (selectedGrade){
+      selectedGrade.classList.toggle("selected-button")
+      document.getElementById(selectedGrade.dataset.reference).hidden = true
+    }
+    if (selectedGrade == this) {
+      selectedGrade = null
+      return
+    }
+    this.classList.toggle("selected-button")
+    document.getElementById(this.dataset.reference).hidden = false
+    selectedGrade = this
+  }
+
+
 </script>
 </html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<head>
+  <style>
+    .accordion {
+      width: 100%;
+    }
+    button.active {
+      color: green;
+    }
+    
+    .hide {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+    
+    div.active {
+      display: block;
+    }
+
+    image-container {
+      margin: auto;
+    }
+
+    .attatchments a {
+      text-decoration: none;
+    }
+    .abc-list li::marker {
+      content: counter(abc-counter, lower-alpha) ") ";
+    }
+    .abc-list li {
+        counter-increment: abc-counter; 
+    }
+
+    .abc-list {
+        line-height: 20pt;
+        list-style-type: none;
+        counter-reset: abc-counter;
+    }    
+  </style>
+</head>
+<body>
+<div class="topnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <button class="icon" onclick="myFunction()">
+        Meny
+      </button>
+    </div>
+<div id="filter-container">
+  <div id="doings-filter">
+    <button class="" data-type="task">Oppgave</button>
+    <button data-type="teaching">Undervisningsopplegg</button>
+  </div>
+  <div id="tags-filter"></div>
+</div>
+<div id="preview-container">
+  <div id="task-preview" class="hide"></div>
+  <div id="teaching-preview" class="hide"></div>
+</div>
+
+</div>
+<div id="task-container" hidden>
+  <button id="task-button" class="accordion">Oppgave</button>
+  <div id="task" class=hide">
+    <h1 class="title"></h1>
+    <div class="content"></div>
+  </div>
+  <button class="solution-button accordion">Løsningsforslag</button>
+  <div class="solution hide"></div>
+</div>
+
+<div id="teaching-container" hidden>
+  <button id="teaching-button" class="accordion">Oppgave</button>
+  <div id="teaching" class="hide">
+    <h2 class="title"></h2>
+    <div class="content"></div>
+  </div>
+  <button id="attatchments-button" class="accordion">Vedlegg</button>
+  <div class="attatchments hide"></div>
+  <button class="solution-button accordion">Løsningsforslag</button>
+  <div class="solution hide"></div>
+</div>
+
+</body>
+
+<script type="module">
+  import tasks from "./tasks/tasks.js"
+  import teachings from "./teachings/teachings.js"
+
+  
+  function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("active")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+
+
+
+  const doingsFilterButtons = document.getElementById("doings-filter").getElementsByTagName("button")
+  for(let doingsFilterButton of doingsFilterButtons) {
+    doingsFilterButton.addEventListener("click", filterDoings)
+  }
+
+  let allTags = []
+  let cnt = 0
+  for(let index of [tasks, teachings]) {
+    let type = "task"
+    if(cnt ===1) {
+      type = "teaching"
+    }
+    cnt = cnt + 1
+    const previewContainer = document.getElementById(`${type}-preview`)
+
+    for(let id of  Object.keys(index)) {
+      const preview = document.createElement("button")
+      preview.setAttribute("class", "preview")
+      preview.setAttribute("data-id", id)
+      preview.setAttribute("data-type", type)
+      preview.innerHTML = `<p>${index[id]["title"]}</p>`
+      let tags = ""
+      for(let tag of index[id]["tags"]) {
+        if (!allTags.includes(tag)) {
+          allTags.push(tag)
+        }
+        tags += ` #${tag}`
+      }
+      preview.innerHTML += `<p>${tags}</p>`
+      previewContainer.appendChild(preview)
+      preview.addEventListener("click", view)
+    }
+  }
+  const tagsFilter = document.getElementById("tags-filter")
+  for(let tag of allTags) {
+    let filterButton = document.createElement("button")
+    filterButton.setAttribute("class", "hide")
+    filterButton.innerText = `${tag}`
+    tagsFilter.appendChild(filterButton)
+  }
+
+  function filterDoings() {
+    let type = this.dataset.type
+    let id = `${type}-preview`
+    this.classList.toggle("active")
+    document.getElementById(id).classList.toggle("show")
+  }
+
+  function view() {
+      document.getElementById("preview-container").hidden = true
+      let id = this.dataset.id
+      let type = this.dataset.type
+      let container
+      let index
+      let attatchments 
+      if(type === "task") {
+        container = document.getElementById("task-container")
+        container.hidden = false
+        index = tasks
+      }
+      if(type === "teaching") {
+        container = document.getElementById("teaching-container")
+        container.hidden = false
+        attatchments = container.querySelector(".attatchments")
+        index = teachings
+      }
+
+      const title = container.querySelector(".title")
+      const content = container.querySelector(".content")
+      const solution = container.querySelector(".solution")
+
+
+      title.innerHTML = index[id]["title"]
+      if (index[id]["solution"]) {
+        solution.innerHTML = index[id]["solution"]
+        container.querySelector(".solution-button").style.display = "true"
+      } else {
+        container.querySelector(".solution-button").style.display = "none"
+      }
+      if (index[id]["attatchments"]) {
+        attatchments.innerHTML = index[id]["attatchments"]
+      }    
+      content.innerHTML = index[id]["content"]
+    }
+  
+  function show(id, type) {
+      let container
+      let index
+      let attatchments 
+      if(type === "task") {
+        container = document.getElementById("task-container")
+        index = tasks
+      }
+      if(type === "teaching") {
+        container = document.getElementById("teaching-container")
+        attatchments = container.querySelector(".attatchments")
+        index = teachings
+      }
+
+      const title = container.querySelector(".title")
+      const content = container.querySelector(".content")
+      const solution = container.querySelector(".solution")
+
+
+      title.innerHTML = index[id]["title"]
+      if (index[id]["solution"]) {
+        solution.innerHTML = index[id]["solution"]
+        container.querySelector(".solution-button").style.display = "true"
+      } else {
+        container.querySelector(".solution-button").style.display = "none"
+      }
+      if (index[id]["attatchments"]) {
+        attatchments.innerHTML = index[id]["attatchments"]
+      }    
+      content.innerHTML = index[id]["content"]
+    }
+
+  //view("pythagoras", "teaching")
+
+</script>
+</html>

@@ -6,9 +6,9 @@
 
 	</body>
 	<script type="module">
-		const response = await fetch("rekar_bm.txt");
+		const response = await fetch("rrek_bm.txt");
 		const text = await response.text()
-		document.getElementsByTagName("body")[0].innerHTML = text
+		//document.getElementsByTagName("body")[0].innerHTML = text
 
 		for(let footbtn of document.getElementsByClassName("footnote-button")) {
 			console.log(footbtn)
@@ -25,6 +25,53 @@
 				footnote.hidden = true
 			}
 		}
+		const book = document.getElementsByTagName("body")[0]
+		let chapter_count = 0
+		let index = {}
+		makeChapter(text)
+
+		function makeChapter(text) {
+			const parser = new DOMParser();
+            const chapter = parser.parseFromString(text, "text/html").getElementsByTagName("body")[0]
+			console.log
+			let section_count = 1
+			chapter_count += 1
+
+			let rule_count = 1
+			let example_count = 1
+			/*
+			for (let chapterTitle of chapter.getElementsByTagName("h1")) {
+				chapterTitle.innerHTML = `${chapter_count}` + " " + chapterTitle.innerHTML
+				index[chapterTitle.id] = ["Chapter", chapter_count.toString()]
+			}
+			*/
+			for (let section of chapter.getElementsByTagName("section")) {
+				let sectionTitle = section.getElementsByClassName("section-title")[0]
+				sectionTitle.innerHTML = `${chapter_count}.${section_count} ` + sectionTitle.innerHTML
+
+				let rules = section.getElementsByClassName("rule")
+				for (let rule of rules) {
+					let ruleTitle = rule.getElementsByTagName("h4")[0]
+					ruleTitle.innerHTML = `${chapter_count}.${rule_count}` + " " + ruleTitle.innerHTML
+					if (rule.id !== undefined) {
+						index[rule.id] = ["Regel", `${chapter_count}.${rule_count}`]
+					}
+					rule_count += 1
+				}
+				let examples = section.getElementsByClassName("example")
+				for (let example of examples) {
+					let exampleTitle = document.createElement("h4")
+					exampleTitle.innerHTML = `Eksempel ${chapter_count}.${example_count} `
+					example.insertAdjacentElement("afterbegin", exampleTitle)
+					if (example.id !== undefined) {
+						index[example.id] = ["Eksempel", `${chapter_count}.${example_count}`]
+					}
+					example_count += 1
+				}
+				section_count += 1
+			}
+		book.append(chapter)
+    }
 	</script>
 </html>
 

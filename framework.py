@@ -12,7 +12,7 @@ def find_html_files(directory):
     return html_files
 
 
-def write_html(path):
+def write_html(path, index):
     f = open(path, "r")
     content = f.read()
 
@@ -63,9 +63,8 @@ def write_html(path):
 
 directory_path = "/home/sindre/web/mathweb"
 html_files = find_html_files(directory_path)
-print(html_files)
+
 for file_path in html_files:
-    pass
-    #write_html(file_path)
+    write_html(file_path)
 
 
