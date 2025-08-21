@@ -4,11 +4,10 @@ index = {
         "math": "<math class='inline-math'><mo>=</mo></math>",
     },
     "equalszero": {
-        "math": "<mo>=</mo><mn>0</mn>",
-        "display": True
+        "dmath": "<mo>=</mo><mn>0</mn>",
     },
     "posint": {
-        "math": """<mrow>
+        "dmath": """<mrow>
     <mn>1</mn>
     <mo>,</mo>
     <mn>2</mn>
@@ -21,11 +20,9 @@ index = {
     <mo>,</mo>
     <mtext> og så videre.</mtext>
   </mrow>""",
-    "display": True
     },
     "14": {
-        "math": "<mn>14</mn>",
-        "display": True
+        "dmath": "<mn>14</mn>",
     },
     "p23": {
         "math": "<mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>)</mo>"
@@ -44,12 +41,10 @@ index = {
     },
     "posintoutl": "<span class='outline'>positive<button class='footnote-button' data-reference='posintoutl'>*</button><div class='footnote' id='posintoutl' hidden>hva ordet 'positiv' betyr skal vi se på i <span class='reference-chapter' index-reference=''> </span></div> heltall </span>",
     "even2to18": {
-        "math": "<mtext>0, 2, 4, 6, 8, 10, 12, 14, 16, og 18</mtext>",
-        "display": True
+        "dmath": "<mtext>0, 2, 4, 6, 8, 10, 12, 14, 16, og 18</mtext>",
     },
     "odd1to19": {
-        "math": "<mtext>1, 3, 5, 7, 9, 11, 13, 15, 17, og 19</mtext>",
-        "display": True
+        "dmath": "<mtext>1, 3, 5, 7, 9, 11, 13, 15, 17, og 19</mtext>",
     },
     "dotcomma": "<table style='margin: auto'><tr><td>3,5</td><td>(norsk)</tr><tr><td>3.5</td><td>(engelsk)</tr></table>",
     "coord": {

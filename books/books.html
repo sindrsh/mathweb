@@ -7,6 +7,7 @@
         
         
 <head>
+  <title>Bøker</title>
   <style>
     .book {
       padding: 10px;
@@ -29,6 +30,10 @@
     #main {
       margin-top: 10px;
     }
+    #info{
+      width: 500px;
+      margin: auto;
+    }
   </style>
 </head>
 <body>
@@ -37,12 +42,22 @@
       <a href="http://127.0.0.1:3000/mathweb/books/books.html" class="menu-button">Bøker</a>
       <a href="http://127.0.0.1:3000/mathweb/corruculum/corruculum.html" class="menu-button">Pensum</a>
       <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamener</a>
-      <button class="icon" onclick="myFunction()">
+      <a href="http://127.0.0.1:3000/mathweb/projects/projects.html" class="menu-button">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
         Meny
       </button>
     </div>
 
 <div id="main">
+  <div id="info">
+    <h1>Bøker</h1>
+    <p>
+      Alle bøkene er gratis tilgjengelig i PDF-versjoner og, på sikt, som e-bøker. Dette gjør at bøkene enkelt 
+      kan brukes med lesestøttende funksjoner og automatiske oversettinger.
+    </p>
+    <p>MB, TM1 og TM2 vil i løpet av 2025 bli tilgjengelig i bokform.</p>
+  </div>
   <table class="book">
     <tr>
       <td class="image">
@@ -62,10 +77,13 @@
           <a href="./pdf/MB_bm.pdf"> PDF</a>
         </p>
         <p>
-          <a> E-bok</a>
+          <a href="./fp/fp.html"> E-bok (beta)</a>
         </p>        
         <p>
-          <a> Løsningsforslag</a>
+          <a href="./pdf/losf_mb.pdf"> Løsningsforslag</a>
+        </p>
+        <p>
+          <a>Kjøp bok (kommer)</a>
         </p>
       </td>
     </tr>
@@ -86,7 +104,10 @@
           Er spesielt aktuell for grunnskoleelever og elever som tar 1P eller 2P.
         </p>
         <p>
-          <a> Løsningsforslag</a>
+          <a href="./pdf/AM1_bm.pdf">PDF</a>
+        </p>
+        <p>
+          <a href="./pdf/losf_am1.pdf"> Løsningsforslag</a>
         </p>
       </td>
     </tr>
@@ -109,11 +130,38 @@
           Er spesielt aktuell for elever som tar 1T eller R1.
         </p>
         <p>
-          <a> Løsningsforslag</a>
+          <a href="./pdf/TM1_bm.pdf">PDF</a>
+        </p>
+        <p>
+          <a href="./pdf/losf_tm1.pdf"> Løsningsforslag</a>
         </p>
       </td>
     </tr>
   </table>
+  <table class="book">
+    <tr>
+      <td class="image">
+        <img src="./tm2.png">
+      </td>
+      <td class="text">
+        <p>
+          <b>Teoretisk matematikk 2 (AM2)</b>
+        </p>
+        <p>
+          Introduser følger og rekker, trigonometriske funksjoner, vektorer i rommet og integraler.
+        </p>
+        <p>
+          Er spesielt aktuell for elever som tar R2.
+        </p>
+        <p>
+          <a href="./pdf/TM2_bm.pdf">PDF</a>
+        </p>
+        <p>
+          <a href="./pdf/losf_tm2.pdf"> Løsningsforslag</a>
+        </p>
+      </td>
+    </tr>
+  </table>  
   <table class="book">
     <tr>
       <td class="image">
@@ -130,7 +178,10 @@
           Er spesielt aktuell for elever som tar 1T, R1 eller R2.
         </p>
         <p>
-          <a> Løsningsforslag</a>
+          <a href="./pdf/TM2_bm.pdf">PDF</a>
+        </p>
+        <p>
+          <a href="./pdf/losf_tm2.pdf"> Løsningsforslag</a>
         </p>
       </td>
     </tr>
@@ -145,6 +196,13 @@
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")
     }
+  }
+  const menuIcon = document.getElementById("menu-icon")
+  menuIcon.addEventListener("click", menuIconClicked)
+
+  function menuIconClicked() {
+    document.getElementById("menu").classList.toggle("responsive")
+    document.getElementById("project-title").classList.toggle("responsive")
   }
 </script>
 

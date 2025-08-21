@@ -24,7 +24,6 @@ body {
 h1 {
   color: #005580;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -58,7 +57,7 @@ h1 {
   width: 200px;
 }
 
-.topnav .icon {
+.topnav #menu-icon {
   height: 48px;
   color: white;
   background-color: #333;
@@ -72,7 +71,7 @@ h1 {
     float: left;
   }
   .topnav a:not(:first-child) {display: none;}
-  .topnav button.icon {
+  .topnav #menu-icon {
     float: right;
     display: block;
   }
@@ -80,7 +79,7 @@ h1 {
     width: 100%;
   }
   .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
+  .topnav.responsive #menu-icon {
     position: absolute;
     right: 0;
     top: 0;
@@ -90,6 +89,9 @@ h1 {
     float: none;
     display: block;
     text-align: left;
+  }
+  #project-title.responsive {
+    display: none;
   }
 }
 

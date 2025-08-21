@@ -24,6 +24,13 @@ def write_html(path, index):
       menuButton.classList.toggle("active")
     }
   }
+  const menuIcon = document.getElementById("menu-icon")
+  menuIcon.addEventListener("click", menuIconClicked)
+
+  function menuIconClicked() {
+    document.getElementById("menu").classList.toggle("responsive")
+    document.getElementById("project-title").classList.toggle("responsive")
+  }
 </script>"""
     substitution = ['<script id="menu-script">(.*?)</script>', menu_script]
     text_handler = re.compile(substitution[0], re.DOTALL)
@@ -34,10 +41,13 @@ def write_html(path, index):
       <a href="http://127.0.0.1:3000/mathweb/books/books.html" class="menu-button">Bøker</a>
       <a href="http://127.0.0.1:3000/mathweb/corruculum/corruculum.html" class="menu-button">Pensum</a>
       <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamener</a>
-      <button class="icon" onclick="myFunction()">
+      <a href="http://127.0.0.1:3000/mathweb/projects/projects.html" class="menu-button">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
         Meny
       </button>
     </div>"""
+
     
     substitution = ['<div class="topnav">(.*?)</div>', menu]
     text_handler = re.compile(substitution[0], re.DOTALL)
@@ -47,6 +57,12 @@ def write_html(path, index):
         <link rel="stylesheet" href="../styles/menu_styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>"""
+    if index:
+        styles = """<head id="general">
+        <link rel="stylesheet" href="./styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>"""
+     
     
     substitution = ['<head id="general">(.*?)</head>', styles]
     text_handler = re.compile(substitution[0], re.DOTALL)
@@ -65,6 +81,6 @@ directory_path = "/home/sindre/web/mathweb"
 html_files = find_html_files(directory_path)
 
 for file_path in html_files:
-    write_html(file_path)
-
+    is_index = "index.html" in file_path
+    write_html(file_path, is_index)
 

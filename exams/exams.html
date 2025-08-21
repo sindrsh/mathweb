@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <head>
-  <title>Eksamensløsninger</title>
+  <title>Løsningsforslag</title>
   <style>
     .grades {
       width: 100px;
@@ -39,8 +39,10 @@
       <a href="http://127.0.0.1:3000/mathweb/index.html" class="menu-button">Home</a>
       <a href="http://127.0.0.1:3000/mathweb/books/books.html" class="menu-button">Bøker</a>
       <a href="http://127.0.0.1:3000/mathweb/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamensløsninger</a>
-      <button class="icon" onclick="myFunction()">
+      <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamener</a>
+      <a href="http://127.0.0.1:3000/mathweb/projects/projects.html" class="menu-button">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
         Meny
       </button>
     </div>
@@ -54,35 +56,35 @@
   <button class="grades" data-reference="r2">R2</button>
 </div>
 <div class="exams" id="g" hidden>
-  <h2>Eksamensløsninger for grunnskolen</h2>
+  <h2>Løsningsforslag for grunnskolen</h2>
   <a href="./g/GV25.pdf">Våren 2025</a>
   <a href="./g/GV24.pdf">Våren 2024</a>
   <a href="./g/GV23.pdf">Våren 2025</a>
 </div>
 <div class="exams" id="1p" hidden>
-  <h2>Eksamensløsninger for 1P</h2>
+  <h2>Løsningsforslag for 1P</h2>
   <a href="./1p/1pv25.pdf">Våren 2025</a>
   <a href="./1p/1PV24.pdf">Våren 2024</a>
 </div>
 <div class="exams" id="2p" hidden>
-  <h2>Eksamensløsninger for 2P</h2>
+  <h2>Løsningsforslag for 2P</h2>
   <a href="./2p/2pv25.pdf">Våren 2025</a>
   <a href="./2p/2PV24.pdf">Våren 2024</a>
 </div>
 <div class="exams" id="1t" hidden>
-  <h2>Eksamensløsninger for 1T</h2>
+  <h2>Løsningsforslag for 1T</h2>
   <a href="./1t/1TV25.pdf">Våren 2025</a>
   <a href="./1t/1TV24.pdf">Våren 2024</a>
 </div>
 <div class="exams" id="r1" hidden>
-  <h2>Eksamensløsninger for R1</h2>
+  <h2>Løsningsforslag for R1</h2>
   <a href="./r1/R1V25.pdf">Våren 2025</a>
   <a href="./r1/R1V24.pdf">Våren 2024</a>
   <a href="./r1/R1H23.pdf">Høsten 2023</a>  
 </div>
 <div class="exams" id="r2" hidden>
-  <h2>Eksamensløsninger for R2</h2>
-  <a href="./r2/R2V25.pdf">Våren 2025</a>
+  <h2>Løsningsforslag for R2</h2>
+  <a href="./r2/R2V25.pdf">Våren 2025 (del 2 mangler)</a>
   <a href="./r2/R2V24.pdf">Våren 2024</a>
   <a href="./r2/R2H23.pdf">Høsten 2023</a>
 </div>
@@ -94,6 +96,13 @@
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")
     }
+  }
+  const menuIcon = document.getElementById("menu-icon")
+  menuIcon.addEventListener("click", menuIconClicked)
+
+  function menuIconClicked() {
+    document.getElementById("menu").classList.toggle("responsive")
+    document.getElementById("project-title").classList.toggle("responsive")
   }
 </script>
 <script>

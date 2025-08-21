@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<head>
+  <title>Ressursbank</title>
+  <style>
+    .accordion {
+      width: 100%;
+    }
+
+    .accordion + div {
+      border: 1pt solid black;
+      padding: 0px 20px 20px 20px
+    }
+
+    .filter-container {
+      width: 600px;
+      margin: auto;
+    }
+    button.active {
+      background-color: rgb(57, 201, 79);
+    }
+    
+    .hide {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+
+    .preview.show {
+      display: inline-block;
+    }
+
+    image-container {
+      margin: auto;
+    }
+
+    .abc-list li::marker {
+      content: counter(abc-counter, lower-alpha) ") ";
+    }
+    .abc-list li {
+        counter-increment: abc-counter; 
+    }
+
+    .tag-button.show {
+      display: inline;
+    }
+
+    .abc-list {
+        line-height: 20pt;
+        list-style-type: none;
+        counter-reset: abc-counter;
+    }    
+
+    #projects-filter {
+      padding: 5px;
+      border-top: 1pt solid black;
+      border-bottom: 1pt solid black;
+    }
+
+    #grades-filter {
+      padding-bottom: 5px;
+      border-bottom: 1pt solid black;
+    }
+    #grades-filter button {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    #tags-filter {
+      padding-bottom: 5px;
+      border-bottom: 1pt solid black;
+    }
+    #tags-filter button {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    
+
+    .preview {
+      width: 200px;
+      border: 1pt solid gray;
+      margin: 5px;
+    }
+    .preview:hover {
+      background-color: bisque;
+    }
+
+    .preview-tag {
+      padding: 5px 5px 0px 4px;
+      display: inline-block;
+      height: 20px;
+      border-radius: 100px;
+      background-color: rgb(64, 229, 229);
+      margin-bottom: 2px;
+      margin-left: 2px;
+    }
+    .preview-grade {
+      padding: 5px;
+      margin-left: 5px;
+      height: 20px;
+      background-color: rgba(243, 153, 74, 0.664);
+    }
+
+    .attatchments a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      padding: 10px;
+      color: black;
+      background-color: rgba(23, 22, 22, 0.195);
+    }
+
+    #teaching-container, #task-container {
+      padding-bottom: 100px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topnav">
+      <a href="http://127.0.0.1:3000/mathweb/index.html" class="menu-button">Home</a>
+      <a href="http://127.0.0.1:3000/mathweb/books/books.html" class="menu-button">Bøker</a>
+      <a href="http://127.0.0.1:3000/mathweb/corruculum/corruculum.html" class="menu-button">Pensum</a>
+      <a href="http://127.0.0.1:3000/mathweb/exams/exams.html" class="menu-button">Eksamener</a>
+      <a href="http://127.0.0.1:3000/mathweb/projects/projects.html" class="menu-button">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<div id="main">
+<div id="start-container">
+<div>
+  <h1>Ressursbank</h1>
+  Her finner du oppgaver og undervisningsoppleg som oppfyller <br> minst ett av disse kriteriene:
+  <ul>
+    <li>Kombinerer flere temaer</li>
+    <li>Legger opp til utforsking</li>
+    <li>Viser praktisk anvendelse av matematikk</li>
+    <li>Er eksamensrelaterte</li>
+  </ul>
+</div>
+<div id="filter-container">
+  <div id="projects-filter">
+    <button data-type="task">Oppgave</button>
+    <button data-type="teaching">Undervisningsopplegg</button>
+  </div>
+  <div id="grades-filter"></div>
+  <div id="tags-filter"></div>
+</div>
+<div id="preview-container">
+</div>
+</div>
+
+<div id="task-container" hidden>
+  <button id="task-button" class="accordion">Oppgave</button>
+  <div id="task" class="hide">
+    <h2 class="title"></h2>
+    <div class="content"></div>
+  </div>
+  <button class="solution-button accordion">Løsningsforslag</button>
+  <div class="solution hide"></div>
+</div>
+
+<div id="teaching-container" hidden>
+  <button id="teaching-button" class="accordion">Opplegg</button>
+  <div id="teaching" class="hide">
+    <h2 class="title"></h2>
+    <div class="content"></div>
+  </div>
+  <button id="attatchments-button" class="accordion">Vedlegg</button>
+  <div class="attatchments hide"></div>
+  <button class="solution-button accordion">Løsningsforslag</button>
+  <div class="solution hide"></div>
+</div>
+</div>
+</div>
+</body>
+
+<script type="module">
+  import tasks from "./tasks/tasks.js"
+  import teachings from "./teachings/teachings.js"
+
+
+  function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+    console.log(this.nextElementSibling)
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+
+
+  const projectsFilterButtons = document.getElementById("projects-filter").getElementsByTagName("button")
+  for(let projectsFilterButton of projectsFilterButtons) {
+    projectsFilterButton.addEventListener("click", filterProjects)
+  }
+
+  let filter = {
+    "types": new Set,
+    "grades": new Set,
+    "tags": new Set,
+  }
+  const previewContainer = document.getElementById("preview-container")
+  let tagIndex = {}
+  let previewIndex = {}
+  let allTags = []
+  let cnt = 0
+  for(let index of [tasks, teachings]) {
+    let type = "task"
+    if(cnt ===1) {
+      type = "teaching"
+    }
+    cnt = cnt + 1
+
+    for(let id of  Object.keys(index)) {
+      const preview = document.createElement("button")
+      preview.setAttribute("class", "preview hide"+" "+ type)
+      preview.setAttribute("data-id", id)
+      preview.innerHTML = `<h3>${index[id]["title"]}</h3>`
+
+      let tagsString = ''
+      for(let tag of index[id]["tags"]) {
+        if (!allTags.includes(tag)) {
+          allTags.push(tag)
+        }
+        tagsString += `<span class="preview-tag">${tag}</span>`
+        let grades = index[id]["grades"]
+
+        if(tag in tagIndex){
+          for(let grade of grades){
+            tagIndex[tag]["grades"].add(grade)
+          }
+          tagIndex[tag]["types"].add(type)
+                  
+        } else {
+          tagIndex[tag] = {}
+          tagIndex[tag]["types"] = new Set([type])
+          tagIndex[tag]["grades"] = new Set()
+          for(let grade of grades){
+            tagIndex[tag]["grades"].add(grade)
+          }
+        }
+      }
+      previewIndex[id] = {}
+      previewIndex[id]["grades"] = new Set(index[id]["grades"])
+      previewIndex[id]["type"] = new Set([type])
+      previewIndex[id]["tags"] = new Set(index[id]["tags"])
+    
+      
+      let gradesString = ''
+      for(let grade of index[id]["grades"]) {
+        gradesString += `<span class="preview-grade">${grade}</span>`
+      }
+      preview.innerHTML += '<p>' + tagsString + '</p>'
+      preview.innerHTML += '<p>' + gradesString + '</p>'
+
+      previewContainer.appendChild(preview)
+      preview.addEventListener("click", view)
+    }
+  }
+
+
+  const tagsFilter = document.getElementById("tags-filter")
+  for(let tag of allTags) {
+    let tagButton = document.createElement("button")
+    tagButton.setAttribute("class", "tag-button hide")
+    tagButton.innerText = `${tag}`
+    tagButton.dataset.tag = tag
+    tagsFilter.appendChild(tagButton)
+    tagButton.addEventListener("click", filterTags)
+  }
+
+  const gradesFilter = document.getElementById("grades-filter")
+  for(let grade of ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "1P", "2P", "1T", "R1", "R2"]) {
+    let gradeButton = document.createElement("button")
+    gradeButton.innerHTML = grade
+    gradeButton.dataset.grade = grade
+    gradesFilter.appendChild(gradeButton)
+    gradeButton.addEventListener("click", filterGrades)
+  }
+
+
+  function addToFilter({type=null, grade=null, tag=null}) {
+    if(type) {
+        filter["types"].add(type)
+    }
+    if(grade) {
+        filter["grades"].add(grade)
+    }
+    if(tag) {
+        filter["tags"].add(tag)
+    }        
+    update()
+  }
+
+  function removeFromFilter({type=null, grade=null, tag=null}){
+    let key
+    let removeValue
+    if(type) {
+      key = "types"
+      removeValue = type
+    }
+    if(grade) {
+      key = "grades"
+      removeValue = grade
+    }
+    if(tag) {
+     key = "tags"
+     removeValue = tag
+    }
+    filter[key].delete(removeValue) 
+    update()
+  }
+
+  function update(){
+    if (filter["tags"].size === 0 && filter["types"].size === 0 && filter["grades"].size === 0) {
+      document.getElementById("tags-filter").hidden = true
+      document.getElementById("preview-container").hidden = true
+      return
+    } else {
+      document.getElementById("tags-filter").hidden = false
+      document.getElementById("preview-container").hidden = false
+    }
+    console.log(filter)
+    const tagButtons = document.querySelectorAll(".tag-button")
+    const previewButtons = document.querySelectorAll(".preview")
+    
+    for(let tagButton of tagButtons) {
+      let gradesOk = true
+      let typeOk = true
+      if(filter["grades"].size > 0) {
+          if (filter["grades"].intersection(tagIndex[tagButton.dataset.tag]["grades"]).size == 0) {
+            gradesOk = false
+            console.log(filter["grades"], tagIndex[tagButton.dataset.tag]["grades"])
+          }
+      }
+      if(filter["types"].size > 0) {
+        if(filter["types"].intersection(tagIndex[tagButton.dataset.tag]["types"]).size == 0){
+          typeOk = false
+        }
+      }
+      if(gradesOk && typeOk) {
+        tagButton.classList.add("show")
+      } else {
+        tagButton.classList.remove("show")
+      }
+    }
+
+    for(let previewButton of previewButtons) {
+      let tagsOk = true
+      let gradesOk = true
+      let typeOk = true
+      
+      if(filter["tags"].size > 0) {
+          console.log(previewIndex[previewButton.dataset.id]["tags"])
+          if (filter["tags"].intersection(previewIndex[previewButton.dataset.id]["tags"]).size == 0) {
+            tagsOk = false
+          }
+      }
+      if(filter["grades"].size > 0) {
+          if (filter["grades"].intersection(previewIndex[previewButton.dataset.id]["grades"]).size == 0) {
+            gradesOk = false
+          }
+      }
+      if(filter["types"].size > 0) {
+        if(filter["types"].intersection(previewIndex[previewButton.dataset.id]["type"]).size == 0){
+          typeOk = false
+        }
+      }    
+      if(gradesOk && typeOk && tagsOk) {
+        previewButton.classList.add("show")
+      } else {
+        previewButton.classList.remove("show")
+      }  
+    }
+}
+
+  function filterTags() {
+    if (this.classList.contains("active")) {
+      removeFromFilter({tag: this.dataset.tag})
+    } else {
+      addToFilter({tag: this.dataset.tag})
+    }
+    this.classList.toggle("active")
+  }
+
+  function filterProjects() {
+    let type = this.dataset.type
+    this.classList.toggle("active")
+    let isActive = this.classList.contains("active")
+    if(isActive) {
+      addToFilter({type: type})
+    } else {
+      removeFromFilter({type: type})
+    }
+  }
+
+  function filterGrades() {
+    if (this.classList.contains("active")) {
+      removeFromFilter({grade: this.dataset.grade})
+    } else {
+      addToFilter({grade: this.dataset.grade})
+    }
+    this.classList.toggle("active")
+  }
+
+  function view() {
+      document.getElementById("start-container").hidden = true
+      let id = this.dataset.id
+      let type = [...previewIndex[id]["type"]][0]
+      let container
+      let index
+      let attatchments 
+      if(type === "task") {
+        container = document.getElementById("task-container")
+        container.hidden = false
+        index = tasks
+      }
+      if(type === "teaching") {
+        container = document.getElementById("teaching-container")
+        container.hidden = false
+        attatchments = container.querySelector(".attatchments")
+        index = teachings
+      }
+      const title = container.querySelector(".title")
+      const content = container.querySelector(".content")
+      const solution = container.querySelector(".solution")
+
+      title.innerHTML = index[id]["title"]
+      if (index[id]["solution"]) {
+        solution.innerHTML = index[id]["solution"]
+        container.querySelector(".solution-button").style.display = "true"
+      } else {
+        container.querySelector(".solution-button").style.display = "none"
+      }
+      if (index[id]["attatchments"]) {
+        attatchments.innerHTML = index[id]["attatchments"]
+      }    
+      content.innerHTML = index[id]["content"]
+    }
+  
+
+  function show(id, type) {
+      document.getElementById("teaching-container").hidden = false
+      let container
+      let index
+      let attatchments 
+      if(type === "task") {
+        container = document.getElementById("task-container")
+        index = tasks
+      }
+      if(type === "teaching") {
+        container = document.getElementById("teaching-container")
+        attatchments = container.querySelector(".attatchments")
+        index = teachings
+      }
+
+      const title = container.querySelector(".title")
+      const content = container.querySelector(".content")
+      const solution = container.querySelector(".solution")
+
+
+      title.innerHTML = index[id]["title"]
+      if (index[id]["solution"]) {
+        solution.innerHTML = index[id]["solution"]
+        container.querySelector(".solution-button").style.display = "true"
+      } else {
+        container.querySelector(".solution-button").style.display = "none"
+      }
+      if (index[id]["attatchments"]) {
+        attatchments.innerHTML = index[id]["attatchments"]
+      }    
+      content.innerHTML = index[id]["content"]
+    }
+
+  update()
+
+</script>
+
+<script id="menu-script">
+  for (let menuButton of document.getElementsByClassName("menu-button")){
+    if (menuButton.href == window.location.href) {
+      menuButton.classList.toggle("active")
+    } else if (menuButton.classList.contains("active")){
+      menuButton.classList.toggle("active")
+    }
+  }
+  const menuIcon = document.getElementById("menu-icon")
+  menuIcon.addEventListener("click", menuIconClicked)
+
+  function menuIconClicked() {
+    document.getElementById("menu").classList.toggle("responsive")
+    document.getElementById("project-title").classList.toggle("responsive")
+  }
+</script>
+
+</html>

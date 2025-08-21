@@ -4,7 +4,7 @@
 
 
 
-<h2 class="section-title">Addisjon </h2>	
+<section><h2 class="section-title">Addisjon </h2>	
 <h3 class="subsection-title">Addisjon med mengder; å legge til</h3>
 Når vi har en mengde og skal legge til mer, bruker vi <span class="outline">plusstegnet</span> 
 <span class='symbol'><math class='inline-math'><mo>+</mo></math></span>
@@ -14,7 +14,7 @@ Når vi har en mengde og skal legge til mer, bruker vi <span class="outline">plu
 Rekkefølgen vi legger sammen tallene på har ikke  noe å si; å starte med 2 og så legge til 3 er det samme som å starte med 3 og så legge til 2:
 <math class="display-math" display="block">{'<mn>3</mn>\n    <mo>+</mo>\n    <mn>2</mn>\n    <mo>=</mo>\n    <mn>5</mn>\n    '}</math>
 <div class="figure"> <img src="./fig/plusm1a.svg"> </div>
-<div class="language-box">
+<div class="language-box"><h4>Språkboksen</h4>
 	Et addisjonsstykke består av to eller flere <span class="outline">ledd</span> og én <span class="outline">sum</span>. I regnestykket
 	<math class="display-math" display="block">{'<mn>2</mn>\n    <mo>+</mo>\n    <mn>3</mn>\n    <mo>=</mo>\n    <mn>5</mn>\n    '}</math>
 	er både 2 og 3 ledd, mens 5 er summen.
@@ -101,13 +101,13 @@ bety ''har samme verdi som''. Dette gjelder også ved subtraksjon, multiplikasjo
 
 </div>
 
-<h2 class="section-title">\sub </h2>
+</section><section><h2 class="section-title">Subtraksjon </h2>
 <h3 class="subsection-title">Subtraksjon med mengder: Å trekke ifra</h3>
 Når vi har en mengde og tar bort en del av den, bruker vi <span class="outline">minustegnet</span> <span class="symbol"> $ - $</span>. Har vi 5 og skal ta bort 3, skriver vi
 <math class="display-math" display="block"><mn>5</mn><mo>−</mo><mn clas='minus'>3</mn><mo>=</mo><mn>2</mn></math>
 <div class="figure"> <img src="./fig/min1c.svg"> </div>
 
-<div class="language-box">
+<div class="language-box"><h4>Språkboksen</h4>
 	Et subtraksjonsstykke består av to eller flere <span class="outline">ledd</span>  og én <span class="outline">differanse</span>. I subtraksjonsstykket
 	<math class="display-math" display="block"><mn>5</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>2</mn></math>
 	er både 5 og 3 ledd, mens 2 er differansen. 
@@ -159,7 +159,7 @@ har vi like mange 4-ere addert som vi har 4-ere subtrahert. Dermed kansellerer 4
 <span class="slant">Obs! </span> I  vil ordet <i>kansellering</i> ha en annen betydning. 
 </div>
 
-<h2 class="section-title">Ganging  </h2>
+</section><section><h2 class="section-title">Ganging  </h2>
 
 <h3 class="subsection-title">Ganging med heltall; innledende definisjon</h3>
 Når vi legger sammen like tall, kan vi bruke <span class="outline">gangetegnet</span> 
@@ -194,7 +194,7 @@ for å skrive regnestykkene våre kortere:
         </mtr>
       </mtable></math>
 </div> 
-<div class="language-box">
+<div class="language-box"><h4>Språkboksen</h4>
 	Et gangestykke består av to eller flere <span class="outline">faktorer</span> og ett <span class="outline">produkt</span>. I gangestykket
 	<math class="display-math" display="block"><mn>4</mn><mo>⋅</mo> <mn>3</mn><mo>=</mo><mn>12</mn></math>
 	er 4 og 3 faktorer, mens 12 er produktet. 
@@ -320,7 +320,7 @@ er to uttrykk med samme verdi.
 	.
 </div>
 
-<h2 class="section-title">Divisjon </h2>
+</section><section><h2 class="section-title">Divisjon </h2>
 <span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
 er <span class="outline">divisjonstegnet</span>.
 I praksis har divisjon tre forskjellige betydninger, her eksemplifisert ved regnestykket 
@@ -338,7 +338,7 @@ I praksis har divisjon tre forskjellige betydninger, her eksemplifisert ved regn
     </ul> 
 </div> 
 
-<div class="language-box"> 
+<div class="language-box"><h4>Språkboksen</h4> 
 	Et divisjonsstykke består av en <span class="outline">dividend</span>, en <span class="outline">divisor</span> og en <span class="outline">kvotient</span>.	
 	I divisjonstykket
 	<math class="display-math" display="block"><mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn></math>
@@ -427,3 +427,4 @@ om vi vet at
       </mtable></math>
 </div>
 
+</section>

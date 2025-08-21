@@ -1,11 +1,11 @@
 import sys
 import re
-filename = "rrek_bm"
+filename = "rekar_bm"
 book = "fp"
 sys.path.append("/home/sindre/web/mathweb/books/"+ book)
-from  rrek_indx import *
+from  rekar_indx import *
 
-f = open("/home/sindre/openmathbooks/MB/rrek/"+filename+".tex", "r")
+f = open("/home/sindre/openmathbooks/MB/rekar/"+filename+".tex", "r")
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 substitutes = [
     ['\\\\label{ ( [^}]* ) }', ''],
@@ -13,6 +13,7 @@ substitutes = [
     ['\\\\section{ ( [^}]* ) }', r'<h2 class="section-title">\1</h2>'],
     ['\\\\subsection[*]{ ( [^}]* ) }', r'<h3 class="subsection-title">\1</h3>'],
     ['\\\\subsubsection{ ( [^}]* ) }', r'<h4 class="subsubsection-title">\1</h4>'],
+    ['\\\\subsubsection[*]{ ( [^}]* ) }', r'<h4 class="subsubsection-title">\1</h4>'],
     ['\\\\index{ ( [^}]* ) }', ''],
     ['\\\\hrs{ ( [^}]* ) }{seksjon}', '<span class="reference-section" index-reference=""> </span>'],
     ['\\\\refkap{ ( [^}]* ) }', '<span class="reference-chapter" index-reference=""> </span>'],

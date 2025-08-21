@@ -6,7 +6,12 @@
 
 	</body>
 	<script type="module">
-		const response = await fetch("rrek_bm.txt");
+	const book = document.createElement("div")
+	document.getElementsByTagName("body")[0].appendChild(book)
+	let chapter_count = 0
+
+	async function createBook(chapter) {
+		const response = await fetch(chapter);
 		const text = await response.text()
 		//document.getElementsByTagName("body")[0].innerHTML = text
 
@@ -25,53 +30,67 @@
 				footnote.hidden = true
 			}
 		}
-		const book = document.getElementsByTagName("body")[0]
-		let chapter_count = 0
-		let index = {}
 		makeChapter(text)
+}
 
-		function makeChapter(text) {
-			const parser = new DOMParser();
-            const chapter = parser.parseFromString(text, "text/html").getElementsByTagName("body")[0]
-			console.log
-			let section_count = 1
-			chapter_count += 1
+function makeChapter(text) {
+	let index = {}
+	const parser = new DOMParser();
+	const chapter = parser.parseFromString(text, "text/html").getElementsByTagName("body")[0]
+	console.log(chapter)
+	let section_count = 1
+	chapter_count += 1
 
-			let rule_count = 1
-			let example_count = 1
-			/*
-			for (let chapterTitle of chapter.getElementsByTagName("h1")) {
-				chapterTitle.innerHTML = `${chapter_count}` + " " + chapterTitle.innerHTML
-				index[chapterTitle.id] = ["Chapter", chapter_count.toString()]
+	let rule_count = 1
+	let example_count = 1
+	/*
+	for (let chapterTitle of chapter.getElementsByTagName("h1")) {
+		chapterTitle.innerHTML = `${chapter_count}` + " " + chapterTitle.innerHTML
+		index[chapterTitle.id] = ["Chapter", chapter_count.toString()]
+	}
+	*/
+	for (let section of chapter.getElementsByTagName("section")) {
+		let sectionTitle = section.getElementsByClassName("section-title")[0]
+		sectionTitle.innerHTML = `${chapter_count}.${section_count} ` + sectionTitle.innerHTML
+
+		let rules = section.getElementsByClassName("rule")
+		for (let rule of rules) {
+			let ruleTitle = rule.getElementsByTagName("h4")[0]
+			ruleTitle.innerHTML = `${chapter_count}.${rule_count}` + " " + ruleTitle.innerHTML
+			if (rule.id !== undefined) {
+				index[rule.id] = ["Regel", `${chapter_count}.${rule_count}`]
 			}
-			*/
-			for (let section of chapter.getElementsByTagName("section")) {
-				let sectionTitle = section.getElementsByClassName("section-title")[0]
-				sectionTitle.innerHTML = `${chapter_count}.${section_count} ` + sectionTitle.innerHTML
-
-				let rules = section.getElementsByClassName("rule")
-				for (let rule of rules) {
-					let ruleTitle = rule.getElementsByTagName("h4")[0]
-					ruleTitle.innerHTML = `${chapter_count}.${rule_count}` + " " + ruleTitle.innerHTML
-					if (rule.id !== undefined) {
-						index[rule.id] = ["Regel", `${chapter_count}.${rule_count}`]
-					}
-					rule_count += 1
-				}
-				let examples = section.getElementsByClassName("example")
-				for (let example of examples) {
-					let exampleTitle = document.createElement("h4")
-					exampleTitle.innerHTML = `Eksempel ${chapter_count}.${example_count} `
-					example.insertAdjacentElement("afterbegin", exampleTitle)
-					if (example.id !== undefined) {
-						index[example.id] = ["Eksempel", `${chapter_count}.${example_count}`]
-					}
-					example_count += 1
-				}
-				section_count += 1
+			rule_count += 1
+		}
+		let examples = section.getElementsByClassName("example")
+		for (let example of examples) {
+			let exampleTitle = document.createElement("h4")
+			exampleTitle.innerHTML = `Eksempel ${chapter_count}.${example_count} `
+			example.insertAdjacentElement("afterbegin", exampleTitle)
+			if (example.id !== undefined) {
+				index[example.id] = ["Eksempel", `${chapter_count}.${example_count}`]
 			}
-		book.append(chapter)
+			example_count += 1
+		}
+		section_count += 1
+	}
+	let chapterContainer = document.createElement("div")
+	chapterContainer.innerHTML = chapter.innerHTML
+	book.append(chapterContainer)
     }
+
+	function createTitle(title) {
+		let chapterTitle = document.createElement("h1")
+		chapterTitle.innerHTML = `${chapter_count+1} ${title}`
+		book.appendChild(chapterTitle)
+	}
+	
+	createTitle("Tall og telling")
+	await createBook("tel_bm.txt")
+	createTitle("Regneartene")
+	await createBook("rekar_bm.txt")
+	createTitle("Regnerekkefølge")
+	createBook("rrek_bm.txt")
 	</script>
 </html>
 

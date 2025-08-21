@@ -1,23 +1,21 @@
 index = {
     "2plus3": {
-        "math": {
+        "dmath": {
             """<mn>2</mn>
     <mo>+</mo>
     <mn>3</mn>
     <mo>=</mo>
     <mn>5</mn>
     """},
-    "display": True
     },
     "3plus2": {
-        "math": {
+        "dmath": {
             """<mn>3</mn>
     <mo>+</mo>
     <mn>2</mn>
     <mo>=</mo>
     <mn>5</mn>
     """},
-    "display": True
     },
     "plussym": "<span class='symbol'><math class='inline-math'><mo>+</mo></math></span>",
     "2plus3inline": {
@@ -30,7 +28,7 @@ index = {
     """},
     },
     "pluscommutative": {
-        "math": """<mtable displaystyle="true" class="tml-jot">
+        "dmath": """<mtable displaystyle="true" class="tml-jot">
     <mtr>
       <mtd class="tml-right" style="padding-left:0em;padding-right:0em;">
         <mrow>
@@ -71,36 +69,31 @@ index = {
     </mtr>
   </mtable>
   """,
-    "display": True
     },
     "2plus7": {
-        "math": {
+        "dmath": {
             """<mn>2</mn>
     <mo>+</mo>
     <mn>7</mn>
     <mo>=</mo>
     <mn>9</mn>
     """},
-        "display": True
     },
     "4plus11": {
-        "math": {
+        "dmath": {
             """<mn>4</mn>
     <mo>+</mo>
     <mn>11</mn>
     <mo>=</mo>
     <mn>15</mn>
     """},
-        "display": True
     },
     "symeq": "<span class='symbol'><math class='inline-math'><mo>=</mo></math></span>",
     "5min3": {
-        "math": "<mn>5</mn><mo>−</mo><mn clas='minus'>3</mn><mo>=</mo><mn>2</mn>",
-        "display": True
+        "dmath": "<mn>5</mn><mo>−</mo><mn clas='minus'>3</mn><mo>=</mo><mn>2</mn>",
     },
     "5min3lang": {
-        "math": "<mn>5</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>2</mn>",
-        "display": True
+        "dmath": "<mn>5</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>2</mn>",
     },    
     "5min3inline": {
         "math": "<mn>5</mn><mo>−</mo><mn>3</mn><mo>=</mo><mn>2</mn>",
@@ -113,20 +106,16 @@ index = {
         "math": "<mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn>",
     },
     "6min4": {
-        "math": "<mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn>",
-        "display": True
+        "dmath": "<mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn>",
     }, 
     "12min5": {
-        "math": "<mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn>",
-        "display": True
+        "dmath": "<mn>19</mn><mo>−</mo><mn>19</mn><mo>=</mo><mn>0</mn>",
     }, 
     "mincncla": {
-        "math": "<mn>4</mn><mo>+</mo><mn>3</mn><mo>−</mo><mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>−</mo><mn>4</mn><mo>+</mo><mn>1</mn>",
-        "display": True
+        "dmath": "<mn>4</mn><mo>+</mo><mn>3</mn><mo>−</mo><mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>−</mo><mn>4</mn><mo>+</mo><mn>1</mn>",
     }, 
     "mincnclb": {
-        "math": "<mn>3</mn><mo>+</mo><mn>7</mn><mo>+</mo><mn>1</mn>",
-        "display": True
+        "dmath": "<mn>3</mn><mo>+</mo><mn>7</mn><mo>+</mo><mn>1</mn>",
     },
     "arrow": {
         "footnote": "I figurer med tallinjer vil rødfargede piler indikere at man starter ved pilspissen og vandrer til andre enden."
@@ -138,7 +127,7 @@ index = {
         "math": "<mn>5</mn><mo>=</mo><mn>2</mn><mo>+</mo><mn>3</mn>",
     },
     "firsttimes": {
-        "math": """<mtable>
+        "dmath": """<mtable>
         <mtr>
           <mtd>
             <mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>4</mn>
@@ -165,12 +154,10 @@ index = {
           <mtd><mn>1</mn><mo>⋅</mo><mn>5</mn></mtd>
         </mtr>
       </mtable>""",
-    "display": True
     },
     "timessym": "<span class='symbol'><math class='inline-math'><mo>⋅</mo></math></span>",
     "4times12": {
-        "math": "<mn>4</mn><mo>⋅</mo> <mn>3</mn><mo>=</mo><mn>12</mn>",
-        "display": True
+        "dmath": "<mn>4</mn><mo>⋅</mo> <mn>3</mn><mo>=</mo><mn>12</mn>",
     },
     "4times12inline": {
         "math": "<mn>4</mn><mo>⋅</mo> <mn>3</mn><mo>=</mo><mn>12</mn>"
@@ -184,7 +171,7 @@ index = {
         "math": "<mn>3</mn><mo>⋅</mo> <mn>2</mn>"
     },    
     "timescommute": {
-        "math": """<mtable>
+        "dmath": """<mtable>
         <mtr>
           <mtd>
             <mn>3</mn><mo>⋅</mo><mn>4</mn>
@@ -209,21 +196,18 @@ index = {
           <mtd><mn>80</mn><mo>=</mo><mn>10</mn><mo>⋅</mo><mn>8</mn></mtd>
         </mtr>
       </mtable>""",
-        "display": True
     },
     "2times4": {
         "math": "<mn>2</mn><mo>⋅</mo><mn>4</mn>"
     },
     "2times4eq8": {
-        "math": "<mn>2</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>8</mn>",
-        "display": True
+        "dmath": "<mn>2</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>8</mn>",
     }, 
     "4times2eq8": {
-        "math": "<mn>4</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>8</mn>",
-        "display": True
+        "dmath": "<mn>4</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>8</mn>",
     },
     "repeatedaddition": {
-        "math": """<mtable>
+        "dmath": """<mtable>
         <mtr>
         <mtd>
           <mn>4</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>4</mn>
@@ -246,7 +230,6 @@ index = {
           <mtd><mn>1</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>5</mn></mtd>
         </mtr>
       </mtable>""",
-    "display": True
     },
     "2plus2plus2": {
         "math": "<mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn>"
@@ -263,8 +246,7 @@ index = {
     "2times4lang": '<p style="text-align: center;"> <math><mn>2</mn><mo>⋅</mo><mn>4</mn></math> betyr å vandre 2 plasser <span class="slant">mot høyre</span>, 4 ganger.</p>',
     "4times2lang": '<p style="text-align: center;"> <math><mn>4</mn><mo>⋅</mo><mn>2</mn></math> betyr å vandre 4 plasser <span class="slant">mot høyre</span>, 2 ganger.</p>',    
     "2times3lang": {
-        "math": "<mtext>''2 ganger 3''</mtext><mo>=</mo><mn>3</mn><mo>+</mo><mn>3</mn>",
-        "display": True
+        "dmath": "<mtext>''2 ganger 3''</mtext><mo>=</mo><mn>3</mn><mo>+</mo><mn>3</mn>",
     },
     "amounttimes": "<h3 class='subsection-title' id='amounttimes'>Ganging av mengder</h3>",
     "amounttimesref": '<a href="#amounttimes">Her</a>',
@@ -284,8 +266,7 @@ index = {
       <math class="display-math">  <mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mtext>''Tallet man må gange 3 med for å få 12''</mtext>  </math> </li>
     </ul> """,
     "12div3display": {
-        "math": "<mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn>",
-        "display": True
+        "dmath": "<mn>12</mn><mo> :</mo><mn>3</mn><mo>=</mo><mn>4</mn>",
     },
     "slash": "<span class='symbol'><math class='inline-math'><mo>/</mo></math></span>",
     "12div3eq4": {
@@ -298,7 +279,7 @@ index = {
         "math": "<mn>6</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>18</mn>"
     },
     "6times3": {
-        "math": """      <mtable>
+        "dmath": """      <mtable>
         <mtr>
           <mtd> <mn>18</mn><mo> : </mo><mn>6</mn></mtd>
           <mtd><mo>=</mo></mtd>
@@ -310,13 +291,12 @@ index = {
           <mtd>6</mtd>
         </mtr>
       </mtable>""",
-      "display": True
     },
     "5times7eq35": {
         "math": "<mn>5</mn><mo>⋅</mo><mn>7</mn><mo>=</mo><mn>35</mn>"
     },
     "5times7": {
-        "math": """<mtable>
+        "dmath": """<mtable>
         <mtr>
           <mtd> <mn>35</mn><mo> : </mo><mn>5</mn></mtd>
           <mtd><mo>=</mo></mtd>
@@ -328,7 +308,6 @@ index = {
           <mtd>5</mtd>
         </mtr>
       </mtable>""",
-      "display": True
     }
 }
 

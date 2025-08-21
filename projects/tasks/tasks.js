@@ -2,6 +2,7 @@ const tasks = {
     "walkspeed": {
       "tags": ["proporsjonalitet", "omgjøring av enheter"],
       "title": "Gåfart",
+      "grades": ["5", "6", "7", "8", "9", "10", "1P"],
       "content": `Vanlig gåfart regnes for å være ca. 1,5 m/s. Hvor langt kommer
     man med denne farten
       <ul class="abc-list">
