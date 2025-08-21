@@ -6,15 +6,15 @@
 </head>
 
 <head>
-  <title>Ressursbank</title>
+  <title data-reference="projects">Ressursbank</title>
   <style>
     .accordion {
       width: 100%;
+      font-size: inherit;
     }
-
     .accordion + div {
       border: 1pt solid black;
-      padding: 0px 20px 20px 20px
+      padding: 1px 10px 10px 10px
     }
 
     .filter-container {
@@ -58,7 +58,7 @@
     }    
 
     #projects-filter {
-      padding: 5px;
+      padding-bottom: 5px;
       border-top: 1pt solid black;
       border-bottom: 1pt solid black;
     }
@@ -91,9 +91,10 @@
     }
 
     .preview-tag {
-      padding: 5px 5px 0px 4px;
+      padding: 0px 5px 0px 4px;
       display: inline-block;
       height: 20px;
+      font-size: 14px;
       border-radius: 100px;
       background-color: rgb(64, 229, 229);
       margin-bottom: 2px;
@@ -108,7 +109,7 @@
 
     .attatchments a {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 10px;
       text-decoration: none;
       padding: 10px;
       color: black;
@@ -124,11 +125,11 @@
 <body>
 
 <div class="topnav">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button">Ressursbank</a>
+      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
+      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
@@ -488,8 +489,9 @@
 </script>
 
 <script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.href == window.location.href) {
+    if (menuButton.id === reference) {
       menuButton.classList.toggle("active")
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")

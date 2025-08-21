@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <head>
-  <title>Pensum</title>
+  <title data-reference="curriculum">Pensum</title>
   <style>
     .grade {
       width: 100px;
@@ -15,7 +15,7 @@
       text-decoration: none;
     }
 
-    .selected-curruculum {
+    .selected-curriculum {
       visibility: visible;
     }
     .exams a {
@@ -27,33 +27,33 @@
       margin: auto;
     }
 
-    .curruculum-container {
+    .curriculum-container {
       margin-top: 20px;
     }
 
-    .curruculum {
+    .curriculum {
       border-collapse: collapse;
       display: none;
     }
-    .curruculum td {
+    .curriculum td {
       border: 1pt solid black;
     }
-    .curruculum th:nth-child(n) {
+    .curriculum th:nth-child(n) {
       border: 1pt solid black;
       padding: 2px;
     }
-    .curruculum tbody td:nth-child(1){
+    .curriculum tbody td:nth-child(1){
       padding-left: 5px;
       padding-top: 2px;
       padding-bottom: 2px;
     }
-    .curruculum tbody tr:nth-child(even){
+    .curriculum tbody tr:nth-child(even){
       background-color: #ebf9fd;
     }
-    .curruculum tbody tr:nth-child(odd){
+    .curriculum tbody tr:nth-child(odd){
       background-color: #06a71b1f;
     }    
-    .curruculum td:nth-child(n+2){
+    .curriculum td:nth-child(n+2){
       text-align: center;
     }
 
@@ -76,11 +76,11 @@
 </head>
 <body>
 <div class="topnav">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button">Ressursbank</a>
+      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
+      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
@@ -121,8 +121,8 @@
 <button class="grade" data-reference="r1">R1</button>
 <button class="grade" data-reference="r2">R2</button>
 
-<div class="curruculum-container"></div>
-<table class="curruculum" id="5">
+<div class="curriculum-container"></div>
+<table class="curriculum" id="5">
   <thead>
   <tr>
     <th>Kompetansemål for 5. trinn</th>
@@ -245,7 +245,7 @@
   </tbody>
 </table>
 
-<table class="curruculum" id="6" >
+<table class="curriculum" id="6" >
   <thead>
     <tr>
       <th>Kompetansemål 6. trinn</th>
@@ -301,7 +301,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="7" >
+<table class="curriculum" id="7" >
   <thead>
     <tr>
       <th>Kompetansemål 7. trinn</th>
@@ -362,7 +362,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="8" >
+<table class="curriculum" id="8" >
   <thead>
     <tr>
       <th>Kompetansemål 8. trinn</th>
@@ -428,7 +428,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="9" >
+<table class="curriculum" id="9" >
   <thead>
     <tr>
       <th>Kompetansemål 9. trinn</th>
@@ -489,7 +489,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="10" >
+<table class="curriculum" id="10" >
   <thead>
     <tr>
       <th>Kompetansemål 10. trinn</th>
@@ -545,7 +545,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="1p" >
+<table class="curriculum" id="1p" >
   <thead>
     <tr>
       <th>Kompetansemål 1P</th>
@@ -616,7 +616,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="2p" >
+<table class="curriculum" id="2p" >
   <thead>
     <tr>
       <th>Kompetansemål 2P</th>
@@ -662,7 +662,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="1t" >
+<table class="curriculum" id="1t" >
   <thead>
     <tr>
       <th>Kompetansemål 1T</th>
@@ -743,7 +743,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="r1" >
+<table class="curriculum" id="r1" >
   <thead>
     <tr>
       <th>Kompetansemål R1</th>
@@ -852,7 +852,7 @@
     </tr>
   </tbody>
 </table>
-<table class="curruculum" id="r2" >
+<table class="curriculum" id="r2" >
   <thead>
     <tr>
       <th>Kompetansemål R2</th>
@@ -966,8 +966,9 @@
 </div>
 </div>
 <script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.href == window.location.href) {
+    if (menuButton.id === reference) {
       menuButton.classList.toggle("active")
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")
@@ -991,7 +992,7 @@
   function selectGrade() {
     if (selectedGrade){
       selectedGrade.classList.toggle("selected-button")
-      document.getElementById(selectedGrade.dataset.reference).classList.toggle("selected-curruculum")
+      document.getElementById(selectedGrade.dataset.reference).classList.toggle("selected-curriculum")
       document.getElementById(selectedGrade.dataset.reference).style.display = "none"
     }
     if (selectedGrade == this) {

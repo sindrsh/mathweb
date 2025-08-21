@@ -7,7 +7,7 @@
         
         
 <head>
-  <title>Bøker</title>
+  <title data-reference="books">Bøker</title>
   <style>
     .book {
       padding: 10px;
@@ -16,6 +16,7 @@
       display: inline-block;
       height: 350px;
       background-color: #cfeff563;
+      font-size: 14px;
     }
     .book img {
       width: 150px;
@@ -38,11 +39,11 @@
 </head>
 <body>
 <div class="topnav">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button">Ressursbank</a>
+      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
+      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
@@ -135,6 +136,9 @@
         <p>
           <a href="./pdf/losf_tm1.pdf"> Løsningsforslag</a>
         </p>
+        <p>
+          <a>Kjøp bok (kommer)</a>
+        </p>
       </td>
     </tr>
   </table>
@@ -159,6 +163,9 @@
         <p>
           <a href="./pdf/losf_tm2.pdf"> Løsningsforslag</a>
         </p>
+        <p>
+          <a>Kjøp bok (kommer)</a>
+        </p>
       </td>
     </tr>
   </table>  
@@ -178,10 +185,7 @@
           Er spesielt aktuell for elever som tar 1T, R1 eller R2.
         </p>
         <p>
-          <a href="./pdf/TM2_bm.pdf">PDF</a>
-        </p>
-        <p>
-          <a href="./pdf/losf_tm2.pdf"> Løsningsforslag</a>
+          <a href="./pdf/AM2_bm.pdf">PDF</a>
         </p>
       </td>
     </tr>
@@ -190,8 +194,9 @@
 </body>
 
 <script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.href == window.location.href) {
+    if (menuButton.id === reference) {
       menuButton.classList.toggle("active")
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")

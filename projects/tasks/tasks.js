@@ -12,7 +12,7 @@ const tasks = {
       `
     },
     "thunderbolt": {
-      "tags": ["overslag, proporsjonalitet"],
+      "tags": ["overslag", "proporsjonalitet"],
       "title": "Lyn og torden",
       "grades": ["5", "6", "7", "8", "9", "10", "1P"],
       "content": `Når det er lyn og torden kan du bruke følgende metode for å

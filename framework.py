@@ -18,8 +18,9 @@ def write_html(path, index):
     content = f.read()
 
     menu_script = """<script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.href == window.location.href) {
+    if (menuButton.id === reference) {
       menuButton.classList.toggle("active")
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")
@@ -38,11 +39,11 @@ def write_html(path, index):
     content = text_handler.sub(substitution[1], content)
 
     menu = """<div class="topnav">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button">Ressursbank</a>
+      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
+      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny

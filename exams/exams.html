@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <head>
-  <title>Løsningsforslag</title>
+  <title data-reference="exams">Løsningsforslag</title>
   <style>
     .grades {
       width: 100px;
@@ -36,11 +36,11 @@
 </head>
 <body>
 <div class="topnav">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button">Ressursbank</a>
+      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
+      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
@@ -59,7 +59,7 @@
   <h2>Løsningsforslag for grunnskolen</h2>
   <a href="./g/GV25.pdf">Våren 2025</a>
   <a href="./g/GV24.pdf">Våren 2024</a>
-  <a href="./g/GV23.pdf">Våren 2025</a>
+  <a href="./g/GV23.pdf">Våren 2023</a>
 </div>
 <div class="exams" id="1p" hidden>
   <h2>Løsningsforslag for 1P</h2>
@@ -90,8 +90,9 @@
 </div>
 </body>
 <script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.href == window.location.href) {
+    if (menuButton.id === reference) {
       menuButton.classList.toggle("active")
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")
@@ -142,7 +143,22 @@
     document.getElementById(this.dataset.reference).hidden = false
     selectedGrade = this
   }
+</script>
+<script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
+  for (let menuButton of document.getElementsByClassName("menu-button")){
+    if (menuButton.id === reference) {
+      menuButton.classList.toggle("active")
+    } else if (menuButton.classList.contains("active")){
+      menuButton.classList.toggle("active")
+    }
+  }
+  const menuIcon = document.getElementById("menu-icon")
+  menuIcon.addEventListener("click", menuIconClicked)
 
-
+  function menuIconClicked() {
+    document.getElementById("menu").classList.toggle("responsive")
+    document.getElementById("project-title").classList.toggle("responsive")
+  }
 </script>
 </html>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <head>
-  <title>OPENMATHBOOKS</title>
+  <title data-reference="index">Openmathbooks</title>
   <style>
     #main{
       width: 450px;
@@ -15,11 +15,11 @@
         
 <body>
 <div class="topnav">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button">Ressursbank</a>
+      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
+      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
@@ -29,11 +29,11 @@
 <div id="main">
 <div class="info">
 <h1>Gratis lærebøker i matematikk</h1>
-Bøkene i OpenMathbooks-serien er gratis og fri for reklame. Bøkene dekker kompetansemålene fra grunnskolen og fra VGS-fagene 1P, 1T, 2P, R1 og R2.
+Bøkene i OpenMathbooks-serien er gratis tilgjengelig i PDF-versjoner og fri for reklame. Bøkene dekker kompetansemålene fra grunnskolen og fra VGS-fagene 1P, 1T, 2P, R1 og R2.
 </div>
 <div>
 <h1>Åpen kildekode</h1>
-Bøkene har åpen kildekode og er lisensiert under CC BY-NC-SA 4.0. Dette betyr at den som vil kan lage sin egen kopi av boka og redigere kopien som de vil.
+Bøkene har åpen kildekode og er lisensiert under CC BY-NC-SA 4.0. Dette betyr at den som vil kan lage sin egen kopi av boka, og redigere kopien som man ønsker.
 </div>
 
 </div>
@@ -41,8 +41,9 @@ Bøkene har åpen kildekode og er lisensiert under CC BY-NC-SA 4.0. Dette betyr 
 
 
 <script id="menu-script">
+  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.href == window.location.href) {
+    if (menuButton.id === reference) {
       menuButton.classList.toggle("active")
     } else if (menuButton.classList.contains("active")){
       menuButton.classList.toggle("active")
