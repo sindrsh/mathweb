@@ -35,7 +35,7 @@
   </style>
 </head>
 <body>
-<div class="topnav">
+<div class="topnav" id="menu">
       <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
       <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
       <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
@@ -142,23 +142,6 @@
     this.classList.toggle("selected-button")
     document.getElementById(this.dataset.reference).hidden = false
     selectedGrade = this
-  }
-</script>
-<script id="menu-script">
-  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
-  for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.id === reference) {
-      menuButton.classList.toggle("active")
-    } else if (menuButton.classList.contains("active")){
-      menuButton.classList.toggle("active")
-    }
-  }
-  const menuIcon = document.getElementById("menu-icon")
-  menuIcon.addEventListener("click", menuIconClicked)
-
-  function menuIconClicked() {
-    document.getElementById("menu").classList.toggle("responsive")
-    document.getElementById("project-title").classList.toggle("responsive")
   }
 </script>
 </html>

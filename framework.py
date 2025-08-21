@@ -38,7 +38,7 @@ def write_html(path, index):
     text_handler = re.compile(substitution[0], re.DOTALL)
     content = text_handler.sub(substitution[1], content)
 
-    menu = """<div class="topnav">
+    menu = """<div class="topnav" id="menu">
       <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
       <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
       <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>

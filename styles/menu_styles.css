@@ -70,6 +70,11 @@ h1 {
   float: right;
   display: none;
 }
+#main {
+  margin: auto;
+  max-width: 810px;
+  padding-left: 100px;
+}
 
 @media screen and (max-width: 600px) {
   #project-title {
@@ -82,6 +87,7 @@ h1 {
   }
   #main {
     width: 100%;
+    padding-left: 5px;
   }
   .topnav.responsive {position: relative;}
   .topnav.responsive #menu-icon {
@@ -100,8 +106,4 @@ h1 {
   }
 }
 
-#main {
-  margin: auto;
-  max-width: 810px;
-  padding-left: 100px;
-}
+
