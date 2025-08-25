@@ -85,6 +85,11 @@ h1 {
   padding-left: 100px;
 }
 
+#links-container {
+  width: 500px;
+  margin: auto;
+}
+
 #main p {
   margin-top: 5px;
 }
@@ -92,6 +97,7 @@ h1 {
 @media screen and (max-width: 700px) {
   #project-title {
     float: left;
+    padding-left: 10px;
   }
   #menu a:not(:first-child) {display: none;}
   #menu #menu-icon {
