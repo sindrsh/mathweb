@@ -42,7 +42,7 @@ const teachings = {
               </div
             </li>
       `,
-      "attatchments": "<a href=./teachings/pythagoras/tritri.pdf>Figurer</a>"
+      "attatchments": "<a href=./teachings/pythagoras/pytpdf.pdf>Figurer</a>"
     }
 }
 

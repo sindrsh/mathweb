@@ -35,15 +35,16 @@
     .preview.show {
       display: inline-block;
     }
-
-    image-container {
-      margin: auto;
+  
+    .image-container {
+      text-align: center;
     }
 
     .abc-list li::marker {
       content: counter(abc-counter, lower-alpha) ") ";
     }
     .abc-list li {
+        margin-bottom: 10px;
         counter-increment: abc-counter; 
     }
 
@@ -80,7 +81,6 @@
       margin-left: 5px;
     }
     
-
     .preview {
       width: 200px;
       border: 1pt solid gray;
@@ -117,6 +117,7 @@
     }
 
     #teaching-container, #task-container {
+      margin-top: 20px;
       padding-bottom: 100px;
     }
 
@@ -124,12 +125,12 @@
 </head>
 <body>
 
-<div class="topnav" id="menu">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
@@ -147,6 +148,11 @@
     <li>Viser praktisk anvendelse av matematikk</li>
     <li>Er eksamensrelaterte</li>
   </ul>
+  <p>
+    Vær spesielt oppmerksom på oppgaver tagget med ''utforsking". Disse oppgavene er ment
+    for at leseren skal fordype seg i sentrale tema. De egner seg godt til å diskuteres i grupper, men man kan også løse
+    oppgavene på egenhånd.
+  </p>
 </div>
 <div id="filter-container">
   <div id="projects-filter">
@@ -193,7 +199,6 @@
   function showAndHide() {
     this.classList.toggle("active");
     this.nextElementSibling.classList.toggle("show")
-    console.log(this.nextElementSibling)
   }
 
   for (let bt of document.getElementsByClassName("accordion")) {
@@ -332,7 +337,6 @@
       document.getElementById("tags-filter").hidden = false
       document.getElementById("preview-container").hidden = false
     }
-    console.log(filter)
     const tagButtons = document.querySelectorAll(".tag-button")
     const previewButtons = document.querySelectorAll(".preview")
     
@@ -342,7 +346,6 @@
       if(filter["grades"].size > 0) {
           if (filter["grades"].intersection(tagIndex[tagButton.dataset.tag]["grades"]).size == 0) {
             gradesOk = false
-            console.log(filter["grades"], tagIndex[tagButton.dataset.tag]["grades"])
           }
       }
       if(filter["types"].size > 0) {
@@ -363,7 +366,6 @@
       let typeOk = true
       
       if(filter["tags"].size > 0) {
-          console.log(previewIndex[previewButton.dataset.id]["tags"])
           if (filter["tags"].intersection(previewIndex[previewButton.dataset.id]["tags"]).size == 0) {
             tagsOk = false
           }

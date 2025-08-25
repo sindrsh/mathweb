@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head>
+        <link rel="stylesheet" href="../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgavevisning</title>
+  <style>
+    .accordion {
+      width: 100%;
+      font-size: inherit;
+    }
+    .accordion + div {
+      border: 1pt solid black;
+      padding: 1px 10px 10px 10px
+    }
+
+    #task-container, #teaching-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .filter-container {
+      width: 600px;
+      margin: auto;
+    }
+    button.active {
+      background-color: rgb(57, 201, 182);
+    }
+    
+    .hide {
+     display: none;
+    }
+    .show {
+      display: block;
+    }
+
+    .preview.show {
+      display: inline-block;
+    }
+
+    image-container {
+      margin: auto;
+    }
+
+    .abc-list li::marker {
+      content: counter(abc-counter, lower-alpha) ") ";
+    }
+    .abc-list li {
+        counter-increment: abc-counter; 
+    }
+
+    .tag-button.show {
+      display: inline;
+    }
+
+    .abc-list {
+        line-height: 20pt;
+        list-style-type: none;
+        counter-reset: abc-counter;
+    }    
+
+    #projects-filter {
+      padding-bottom: 5px;
+      border-top: 1pt solid black;
+      border-bottom: 1pt solid black;
+    }
+
+    #grades-filter {
+      padding-bottom: 5px;
+      border-bottom: 1pt solid black;
+    }
+    #grades-filter button {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    #tags-filter {
+      padding-bottom: 5px;
+      border-bottom: 1pt solid black;
+    }
+    #tags-filter button {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    
+
+    .preview {
+      width: 200px;
+      border: 1pt solid gray;
+      margin: 5px;
+    }
+    .preview:hover {
+      background-color: bisque;
+    }
+
+    .preview-tag {
+      padding: 0px 5px 0px 4px;
+      display: inline-block;
+      height: 20px;
+      font-size: 14px;
+      border-radius: 100px;
+      background-color: rgb(106, 245, 245);
+      margin-bottom: 2px;
+      margin-left: 2px;
+    }
+    .preview-grade {
+      padding: 5px;
+      margin-left: 5px;
+      height: 20px;
+      background-color: rgba(243, 153, 74, 0.664);
+    }
+
+    .attatchments a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      padding: 10px;
+      color: black;
+      background-color: rgba(23, 22, 22, 0.195);
+    }
+
+    #teaching-container, #task-container {
+      padding-bottom: 100px;
+    }
+
+  </style>
+</head>
+
+<body>
+<div>
+   
+
+</div>
+<div id="main">
+<div id="task-container">
+  <button id="task-button" class="accordion">Oppgave</button>
+  <div id="task" class="hide">
+    <h2 class="title"></h2>
+    <div class="content"></div>
+  </div>
+  <button class="solution-button accordion">Løsningsforslag</button>
+  <div class="solution hide"></div>
+</div>
+</div>
+</body>
+
+<script type="module">
+    import tasks from "./tasks.js"
+    const index = tasks
+
+  function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+
+    function show(id) {
+      if (!id in index) {
+        console.log("id error")
+        return
+      }  
+      const container = document.getElementById("task-container")
+      let attatchments 
+      const title = container.querySelector(".title")
+      const content = container.querySelector(".content")
+      const solution = container.querySelector(".solution")
+
+      title.innerHTML = index[id]["title"]
+      if (index[id]["solution"]) {
+        solution.innerHTML = index[id]["solution"]
+        container.querySelector(".solution-button").style.display = "true"
+      } else {
+        container.querySelector(".solution-button").style.display = "none"
+      }
+      if (index[id]["attatchments"]) {
+        attatchments.innerHTML = index[id]["attatchments"]
+      }    
+      content.innerHTML = index[id]["content"]
+    }
+
+    show("secondorderfunction")
+</script>

@@ -37,21 +37,23 @@ def write_html(path, index):
     substitution = ['<script id="menu-script">(.*?)</script>', menu_script]
     text_handler = re.compile(substitution[0], re.DOTALL)
     content = text_handler.sub(substitution[1], content)
-
-    menu = """<div class="topnav" id="menu">
-      <a href="http://openmathbooks.netlify.app/index.html" class="menu-button" id="index-link">Home</a>
-      <a href="http://openmathbooks.netlify.app/books/books.html" class="menu-button" id="books-link">Bøker</a>
-      <a href="http://openmathbooks.netlify.app/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
-      <a href="http://openmathbooks.netlify.app/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
-      <a href="http://openmathbooks.netlify.app/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+    
+    #build = "http://127.0.0.1:3000/mathweb"
+    build = ""
+    menu = """<div id="menu">
+      <a href="%s/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="%s/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="%s/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="%s/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="%s/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
       </button>
-    </div>"""
+    </div>""" % (build, build, build, build, build)
 
     
-    substitution = ['<div class="topnav">(.*?)</div>', menu]
+    substitution = ['<div id="menu">(.*?)</div>', menu]
     text_handler = re.compile(substitution[0], re.DOTALL)
     content = text_handler.sub(substitution[1], content)
 
