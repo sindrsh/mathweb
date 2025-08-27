@@ -154,6 +154,513 @@ const tasks = {
         <math class="inline-math"><mi>y</mi></math>-verdi.
       </li>
     </ol>`
+    },
+    "secondorderfunctionadvanced-1": {
+        "tags": ["andregradsfunksjon", "symmetri", "utforsking", "utfordring"],
+        "title": "Andregradsfunksjonens symmetriegenskaper 1",
+        "grades": ["1t"],
+        "content": ` <p>
+    Gitt funksjonen
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>
+      <mo>=</mo>
+      <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+      <mo>+</mo>
+      <mi>b</mi><mi>x</mi>
+      <mo>+</mo>
+      <mi>c</mi>
+    </math>.
+    Vis at grafen til 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>
+    er symmetrisk om linja 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>x</mi><mo>=</mo>
+      <mfrac>
+        <mrow><mo>-</mo><mi>b</mi></mrow>
+        <mrow><mn>2</mn><mi>a</mi></mrow>
+      </mfrac>
+    </math>.
+  </p>
+  <p>Etter denne oppgaven bør du også gjøre oppgaven <i>Andregradsfunksjonens symmetriegenskaper 2</i>
+  </p>
+  `,
+  "solution": `<p>
+    <h4>Alternativ 1</h4>
+    Skal grafen til 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>
+    være symmetrisk om linja 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>x</mi><mo>=</mo>
+      <mfrac>
+        <mrow><mo>-</mo><mi>b</mi></mrow>
+        <mrow><mn>2</mn><mi>a</mi></mrow>
+      </mfrac>
+    </math>,
+    må vi for et tall 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>
+    ha at
+  </p>
+
+  <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mi>k</mi>
+        <mo>-</mo>
+        <mfrac>
+          <mi>b</mi>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>-</mo><mi>k</mi>
+        <mo>-</mo>
+        <mfrac>
+          <mi>b</mi>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+    </math>
+  </p>
+
+  <p>
+    For et tall 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi></math>
+    har vi at
+  </p>
+
+  <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>d</mi>
+        <mo>-</mo>
+        <mfrac>
+          <mi>b</mi>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow><mn>2</mn><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi></mrow>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+      </mrow>
+    </math>
+  </p>
+
+  <p>Videre er</p>
+
+  <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mtable columnalign="left">
+        <mtr>
+          <mtd>
+            <mi>f</mi>
+            <mo>(</mo>
+            <mi>d</mi>
+            <mo>-</mo>
+            <mfrac>
+              <mi>b</mi>
+              <mrow><mn>2</mn><mi>a</mi></mrow>
+            </mfrac>
+            <mo>)</mo>
+            <mo>=</mo>
+            <mi>a</mi>
+            <mo>(</mo>
+            <mfrac>
+              <mrow><mn>2</mn><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi></mrow>
+              <mrow><mn>2</mn><mi>a</mi></mrow>
+            </mfrac>
+            <msup><mo>)</mo><mn>2</mn></msup>
+            <mo>+</mo>
+            <mi>b</mi>
+            <mo>(</mo>
+            <mfrac>
+              <mrow><mn>2</mn><mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi></mrow>
+              <mrow><mn>2</mn><mi>a</mi></mrow>
+            </mfrac>
+            <mo>)</mo>
+            <mo>+</mo>
+            <mi>c</mi>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mo>=</mo>
+            <mfrac>
+              <mrow><mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><msup><mi>d</mi><mn>2</mn></msup>
+              <mo>-</mo><mn>4</mn><mi>a</mi><mi>b</mi><mi>d</mi>
+              <mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow>
+              <mrow><mn>4</mn><mi>a</mi></mrow>
+            </mfrac>
+            <mo>+</mo>
+            <mfrac>
+              <mrow><mn>2</mn><mi>a</mi><mi>b</mi><mi>d</mi><mo>-</mo><msup><mi>b</mi><mn>2</mn></msup></mrow>
+              <mrow><mn>2</mn><mi>a</mi></mrow>
+            </mfrac>
+            <mo>+</mo>
+            <mi>c</mi>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mo>=</mo>
+            <mfrac>
+              <mrow><mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><msup><mi>d</mi><mn>2</mn></msup>
+              <mo>-</mo><msup><mi>b</mi><mn>2</mn></msup></mrow>
+              <mrow><mn>4</mn><mi>a</mi></mrow>
+            </mfrac>
+            <mo>+</mo>
+            <mi>c</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+    </math>
+  </p>
+
+  <p>
+    Dette betyr at uansett om 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mi>k</mi></math>
+    eller 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mo>-</mo><mi>k</mi></math>,
+    så vil uttrykket over være likt, og altså er betingelsen gyldig.
+  </p>
+    <h4> Alternativ 2 </h4>
+    <p>
+    Skal <math xmlns="http://www.w3.org/1998/Math/MathML" class="math">
+      <mi>f</mi>
+    </math> være symmetrisk om en vertikallinje, må det bety at to tall
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math> og
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>
+    gir lik <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>-verdi:
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mtable>
+        <mtr>
+          <mtd>
+            <mrow>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo>
+              <mo>=</mo>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <mi>a</mi><msup><mi>s</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <mi>b</mi><mi>s</mi>
+              <mo>+</mo>
+              <mi>c</mi>
+              <mo>=</mo>
+              <mi>a</mi><msup><mi>t</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <mi>b</mi><mi>t</mi>
+              <mo>+</mo>
+              <mi>c</mi>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <mi>a</mi>
+              <mo stretchy="false">(</mo>
+                <msup><mi>s</mi><mn>2</mn></msup>
+                <mo>&#x2212;</mo>
+                <msup><mi>t</mi><mn>2</mn></msup>
+              <mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mi>b</mi>
+              <mo stretchy="false">(</mo><mi>s</mi><mo>&#x2212;</mo><mi>t</mi><mo stretchy="false">)</mo>
+              <mo>=</mo>
+              <mn>0</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <mi>a</mi>
+              <mo stretchy="false">(</mo><mi>s</mi><mo>&#x2212;</mo><mi>t</mi><mo stretchy="false">)</mo>
+              <mo stretchy="false">(</mo><mi>s</mi><mo>+</mo><mi>t</mi><mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mi>b</mi>
+              <mo stretchy="false">(</mo><mi>s</mi><mo>&#x2212;</mo><mi>t</mi><mo stretchy="false">)</mo>
+              <mo>=</mo>
+              <mn>0</mn>
+              <mo>&#xA0;</mo>
+              <mtext>(</mtext><mi>s</mi><mo>&#x2260;</mo><mi>t</mi><mtext>)</mtext>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <mi>a</mi><mo stretchy="false">(</mo><mi>s</mi><mo>+</mo><mi>t</mi><mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mi>b</mi>
+              <mo>=</mo>
+              <mn>0</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <mi>t</mi>
+              <mo>=</mo>
+              <mrow>
+                <mo>&#x2212;</mo>
+                <mfrac>
+                  <mi>b</mi>
+                  <mi>a</mi>
+                </mfrac>
+                <mo>&#x2212;</mo>
+                <mi>s</mi>
+              </mrow>
+            </mrow>
+          </mtd>
+        </mtr>
+
+      </mtable>
+    </math>
+  </div>
+  <p class="note">
+    Vi lar <math xmlns="http://www.w3.org/1998/Math/MathML" class="math" display="inline">
+      <msub><mi>x</mi><mi>s</mi></msub>
+    </math> være <i>x</i>-verdien til symmetrilinja til <math xmlns="http://www.w3.org/1998/Math/MathML" class="math" display="inline"><mi>f</mi></math>.
+    <math xmlns="http://www.w3.org/1998/Math/MathML" class="math" display="inline">
+      <msub><mi>x</mi><mi>s</mi></msub>
+    </math> må ligge midt mellom <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math> og
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>. Vi lar <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>&gt;<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math>, da er:
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mtable>
+        <mtr>
+          <mtd>
+            <mrow>
+              <msub><mi>x</mi><mi>s</mi></msub>
+              <mo>=</mo>
+              <mi>s</mi>
+              <mo>+</mo>
+              <mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo stretchy="false">(</mo>
+                <mi>t</mi>
+                <mo>&#x2212;</mo>
+                <mi>s</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <msub><mi>x</mi><mi>s</mi></msub>
+              <mo>=</mo>
+              <mi>s</mi>
+              <mo>+</mo>
+              <mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mrow>
+                <mo stretchy="false">(</mo>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mfrac><mi>b</mi><mi>a</mi></mfrac>
+                  <mo>&#x2212;</mo>
+                  <mi>s</mi>
+                  <mo>&#x2212;</mo>
+                  <mi>s</mi>
+                </mrow>
+                <mo stretchy="false">)</mo>
+              </mrow>
+            </mrow>
+          </mtd>
+        </mtr>
+
+        <mtr>
+          <mtd>
+            <mrow>
+              <msub><mi>x</mi><mi>s</mi></msub>
+              <mo>=</mo>
+              <mrow>
+                <mo>&#x2212;</mo>
+                <mfrac>
+                  <mi>b</mi>
+                  <mrow><mn>2</mn><mi>a</mi></mrow>
+                </mfrac>
+              </mrow>
+            </mrow>
+          </mtd>
+        </mtr>
+      </mtable>
+    </math>
+  </div>
+  </ol>
+  `
+},
+    "secondorderfunctionadvanced-2": {
+        "tags": ["andregradsfunksjon", "symmetri", "utforsking", "utfordring"],
+        "title": "Andregradsfunksjonens symmetriegenskaper 2",
+        "grades": ["1t"],
+        "content": `<p>
+    Gitt funksjonen 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>
+      <mo>=</mo>
+      <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+      <mo>+</mo><mi>b</mi><mi>x</mi>
+      <mo>+</mo><mi>c</mi>
+    </math>.
+    I oppgaven <i>Andregradfunksjonens symmetriegenskaper 1</i> viste vi at 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>
+    er symmetrisk om linja 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>x</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mo>&#x2212;</mo><mi>b</mi></mrow>
+        <mrow><mn>2</mn><mi>a</mi></mrow>
+      </mfrac>
+    </math>.
+    Da følger det at for alle tall
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> er
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>&#x00B1;</mo><mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mi>b</mi>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><msup><mi>k</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo>
+            <msup><mi>b</mi><mn>2</mn></msup>
+          </mrow>
+          <mrow><mn>4</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mi>c</mi>
+      </mrow>
+    </math>
+  </div>
+
+  <p>
+    Bruk dette til å utlede 
+    <i>abc</i>-formelen.
+  </p>`,
+  "solution": `
+  <p>
+    Hvis 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>
+      <mo>=</mo>
+      <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+      <mo>+</mo><mi>b</mi><mi>x</mi>
+      <mo>+</mo><mi>c</mi>
+      <mo>=</mo><mn>0</mn>
+    </math>, har vi for et tall 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> at
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>&#x00B1;</mo><mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mfrac><mi>b</mi><mrow><mn>2</mn><mi>a</mi></mrow></mfrac>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><msup><mi>k</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo><msup><mi>b</mi><mn>2</mn></msup>
+          </mrow>
+          <mrow><mn>4</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>+</mo><mi>c</mi>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>
+  </div>
+
+  <p>
+    Løser vi denne ligningen med hensyn på 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>, får vi at
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>k</mi>
+        <mo>=</mo>
+        <mo>&#x00B1;</mo>
+        <mfrac>
+          <msqrt>
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo>
+            <mn>4</mn><mi>a</mi><mi>c</mi>
+          </msqrt>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+      </mrow>
+    </math>
+  </div>
+
+  <p>
+    Dette betyr at
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>&#x00B1;</mo>
+        <mfrac>
+          <msqrt>
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo>
+            <mn>4</mn><mi>a</mi><mi>c</mi>
+          </msqrt>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>&#x2212;</mo>
+        <mfrac><mi>b</mi><mrow><mn>2</mn><mi>a</mi></mrow></mfrac>
+        <mo>)</mo>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>
+  </div>
+  `
     }
 }
 
