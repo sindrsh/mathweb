@@ -661,7 +661,44 @@ const tasks = {
     </math>
   </div>
   `
-    }
+    },
+  "areaandcircumferenceevenandodd": {
+    "title": "Areal og omkrets til rektangel",
+    "tags": ["utforsking", "areal", "omkrets", "multiplikasjon"],
+    "content": `<ul class="abc-list">
+  <li>Forklar hvorfor omkretsen til et rektangel med heltalls bredde og høyde alltid er et partall.</li>
+  <li>
+    ''Hvis både bredden og høyden i et rektangel er oddetall, er det umulig at arealet og omkretsen til rektangelet har samme verdi.''
+    <p>Forklar hvorfor påstanden er riktig/ikke riktig.</p>
+  </li>
+  <li>Hva er sidelengden til det eneste kvadratet hvor areal og omkrets har samme verdi?</li>
+</ul>`,
+    "solution": `<ol>
+    <li>
+      Omkretsen til et rektangel er lik  
+      <br>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mrow>
+          <mn>2</mn>
+          <mo>&#x22C5;</mo>
+          <mi>bredde</mi>
+          <mo>+</mo>
+          <mn>2</mn>
+          <mo>&#x22C5;</mo>
+          <mi>høyde</mi>
+        </mrow>
+      </math>
+      Hvis både bredden og høyden er heltall, er begge leddene over partall, og summen av to partall er et partall.
+    </li>
+    <li>
+      Et oddetall ganget med et oddetall vil alltid gi et oddetall. Dermed er arealet et oddetall.  
+      Hvis både bredden og høyden er oddetall er de også heltall, og da har vi fra oppgave a) at omkretsen er et partall.
+    </li>
+    <li>
+      <mn>4</mn>
+    </li>
+  </ol>`
+  }
 }
 
 export default tasks

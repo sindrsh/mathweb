@@ -126,59 +126,14 @@
 </head>
 
 <body>
-<div>
-   
-
-</div>
-<div id="main">
-<div id="task-container">
-  <button id="task-button" class="accordion">Oppgave</button>
-  <div id="task" class="hide">
-    <h2 class="title"></h2>
-    <div class="content"></div>
-  </div>
-  <button class="solution-button accordion">Løsningsforslag</button>
-  <div class="solution hide"></div>
-</div>
-</div>
+<ul class="abc-list">
+  <li>Forklar hvorfor omkretsen til et rektangel med heltalls bredde og høyde alltid er et partall.</li>
+  <li>
+    ''Hvis både bredden og høyden i et rektangel er oddetall, er det umulig at arealet og omkretsen til rektangelet har samme verdi.''
+    <p>Forklar hvorfor påstanden er riktig/ikke riktig.</p>
+  </li>
+  <li>Hva er sidelengden til det eneste kvadratet hvor areal og omkrets har samme verdi?</li>
+</ul>
 </body>
 
-<script type="module">
-    import tasks from "./tasks.js"
-    const index = tasks
-
-  function showAndHide() {
-    this.classList.toggle("active");
-    this.nextElementSibling.classList.toggle("show")
-  }
-
-  for (let bt of document.getElementsByClassName("accordion")) {
-    bt.addEventListener("click", showAndHide);
-}
-
-    function show(id) {
-      if (!id in index) {
-        console.log("id error")
-        return
-      }  
-      const container = document.getElementById("task-container")
-      let attatchments 
-      const title = container.querySelector(".title")
-      const content = container.querySelector(".content")
-      const solution = container.querySelector(".solution")
-
-      title.innerHTML = index[id]["title"]
-      if (index[id]["solution"]) {
-        solution.innerHTML = index[id]["solution"]
-        container.querySelector(".solution-button").style.display = "true"
-      } else {
-        container.querySelector(".solution-button").style.display = "none"
-      }
-      if (index[id]["attatchments"]) {
-        attatchments.innerHTML = index[id]["attatchments"]
-      }    
-      content.innerHTML = index[id]["content"]
-    }
-
-    show("areaandcircumferenceevenandodd")
-</script>
+</html>
