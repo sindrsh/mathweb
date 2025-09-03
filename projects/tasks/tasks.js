@@ -697,7 +697,8 @@ const tasks = {
     <li>
       <mn>4</mn>
     </li>
-  </ol>`
+  </ol>`,
+  "grades": ["5", "6", "7"]
   }
 }
 
