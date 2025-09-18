@@ -38,8 +38,8 @@ def write_html(path, index):
     text_handler = re.compile(substitution[0], re.DOTALL)
     content = text_handler.sub(substitution[1], content)
     
-    #build = "http://127.0.0.1:3000/mathweb"
-    build = ""
+    build = "http://127.0.0.1:3000/mathweb"
+    #build = ""
     menu = """<div id="menu">
       <a href="%s/index.html" class="menu-button" id="index-link">Om</a>
       <a href="%s/books/books.html" class="menu-button" id="books-link">Bøker</a>
