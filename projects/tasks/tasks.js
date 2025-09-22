@@ -717,10 +717,12 @@ const tasks = {
     <li>
       Bruk <em>figur a</em> til å forklare at 
       <math>
+        <msup>
         <mrow>
           <mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>
-          <msup><mn>2</mn></msup>
         </mrow>
+        <mn>2</mn>
+      </msup>
         <mo>=</mo>
         <msup><mi>a</mi><mn>2</mn></msup>
         <mo>+</mo>
@@ -733,10 +735,11 @@ const tasks = {
     <li>
       Bruk <em>figur b</em> til å forklare at 
       <math>
+        <msup>
         <mrow>
           <mo>(</mo><mi>a</mi><mo>-</mo><mi>b</mi><mo>)</mo>
-          <msup><mn>2</mn></msup>
         </mrow>
+        <mn>2</mn></msup>
         <mo>=</mo>
         <msup><mi>a</mi><mn>2</mn></msup>
         <mo>-</mo>
