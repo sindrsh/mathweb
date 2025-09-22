@@ -32,8 +32,18 @@
       margin-top: 10px;
     }
     #info{
-      width: 500px;
+      max-width: 500px;
       margin: auto;
+    }
+    #book-container {
+      width: auto;
+      margin: auto;
+    }
+    @media screen and (max-width: 1000px) {
+      #book-container {
+        width: 400px;
+        margin: auto;
+    }
     }
   </style>
 </head>
@@ -59,6 +69,7 @@
     </p>
     <p>MB, TM1 og TM2 vil i løpet av 2025 bli tilgjengelig i bokform.</p>
   </div>
+  <div id="book-container">
   <table class="book">
     <tr>
       <td class="image">
@@ -190,6 +201,7 @@
       </td>
     </tr>
   </table>
+  </div>
 </div>
 </body>
 

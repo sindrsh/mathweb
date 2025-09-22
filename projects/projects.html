@@ -8,6 +8,21 @@
 <head>
   <title data-reference="projects">Ressursbank</title>
   <style>
+    math mtd{
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+    math mtd:nth-child(1) {
+      text-align: -webkit-right;
+    }
+    math mtd:nth-child(2) {
+      text-align: center;
+    }
+    math mtd:nth-child(3) {
+      text-align: left;
+    }
+
     .accordion {
       width: 100%;
       font-size: inherit;
@@ -124,6 +139,11 @@
       background-color: rgba(23, 22, 22, 0.195);
     }
 
+    #info {
+      max-width: 500px;
+      margin: auto;
+    }
+
     #teaching-container, #task-container {
       margin-top: 20px;
       padding-bottom: 100px;
@@ -147,7 +167,7 @@
 
 <div id="main">
 <div id="start-container">
-<div>
+<div id="info">
   <h1>Ressursbank</h1>
   Her finner du oppgaver og undervisningsoppleg som oppfyller <br> minst ett av disse kriteriene:
   <ul>

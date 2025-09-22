@@ -118,7 +118,7 @@ const tasks = {
       <li>
         Vi har at
         <math display="block" class="display-math">
-          <mtable columnalign="left">
+          <mtable >
             <mtr>
               <mtd>
                 <mi>f</mi><mo>(</mo><mo>−</mo><mn>3</mn><mo>)</mo>
@@ -255,7 +255,7 @@ const tasks = {
 
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-      <mtable columnalign="left">
+      <mtable >
         <mtr>
           <mtd>
             <mi>f</mi>
@@ -699,6 +699,221 @@ const tasks = {
     </li>
   </ol>`,
   "grades": ["5", "6", "7"]
+  },
+  "thequadraticrules": {
+    "title": "Kvadratsetningene",
+    "tags": ["utforsking", "algebra", "kvadratsetningene", "areal"],
+    "grades": ["9", "10", "1T"],
+    "content": `
+    <p>
+    I begge figurene under er den største firkanten et kvadrat, og arealene til de fargede kvadratene er vist i figurene. 
+    I <em>figur b</em> har det største kvadratet sidelengde 
+    <math>
+      <mi>a</mi>
+    </math>.
+  </p>
+
+  <ol class="abc-list">
+    <li>
+      Bruk <em>figur a</em> til å forklare at 
+      <math>
+        <mrow>
+          <mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>
+          <msup><mn>2</mn></msup>
+        </mrow>
+        <mo>=</mo>
+        <msup><mi>a</mi><mn>2</mn></msup>
+        <mo>+</mo>
+        <mn>2</mn><mi>a</mi><mi>b</mi>
+        <mo>+</mo>
+        <msup><mi>b</mi><mn>2</mn></msup>
+      </math>.
+    </li>
+
+    <li>
+      Bruk <em>figur b</em> til å forklare at 
+      <math>
+        <mrow>
+          <mo>(</mo><mi>a</mi><mo>-</mo><mi>b</mi><mo>)</mo>
+          <msup><mn>2</mn></msup>
+        </mrow>
+        <mo>=</mo>
+        <msup><mi>a</mi><mn>2</mn></msup>
+        <mo>-</mo>
+        <mn>2</mn><mi>a</mi><mi>b</mi>
+        <mo>+</mo>
+        <msup><mi>b</mi><mn>2</mn></msup>
+      </math>.
+    </li>
+
+    <li>
+      Bruk <em>figur b</em> til å forklare at 
+      <math>
+        <mrow>
+          <mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>
+          <mo>(</mo><mi>a</mi><mo>-</mo><mi>b</mi><mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <msup><mi>a</mi><mn>2</mn></msup>
+        <mo>-</mo>
+        <msup><mi>b</mi><mn>2</mn></msup>
+      </math>.
+    </li>
+  </ol>
+    Figur a: <img src="./tasks/opgalgsquare1.svg">&nbsp;, Figur b:
+  <img src="./tasks/opgalgsquare2.svg">
+    `,
+    "solution": `
+  <ol class="abc-list">
+    <li>
+      <p>Da det røde kvadratet har sidelengde <math><mi>a</mi></math> og det grønne kvadratet har sidelengde <math><mi>b</mi></math>, har det største kvadratet sidelengde <math><mi>a</mi><mo>+</mo><mi>b</mi></math>. Hver av de hvite rektanglene har areal <math><mi>a</mi><mi>b</mi></math>. Dermed har vi at:</p>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mtable columnalign="right center left">
+          <mtr>
+            <mtd><msub><mi>A</mi><mtext>størst kvadrat</mtext></msub></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msub><mi>A</mi><mtext>rødt kvadrat</mtext></msub>
+              <mo>+</mo>
+              <msub><mi>A</mi><mtext>grønt kvadrat</mtext></msub>
+              <mo>+</mo>
+              <mn>2</mn><msub><mi>A</mi><mtext>hvitt rektangel</mtext></msub>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <msup><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow><mn>2</mn></msup>
+            </mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msup><mi>a</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <msup><mi>b</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <mn>2</mn><mi>a</mi><mi>b</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+      </math>
+    </li>
+
+    <li>
+      <p>Det blå kvadratet har sidelengde <math><mi>a</mi><mo>−</mo><mi>b</mi></math>. Hver av de hvite rektanglene har areal <math><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo><mi>b</mi></math>. Dermed har vi at:</p>
+
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mtable columnalign="right center left">
+          <mtr>
+            <mtd><msub><mi>A</mi><mtext>størst kvadrat</mtext></msub></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msub><mi>A</mi><mtext>blått kvadrat</mtext></msub>
+              <mo>+</mo>
+              <msub><mi>A</mi><mtext>grønt kvadrat</mtext></msub>
+              <mo>+</mo>
+              <mn>2</mn><msub><mi>A</mi><mtext>hvitt rektangel</mtext></msub>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd><msup><mi>a</mi><mn>2</mn></msup></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msup><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo></mrow><mn>2</mn></msup>
+              <mo>+</mo>
+              <msup><mi>b</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <mn>2</mn><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo><mi>b</mi></mrow>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd><msup><mi>a</mi><mn>2</mn></msup></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msup><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo></mrow><mn>2</mn></msup>
+              <mo>+</mo>
+              <msup><mi>b</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <mn>2</mn><mi>a</mi><mi>b</mi>
+              <mo>−</mo>
+              <mn>2</mn><msup><mi>b</mi><mn>2</mn></msup>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <msup><mi>a</mi><mn>2</mn></msup>
+              <mo>−</mo>
+              <mn>2</mn><mi>a</mi><mi>b</mi>
+              <mo>+</mo>
+              <msup><mi>b</mi><mn>2</mn></msup>
+            </mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msup><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo></mrow><mn>2</mn></msup>
+            </mtd>
+          </mtr>
+        </mtable>
+      </math>
+    </li>
+
+    <li>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mtable columnalign="right center left">
+          <mtr>
+            <mtd>
+              <msup><mi>a</mi><mn>2</mn></msup>
+              <mo>−</mo>
+              <msup><mi>b</mi><mn>2</mn></msup>
+            </mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msub><mi>A</mi><mtext>størst kvadrat</mtext></msub>
+              <mo>−</mo>
+              <msub><mi>A</mi><mtext>grønt kvadrat</mtext></msub>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msub><mi>A</mi><mtext>blått kvadrat</mtext></msub>
+              <mo>+</mo>
+              <mn>2</mn><msub><mi>A</mi><mtext>hvitt rektangel</mtext></msub>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <msup><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo></mrow><mn>2</mn></msup>
+              <mo>+</mo>
+              <mn>2</mn><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo><mi>b</mi></mrow>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <mrow>
+                <mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo>
+                <mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>+</mo><mn>2</mn><mi>b</mi><mo>)</mo>
+              </mrow>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd></mtd>
+            <mtd><mo>=</mo></mtd>
+            <mtd>
+              <mrow>
+                <mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo>
+                <mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo>
+              </mrow>
+            </mtd>
+          </mtr>
+        </mtable>
+      </math>
+    </li>
+  </ol>
+    `
   }
 }
 
