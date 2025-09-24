@@ -767,6 +767,8 @@ const tasks = {
   <img src="./tasks/opgalgsquare2.svg">
     `,
     "solution": `
+  Figur a: <img src="./tasks/opgalgsquare1_lf.svg">&nbsp;, Figur b:
+  <img src="./tasks/opgalgsquare2_lf.svg">
   <ol class="abc-list">
     <li>
       <p>Da det røde kvadratet har sidelengde <math><mi>a</mi></math> og det grønne kvadratet har sidelengde <math><mi>b</mi></math>, har det største kvadratet sidelengde <math><mi>a</mi><mo>+</mo><mi>b</mi></math>. Hver av de hvite rektanglene har areal <math><mi>a</mi><mi>b</mi></math>. Dermed har vi at:</p>
