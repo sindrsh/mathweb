@@ -9,7 +9,7 @@ button {
 }
 
 math {
-  font-family: 'Open Sans', Verdana, 'Noto Sans Math';
+  font-family: 'Open Sans', 'Noto Sans Math', 'STIX Two Math', Verdana;
 }
 
 h1 {
