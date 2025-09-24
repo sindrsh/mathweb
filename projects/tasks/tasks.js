@@ -923,11 +923,10 @@ const tasks = {
   "determinant": {
     "title": "Parallellogram i koordinatsystem",
     "tags": ["algebra", "areal", "utforsking"],
-    "grades": ["9","10", "1P", "1T"],
-    "content": `<p>Gitt punktene</p>
+    "grades": ["9","10", "1P", "1T", "R1"],
+    "content": `<p>Gitt punktene
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>O</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo>
   <mo>,</mo>
   <mtext>&nbsp;</mtext>
@@ -937,17 +936,10 @@ const tasks = {
   <mi>C</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo>
   <mo>,</mo>
   <mtext>&nbsp;</mtext>
-  <mi>D</mi><mo>=</mo><mo>(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>)</mo>
-  <mo>,</mo>
-  <mtext>&nbsp;</mtext>
-  <mi>E</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>,</mo><mn>0</mn><mo>)</mo>
-  <mo>,</mo>
-  <mtext>&nbsp;</mtext>
   <mtext> og&nbsp; </mtext>
-  <mi>F</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo>
+  <mi>D</mi><mo>=</mo><mo>(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>)</mo>
 </math>
-</math>
-
+</p>
 <p>Vis at
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
@@ -968,7 +960,30 @@ const tasks = {
 `,
   "solution": `
   <p>
-  Med 
+  Vi lar <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>E</mi>
+  <mo>=</mo>
+  <mo>(</mo>
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>c</mi>
+  <mo>,</mo>
+  <mn>0</mn>
+  <mo>)</mo>
+</math>
+og
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>F</mi>
+  <mo>=</mo>
+  <mo>(</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mi>d</mi>
+  <mo>)</mo>
+</math>
+  . Med 
   <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mi>E</mi></math> 
   som grunnlinje har 
   <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></math> 
