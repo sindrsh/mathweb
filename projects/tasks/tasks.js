@@ -919,6 +919,140 @@ const tasks = {
     </li>
   </ol>
     `
+  },
+  "determinant": {
+    "title": "Parallellogram i koordinatsystem",
+    "tags": ["algebra", "areal", "utforsking"],
+    "grades": ["9","10", "1P", "1T"],
+    "content": `<p>Gitt punktene</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>O</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mi>B</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mi>C</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mi>D</mi><mo>=</mo><mo>(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mi>E</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mtext> og&nbsp; </mtext>
+  <mi>F</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo>
+</math>
+</math>
+
+<p>Vis at
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>A</mi>
+    <mrow>
+      <mo>□</mo>
+      <mi>O</mi>
+      <mi>B</mi>
+      <mi>C</mi>
+      <mi>D</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mi>a</mi><mi>d</mi><mo>-</mo><mi>c</mi><mi>d</mi>
+</math>
+</p>
+<img src="./tasks/determinant.svg"></div>
+`,
+  "solution": `
+  <p>
+  Med 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mi>E</mi></math> 
+  som grunnlinje har 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></math> 
+  høyde 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math>, 
+  altså er
+</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>2</mn>
+  <msub><mi>A</mi><mrow><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></mrow></msub>
+  <mo>=</mo>
+  <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)</mo><mi>b</mi>
+</math>
+
+<p>Tilsvarende er</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>2</mn>
+  <msub><mi>A</mi><mrow><mi>△</mi><mi>F</mi><mi>D</mi><mi>O</mi></mrow></msub>
+  <mo>=</mo>
+  <mo>(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo><mi>c</mi>
+</math>
+
+<p>
+  Da 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mrow><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></mrow></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>△</mi><mi>C</mi><mi>D</mi><mi>F</mi></mrow></msub></math> 
+  og 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mrow><mi>△</mi><mi>F</mi><mi>D</mi><mi>O</mi></mrow></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>△</mi><mi>E</mi><mi>B</mi><mi>C</mi></mrow></msub></math>, 
+  har vi at
+</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable>
+    <mtr>
+      <mtd>
+        <msub><mi>A</mi><mrow><mo>□</mo><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi></mrow></msub>
+      </mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <msub><mi>A</mi><mrow><mo>□</mo><mi>O</mi><mi>E</mi><mi>C</mi><mi>F</mi></mrow></msub>
+        <mo>-</mo><mn>2</mn><msub><mi>A</mi><mrow><mi>△</mi><mi>O</mi><mi>B</mi><mi>E</mi></mrow></msub>
+        <mo>-</mo><mn>2</mn><msub><mi>A</mi><mrow><mi>△</mi><mi>F</mi><mi>D</mi><mi>O</mi></mrow></msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo>
+        <mo>-</mo>
+        <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)</mo><mi>b</mi>
+        <mo>-</mo>
+        <mo>(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo><mi>c</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)</mo><mi>d</mi>
+        <mo>-</mo>
+        <mo>(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo><mi>c</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+<img src="./tasks/determinant_lf.svg"></div>
+  `
   }
 }
 
