@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<head>
+  <style>
+    .statement {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<div id="main">
+<button id="task-button" class="accordion active">Oppgave</button>
+<div id="task" class="hide show">
+<h2 class="title">
+  Lyn og torden
+</h2>
+<div class="content">
+  Når det er lyn og torden kan du bruke følgende metode for å
+      finne ut omtrent hvor langt unna du er uværet:
+      <div class="statement"> Start med å telle sekunder straks du ser et lyn. Stopp
+      tellingen når du hører torden. Gang antall sekunder med
+      300, da har du et overslag på hvor mange meter du er unna
+      uværet.
+      </div>
+      Bruk internett til undersøke hastigheten til lys (lyn) og lyd (torden) i luft, og forklar hva denne metoden baserer seg på.
+</div>
+</div>
+<button class="solution-button accordion">Løsningsforslag</button>
+<div class="solution hide"></div>
+</div>
+
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
+
+</html>

@@ -1,0 +1,130 @@
+math mtd{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+math mtd:nth-child(1) {
+  text-align: -webkit-right;
+}
+math mtd:nth-child(2) {
+  text-align: center;
+}
+math mtd:nth-child(3) {
+  text-align: left;
+}
+
+.accordion {
+  width: 100%;
+  font-size: inherit;
+}
+.accordion + div {
+  border: 1pt solid black;
+  padding: 1px 10px 10px 10px
+}
+
+.filter-container {
+  width: 600px;
+  margin: auto;
+}
+button.active {
+  background-color: rgb(57, 201, 79);
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.preview.show {
+  display: inline-block;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.abc-list li::marker {
+  content: counter(abc-counter, lower-alpha) ") ";
+}
+.abc-list li {
+    margin-bottom: 10px;
+    counter-increment: abc-counter; 
+}
+
+.tag-button.show {
+  display: inline;
+}
+
+.abc-list {
+    line-height: 20pt;
+    list-style-type: none;
+    counter-reset: abc-counter;
+}    
+
+#projects-filter {
+  padding-bottom: 5px;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+}
+
+#grades-filter {
+  padding-bottom: 5px;
+  border-bottom: 1pt solid black;
+}
+#grades-filter button {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#tags-filter {
+  padding-bottom: 5px;
+  border-bottom: 1pt solid black;
+}
+#tags-filter button {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.preview {
+  width: 200px;
+  border: 1pt solid gray;
+  margin: 5px;
+}
+.preview:hover {
+  background-color: bisque;
+}
+
+.preview-tag {
+  padding: 0px 5px 0px 4px;
+  display: inline-block;
+  height: 20px;
+  font-size: 14px;
+  border-radius: 100px;
+  background-color: rgb(64, 229, 229);
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+.preview-grade {
+  padding: 5px;
+  margin-left: 5px;
+  height: 20px;
+  background-color: rgba(243, 153, 74, 0.664);
+}
+
+.attatchments a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  background-color: rgba(23, 22, 22, 0.195);
+}
+.solution a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  background-color: rgba(23, 22, 22, 0.195);
+}

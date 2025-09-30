@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang='no'>
 <head id="general">
-        <link rel="stylesheet" href="../styles/menu_styles.css">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<main>
-  <h4>Forberedelser</h4>
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<div id="main">
+           
+<button class="accordion active">Opplegg</button>
+<div class="hide show">
+<h2 class="title">Kilosisten</h2>    
+<div class="content">
+<h4>Forberedelser</h4>
   Klipp arkene langs stiplede linjer og laminer.
   <h4>Gjennomføring</h4>
   <p>
@@ -45,7 +66,23 @@ som blir tatt blir med på å ”ha den” ved neste opprop.
   <li>Lærer roper "milli". Nå skal de fri elevene komme seg over til arket med "1/1000" på uten å bli tatt.</li>
   <li>Leken fortsetter til alle er tatt.</li>
   </ol>
-</p>
-</main>
+</p>        
+</div>
+</div>
+<button id="attatchments-button" class="accordion">Vedlegg</button>
+<div class="attatchments hide">
+  <a href=./enheter.pdf>Figurer</a>
+</div>
+</div>
 
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
 </html>

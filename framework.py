@@ -10,13 +10,23 @@ def find_html_files(directory):
                 dir_string_list = dirpath.split("/")
                 if (len(dir_string_list)-dir_string_list.index("mathweb")<3):
                     html_files.append(os.path.join(dirpath, filename))
+                else: 
+                    if not "/books/" in dirpath:
+                        html_files.append(os.path.join(dirpath, filename))
     return html_files
 
 
-def write_html(path, index):
+def write_html(path):
     f = open(path, "r")
     content = f.read()
-
+    path_split = file_path.split("/")
+    dept = len(path_split)-len(crnt_split)-1
+    level = "./"
+    if dept > 0:
+        level = ""
+        for i in range(dept):
+            level+= "../"
+    
     menu_script = """<script id="menu-script">
   let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
   for (let menuButton of document.getElementsByClassName("menu-button")){
@@ -57,16 +67,10 @@ def write_html(path, index):
     text_handler = re.compile(substitution[0], re.DOTALL)
     content = text_handler.sub(substitution[1], content)
 
-    styles = """<head id="general">
-        <link rel="stylesheet" href="../styles/menu_styles.css">
+    styles = f"""<head id="general">
+        <link rel="stylesheet" href="{level}styles/menu_styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>"""
-    if index:
-        styles = """<head id="general">
-        <link rel="stylesheet" href="./styles/menu_styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>"""
-     
     
     substitution = ['<head id="general">(.*?)</head>', styles]
     text_handler = re.compile(substitution[0], re.DOTALL)
@@ -84,7 +88,6 @@ def write_html(path, index):
 directory_path = "/home/sindre/web/mathweb"
 html_files = find_html_files(directory_path)
 
+crnt_split = os.getcwd().split("/")
 for file_path in html_files:
-    is_index = "index.html" in file_path
-    write_html(file_path, is_index)
-
+    write_html(file_path)

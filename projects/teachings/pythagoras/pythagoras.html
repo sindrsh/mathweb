@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<div id="main">
+<button id="teaching-button" class="accordion active">Opplegg</button>
+<div class="hide show">
+<h2 class="title"></h2>
+<div class="content">
+      Se vedlegg. Alle de ensfargede firkantene i figurene er rektangler, og de grønne trekantene er kongruente og rettvinklede. Det totale
+        arealet er likt på alle figurene.
+          <ul class="abc-list">
+            <li> Klipp ut formene i Figur 1 (Det er viktig at du klipper fint).</li<>
+            <li> Hvilken av formene kan du sette sammen slik at de blir eksakt like store som en annen form? </li>
+            <li> Hvis du tar bort de fire firkanter fra Figur 2, hvilke rektangler kan du da fjerne fra Figur 1
+             for at det som er igjen i Figur 1 og Figur 2 har likt areal? </li>
+            <li>Hva er sammenhengen mellom arealet til det røde kvadratet, det rosa kvadratet og det blå kvadratet?</li>
+            <li> Se på Figur 3 og Figur 4. Hva er verdien til c?</li>
+            <li> Se på Figur 5 og Figur 6.
+            <p style="margin-top: 0; margin-bottom: 0">Finn uttrykket for arealet til det røde kvadratet.</p>
+            <p style="margin-top: 0; margin-bottom: 0">Finn uttrykket for arealet til det rosa kvadratet</p>
+            <p style="margin-top: 0; margin-bottom: 0">Finn uttrykket for arealet til det blå kvadratet</p>
+            </li>
+            <li>Hvis en trekant er rettvinklet, vil man alltid kunne lage en figur som denne?
+            <div class="image-container"> 
+              <img src="./pyt.svg">
+            </div>
+            </li>
+            <li> Hva sier Pytagoras' setning?
+              <div class="image-container"> 
+                <img src="./pyb.svg"> 
+              </div>
+            </li>
+          </ul>
+</div>
+</div>
+<button id="attatchments-button" class="accordion">Vedlegg</button>
+<div class="attatchments hide">
+  <a href=./pytpdf.pdf>Figurer</a>
+</div>
+<button class="solution-button accordion">Løsningsforslag</button>
+</div>
+
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
+
+</html>

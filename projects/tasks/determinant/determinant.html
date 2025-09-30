@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<div id="main">
+<button id="task-button" class="accordion active">Oppgave</button>
+<div id="task" class="hide show">
+<h2 class="title">Parallellogram i et koordinatsystem</h2>
+<div class="content">
+  <p>Gitt punktene
+
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>O</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mi>B</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mi>C</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo>
+  <mo>,</mo>
+  <mtext>&nbsp;</mtext>
+  <mtext> og&nbsp; </mtext>
+  <mi>D</mi><mo>=</mo><mo>(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>)</mo>
+</math>
+</p>
+<p>Vis at
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>A</mi>
+    <mrow>
+      <mo>□</mo>
+      <mi>O</mi>
+      <mi>B</mi>
+      <mi>C</mi>
+      <mi>D</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>
+</math>
+</p>
+<img src="./determinant.svg"></div>
+</div>
+<button class="solution-button accordion">Løsningsforslag</button>
+<div class="solution hide">
+  <p>
+  Vi lar <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>E</mi>
+  <mo>=</mo>
+  <mo>(</mo>
+  <mi>a</mi>
+  <mo>+</mo>
+  <mi>c</mi>
+  <mo>,</mo>
+  <mn>0</mn>
+  <mo>)</mo>
+</math>
+og
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>F</mi>
+  <mo>=</mo>
+  <mo>(</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo>+</mo>
+  <mi>d</mi>
+  <mo>)</mo>
+</math>
+  . Med 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mi>E</mi></math> 
+  som grunnlinje har 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></math> 
+  høyde 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math>, 
+  altså er
+</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>2</mn>
+  <msub><mi>A</mi><mrow><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></mrow></msub>
+  <mo>=</mo>
+  <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)</mo><mi>b</mi>
+</math>
+
+<p>Tilsvarende er</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>2</mn>
+  <msub><mi>A</mi><mrow><mi>△</mi><mi>F</mi><mi>D</mi><mi>O</mi></mrow></msub>
+  <mo>=</mo>
+  <mo>(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo><mi>c</mi>
+</math>
+
+<p>
+  Da 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mrow><mi>△</mi><mi>O</mi><mi>E</mi><mi>B</mi></mrow></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>△</mi><mi>C</mi><mi>D</mi><mi>F</mi></mrow></msub></math> 
+  og 
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mrow><mi>△</mi><mi>F</mi><mi>D</mi><mi>O</mi></mrow></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>△</mi><mi>E</mi><mi>B</mi><mi>C</mi></mrow></msub></math>, 
+  har vi at
+</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable>
+    <mtr>
+      <mtd>
+        <msub><mi>A</mi><mrow><mo>□</mo><mi>A</mi><mi>B</mi><mi>C</mi><mi>D</mi></mrow></msub>
+      </mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <msub><mi>A</mi><mrow><mo>□</mo><mi>O</mi><mi>E</mi><mi>C</mi><mi>F</mi></mrow></msub>
+        <mo>-</mo><mn>2</mn><msub><mi>A</mi><mrow><mi>△</mi><mi>O</mi><mi>B</mi><mi>E</mi></mrow></msub>
+        <mo>-</mo><mn>2</mn><msub><mi>A</mi><mrow><mi>△</mi><mi>F</mi><mi>D</mi><mi>O</mi></mrow></msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo>
+        <mo>-</mo>
+        <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)</mo><mi>b</mi>
+        <mo>-</mo>
+        <mo>(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo><mi>c</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <mo>(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>)</mo><mi>d</mi>
+        <mo>-</mo>
+        <mo>(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo>)</mo><mi>c</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd></mtd>
+      <mtd>
+        <mo>=</mo>
+      </mtd>
+      <mtd>
+        <mi>a</mi><mi>d</mi><mo>-</mo><mi>b</mi><mi>c</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
+<img src="./determinant_lf.svg"></div>
+</div>
+
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
+</html>

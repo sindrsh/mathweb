@@ -1066,8 +1066,51 @@ og
     </mtr>
   </mtable>
 </math>
-<img src="./tasks/determinant_lf.svg"></div>
+<img src="./determinant_lf.svg"></div>
   `
+  },
+  "pentas": {
+    "title": "Femkvadratformer",
+    "tags": ["utforsking", "omkrets", "generalisering", "samarbeid"],
+    "grades": ["4", "5", "6"],
+    "content": `<p>
+  <p>
+    I Figuren under har vi tegnet to former ved å følge disse reglene:
+    <ul>
+      <li>Formen skal bestå av fem blå kvadrater.</li>
+      <li>De blå kvadratene skal ligge kant mot kant.</li>
+    </ul>
+    <img src="./tasks/pentas/pentas_task.svg">
+  </p>
+  <ol class="abc-list">
+    <li>
+      Ved å følge disse reglene kan man lage 10 andre former som er unike.
+      Tegn disse formene.
+    </li>
+    <li>
+      Av de 12 formene er det én form som har en annen omkrets enn de andre. Hvilken er det?
+    </li>
+    <li>
+      Vi kan ta bort den første regelen og lage andre former med flere blå kvadrater. En side som to kvadrater har felles kan vi kalle en skjøt. Beskriv hvordan 
+      vi kan bruke antall skjøter og antall blå kvadrater til å regne ut omkretsene til formene vi lager.
+    </li>
+  </ol>
+</p>`,
+    "solution": `
+    <p>
+  <ol class="abc-list">
+    <li><p><img src="./tasks/pentas/pentas_sol.svg"></p></li>
+    <li>
+      <p>Denne formen har omkrets 10.</p>
+      <p><img src=".tasks/pentas/pentas_sol2.svg"></p></li>
+      <li>
+        <p>Uten skjøter ville hvert blått kvadrat bidratt med 4 til omkretsen. Men For hver skjøt
+          Er det to sider som ikke bidrar til omkretsen. Vi kan derfor gange antall blå kvadrat med 4, og så
+          trekke ifra 2 ganger antall skjøter.
+        </p>
+      </li>
+  </ol>
+</p>`
   }
 }
 

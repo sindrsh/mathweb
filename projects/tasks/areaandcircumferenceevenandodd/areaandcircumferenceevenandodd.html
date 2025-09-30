@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<div id="main">
+<button id="task-button" class="accordion active">Oppgave</button>
+<div id="task" class="hide show">
+<h2 class="title">Areal og omkrets til rektangel</h2>
+<div class="content">
+<ul class="abc-list">
+  <li>Forklar hvorfor omkretsen til et rektangel med heltalls bredde og høyde alltid er et partall.</li>
+  <li>
+    ''Hvis både bredden og høyden i et rektangel er oddetall, er det umulig at arealet og omkretsen til rektangelet har samme verdi.''
+    <p>Forklar hvorfor påstanden er riktig/ikke riktig.</p>
+  </li>
+  <li>Hva er sidelengden til det eneste kvadratet hvor areal og omkrets har samme verdi?</li>
+</ul>
+
+</div>
+</div>
+<button class="solution-button accordion">Løsningsforslag</button>
+<div class="solution hide">
+<ol>
+    <li>
+      Omkretsen til et rektangel er lik  
+      <br>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mrow>
+          <mn>2</mn>
+          <mo>&#x22C5;</mo>
+          <mi>bredde</mi>
+          <mo>+</mo>
+          <mn>2</mn>
+          <mo>&#x22C5;</mo>
+          <mi>høyde</mi>
+        </mrow>
+      </math>
+      Hvis både bredden og høyden er heltall, er begge leddene over partall, og summen av to partall er et partall.
+    </li>
+    <li>
+      Et oddetall ganget med et oddetall vil alltid gi et oddetall. Dermed er arealet et oddetall.  
+      Hvis både bredden og høyden er oddetall er de også heltall, og da har vi fra oppgave a) at omkretsen er et partall.
+    </li>
+    <li>
+      <mn>4</mn>
+    </li>
+  </ol>
+</div>
+</div>
+
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
+</html>

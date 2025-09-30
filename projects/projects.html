@@ -4,74 +4,56 @@
         <link rel="stylesheet" href="../styles/menu_styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <head>
-  <title data-reference="projects">Ressursbank</title>
-  <style>
-    math mtd{
-    padding-left: 2px;
-    padding-right: 2px;
-  }
+    <style>
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
 
-    math mtd:nth-child(1) {
-      text-align: -webkit-right;
-    }
-    math mtd:nth-child(2) {
-      text-align: center;
-    }
-    math mtd:nth-child(3) {
-      text-align: left;
-    }
+        .tag-button.show {
+            display: inline;
+        }
 
-    .accordion {
-      width: 100%;
-      font-size: inherit;
-    }
-    .accordion + div {
-      border: 1pt solid black;
-      padding: 1px 10px 10px 10px
-    }
+        button.active {
+          background-color: rgb(57, 201, 79);
+        }
 
-    .filter-container {
-      width: 600px;
-      margin: auto;
-    }
-    button.active {
-      background-color: rgb(57, 201, 79);
-    }
-    
-    .hide {
-      display: none;
-    }
-    .show {
-      display: block;
+        .preview {
+            font-size: small;
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            border: 1pt solid gray;
+            margin: 5px;
+            padding: 5px;
+            overflow: auto;
+        }
+        .preview.show {
+          display: inline-block;
+        }
+    .preview:hover {
+      background-color: bisque;
     }
 
-    .preview.show {
+    .preview-tag {
+      padding: 0px 5px 0px 4px;
       display: inline-block;
+      height: 20px;
+      font-size: 14px;
+      border-radius: 100px;
+      background-color: rgb(64, 229, 229);
+      margin-bottom: 2px;
+      margin-left: 2px;
     }
-  
-    .image-container {
-      text-align: center;
+    .preview-grade {
+      padding: 5px;
+      margin-left: 5px;
+      height: 20px;
+      background-color: rgba(243, 153, 74, 0.664);
     }
-
-    .abc-list li::marker {
-      content: counter(abc-counter, lower-alpha) ") ";
-    }
-    .abc-list li {
-        margin-bottom: 10px;
-        counter-increment: abc-counter; 
-    }
-
-    .tag-button.show {
-      display: inline;
-    }
-
-    .abc-list {
-        line-height: 20pt;
-        list-style-type: none;
-        counter-reset: abc-counter;
-    }    
 
     #projects-filter {
       padding-bottom: 5px;
@@ -95,63 +77,9 @@
       margin-top: 5px;
       margin-left: 5px;
     }
-    
-    .preview {
-      width: 200px;
-      border: 1pt solid gray;
-      margin: 5px;
-    }
-    .preview:hover {
-      background-color: bisque;
-    }
-
-    .preview-tag {
-      padding: 0px 5px 0px 4px;
-      display: inline-block;
-      height: 20px;
-      font-size: 14px;
-      border-radius: 100px;
-      background-color: rgb(64, 229, 229);
-      margin-bottom: 2px;
-      margin-left: 2px;
-    }
-    .preview-grade {
-      padding: 5px;
-      margin-left: 5px;
-      height: 20px;
-      background-color: rgba(243, 153, 74, 0.664);
-    }
-
-    .attatchments a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      padding: 10px;
-      color: black;
-      background-color: rgba(23, 22, 22, 0.195);
-    }
-    .solution a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      padding: 10px;
-      color: black;
-      background-color: rgba(23, 22, 22, 0.195);
-    }
-
-    #info {
-      max-width: 500px;
-      margin: auto;
-    }
-
-    #teaching-container, #task-container {
-      margin-top: 20px;
-      padding-bottom: 100px;
-    }
-
-  </style>
+    </style>
 </head>
-<body>
+
 
 <div id="menu">
       <a href="/index.html" class="menu-button" id="index-link">Om</a>
@@ -187,144 +115,285 @@
     <button data-type="task">Oppgave</button>
     <button data-type="teaching">Undervisningsopplegg</button>
   </div>
-  <div id="grades-filter"></div>
-  <div id="tags-filter"></div>
+  <div id="grades-filter"><button class="grade-button" data-grade="5">5</button> 
+<button class="grade-button" data-grade="6">6</button> 
+<button class="grade-button" data-grade="7">7</button> 
+<button class="grade-button" data-grade="8">8</button> 
+<button class="grade-button" data-grade="9">9</button> 
+<button class="grade-button" data-grade="10">10</button> 
+<button class="grade-button" data-grade="1P">1P</button> 
+<button class="grade-button" data-grade="1T">1T</button> 
+<button class="grade-button" data-grade="2P">2P</button> 
+<button class="grade-button" data-grade="R1">R1</button> 
+<button class="grade-button" data-grade="R2">R2</button> 
+</div>
+  <div id="tags-filter"><button class="tag-button hide" data-tag="andregradsfunksjon">andregradsfunksjon</button> 
+<button class="tag-button hide" data-tag="symmetri">symmetri</button> 
+<button class="tag-button hide" data-tag="utforsking">utforsking</button> 
+<button class="tag-button hide" data-tag="utfordring">utfordring</button> 
+<button class="tag-button hide" data-tag="overslag">overslag</button> 
+<button class="tag-button hide" data-tag="proporsjonalitet">proporsjonalitet</button> 
+<button class="tag-button hide" data-tag="omkrets">omkrets</button> 
+<button class="tag-button hide" data-tag="generalisering">generalisering</button> 
+<button class="tag-button hide" data-tag="samarbeid">samarbeid</button> 
+<button class="tag-button hide" data-tag="andregrad">andregrad</button> 
+<button class="tag-button hide" data-tag="funksjoner">funksjoner</button> 
+<button class="tag-button hide" data-tag="algebra">algebra</button> 
+<button class="tag-button hide" data-tag="areal">areal</button> 
+<button class="tag-button hide" data-tag="kvadratsetningene">kvadratsetningene</button> 
+<button class="tag-button hide" data-tag="multiplikasjon">multiplikasjon</button> 
+<button class="tag-button hide" data-tag="omgjøring av enheter">omgjøring av enheter</button> 
+<button class="tag-button hide" data-tag="ute">ute</button> 
+<button class="tag-button hide" data-tag="lek">lek</button> 
+<button class="tag-button hide" data-tag="enheter">enheter</button> 
+<button class="tag-button hide" data-tag="Pytagoras' setning">Pytagoras' setning</button> 
+<button class="tag-button hide" data-tag="introduksjon til tema">introduksjon til tema</button> 
+</div>
 </div>
 <div id="preview-container">
 </div>
 </div>
 
-<div id="task-container" hidden>
-  <button id="task-button" class="accordion">Oppgave</button>
-  <div id="task" class="hide">
-    <h2 class="title"></h2>
-    <div class="content"></div>
-  </div>
-  <button class="solution-button accordion">Løsningsforslag</button>
-  <div class="solution hide"></div>
-</div>
+<div id="task-container">
+    <a class="preview hide task" href="./tasks/secondorderfunctionadvanced-2/secondorderfunctionadvanced-2.html" data-id="secondorderfunctionadvanced-2">
+    <h3>Andregradsfunksjonens symmetriegenskaper 2</h3>
+    <p>
+    <span class="preview-tag">andregradsfunksjon</span> 
+<span class="preview-tag">symmetri</span> 
+<span class="preview-tag">utforsking</span> 
+<span class="preview-tag">utfordring</span> 
 
-<div id="teaching-container" hidden>
-  <button id="teaching-button" class="accordion">Opplegg</button>
-  <div id="teaching" class="hide">
-    <h2 class="title"></h2>
-    <div class="content"></div>
-  </div>
-  <button id="attatchments-button" class="accordion">Vedlegg</button>
-  <div class="attatchments hide"></div>
-  <button class="solution-button accordion">Løsningsforslag</button>
-  <div class="solution hide"></div>
-</div>
-</div>
-</div>
-</body>
+    </p>
+    <p>
+    <span class="preview-grade">1T</span> 
 
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/secondorderfunctionadvanced-1/secondorderfunctionadvanced-1.html" data-id="secondorderfunctionadvanced-1">
+    <h3>Andregradsfunksjonens symmetriegenskaper 1</h3>
+    <p>
+    <span class="preview-tag">andregradsfunksjon</span> 
+<span class="preview-tag">symmetri</span> 
+<span class="preview-tag">utforsking</span> 
+<span class="preview-tag">utfordring</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">1T</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/thunderbolt/thunderbolt.html" data-id="thunderbolt">
+    <h3>Lyn og torden</h3>
+    <p>
+    <span class="preview-tag">overslag</span> 
+<span class="preview-tag">proporsjonalitet</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">5</span> 
+<span class="preview-grade">6</span> 
+<span class="preview-grade">7</span> 
+<span class="preview-grade">8</span> 
+<span class="preview-grade">9</span> 
+<span class="preview-grade">10</span> 
+<span class="preview-grade">1P</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/pentas/pentas.html" data-id="pentas">
+    <h3>Femkvadratformer</h3>
+    <p>
+    <span class="preview-tag">utforsking</span> 
+<span class="preview-tag">omkrets</span> 
+<span class="preview-tag">generalisering</span> 
+<span class="preview-tag">samarbeid</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">4</span> 
+<span class="preview-grade">5</span> 
+<span class="preview-grade">6</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/secondorderfunction/secondorderfunction.html" data-id="secondorderfunction">
+    <h3>Andregradsunksjonen</h3>
+    <p>
+    <span class="preview-tag">andregrad</span> 
+<span class="preview-tag">utforsking</span> 
+<span class="preview-tag">funksjoner</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">10</span> 
+<span class="preview-grade">1P</span> 
+<span class="preview-grade">1T</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/determinant/determinant.html" data-id="determinant">
+    <h3>Parallellogram i et koordinatsystem</h3>
+    <p>
+    <span class="preview-tag">algebra</span> 
+<span class="preview-tag">areal</span> 
+<span class="preview-tag">utforsking</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">9</span> 
+<span class="preview-grade">10</span> 
+<span class="preview-grade">1P</span> 
+<span class="preview-grade">1T</span> 
+<span class="preview-grade">R1</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/opgalgsquare/opgalgsquare.html" data-id="opgalgsquare">
+    <h3>Kvadratsetningene</h3>
+    <p>
+    <span class="preview-tag">utforsking</span> 
+<span class="preview-tag">algebra</span> 
+<span class="preview-tag">kvadratsetningene</span> 
+<span class="preview-tag">areal</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">9</span> 
+<span class="preview-grade">10</span> 
+<span class="preview-grade">1T</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/areaandcircumferenceevenandodd/areaandcircumferenceevenandodd.html" data-id="areaandcircumferenceevenandodd">
+    <h3>Areal og omkrets til rektangel</h3>
+    <p>
+    <span class="preview-tag">utforsking</span> 
+<span class="preview-tag">areal</span> 
+<span class="preview-tag">omkrets</span> 
+<span class="preview-tag">multiplikasjon</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">4</span> 
+<span class="preview-grade">5</span> 
+<span class="preview-grade">6</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide task" href="./tasks/walkspeed/walkspeed.html" data-id="walkspeed">
+    <h3>Gåfart</h3>
+    <p>
+    <span class="preview-tag">proporsjonalitet</span> 
+<span class="preview-tag">omgjøring av enheter</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">5</span> 
+<span class="preview-grade">6</span> 
+<span class="preview-grade">7</span> 
+<span class="preview-grade">8</span> 
+<span class="preview-grade">9</span> 
+<span class="preview-grade">10</span> 
+<span class="preview-grade">1P</span> 
+
+    </p>
+    </a>
+    </div>
+<div id="teaching-container">
+    <a class="preview hide teaching" href="./teachings/kilosisten/kilosisten.html" data-id="kilosisten">
+    <h3>Kilosisten</h3>
+    <p>
+    <span class="preview-tag">ute</span> 
+<span class="preview-tag">lek</span> 
+<span class="preview-tag">enheter</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">4</span> 
+<span class="preview-grade">5</span> 
+<span class="preview-grade">6</span> 
+<span class="preview-grade">7</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide teaching" href="./teachings/timestablecoloring/timestablecoloring.html" data-id="timestablecoloring">
+    <h3>Fargelegg gangetabeller</h3>
+    <p>
+    <span class="preview-tag">utforsking</span> 
+<span class="preview-tag">multiplikasjon</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">3</span> 
+<span class="preview-grade">4</span> 
+<span class="preview-grade">5</span> 
+
+    </p>
+    </a>
+    
+    <a class="preview hide teaching" href="./teachings/pythagoras/pythagoras.html" data-id="pythagoras">
+    <h3>Pytagoras' setning</h3>
+    <p>
+    <span class="preview-tag">utforsking</span> 
+<span class="preview-tag">Pytagoras' setning</span> 
+<span class="preview-tag">algebra</span> 
+<span class="preview-tag">introduksjon til tema</span> 
+
+    </p>
+    <p>
+    <span class="preview-grade">7</span> 
+<span class="preview-grade">8</span> 
+
+    </p>
+    </a>
+    </div>
+</div>
 <script type="module">
-  import tasks from "./tasks/tasks.js"
-  import teachings from "./teachings/teachings.js"
+    import {allTags, tagIndex, previewIndex} from "./tags.js"
+    const projectsFilterButtons = document.getElementById("projects-filter").getElementsByTagName("button")
+    
+    for(let projectsFilterButton of projectsFilterButtons) {
+        projectsFilterButton.addEventListener("click", filterProjects)
+    }
+    
+    for(let tag of Object.keys(tagIndex)) {
+        tagIndex[tag]["types"] = new Set(tagIndex[tag]["types"])
+        tagIndex[tag]["grades"] = new Set(tagIndex[tag]["grades"])
+    }
 
-
-  function showAndHide() {
-    this.classList.toggle("active");
-    this.nextElementSibling.classList.toggle("show")
-  }
-
-  for (let bt of document.getElementsByClassName("accordion")) {
-    bt.addEventListener("click", showAndHide);
-}
-
-
-  const projectsFilterButtons = document.getElementById("projects-filter").getElementsByTagName("button")
-  for(let projectsFilterButton of projectsFilterButtons) {
-    projectsFilterButton.addEventListener("click", filterProjects)
-  }
-
-  let filter = {
+    for(let id of Object.keys(previewIndex)) {
+      previewIndex[id]["type"] = new Set(previewIndex[id]["type"])
+      previewIndex[id]["tags"] = new Set(previewIndex[id]["tags"])
+      previewIndex[id]["grades"] = new Set(previewIndex[id]["grades"])
+    }
+    
+    let filter = {
     "types": new Set,
     "grades": new Set,
     "tags": new Set,
-  }
-  const previewContainer = document.getElementById("preview-container")
-  let tagIndex = {}
-  let previewIndex = {}
-  let allTags = []
-  let cnt = 0
-  for(let index of [tasks, teachings]) {
-    let type = "task"
-    if(cnt ===1) {
-      type = "teaching"
     }
-    cnt = cnt + 1
 
-    for(let id of  Object.keys(index)) {
-      const preview = document.createElement("button")
-      preview.setAttribute("class", "preview hide"+" "+ type)
-      preview.setAttribute("data-id", id)
-      preview.innerHTML = `<h3>${index[id]["title"]}</h3>`
-
-      let tagsString = ''
-      for(let tag of index[id]["tags"]) {
-        if (!allTags.includes(tag)) {
-          allTags.push(tag)
-        }
-        tagsString += `<span class="preview-tag">${tag}</span>`
-        let grades = index[id]["grades"]
-
-        if(tag in tagIndex){
-          for(let grade of grades){
-            tagIndex[tag]["grades"].add(grade)
-          }
-          tagIndex[tag]["types"].add(type)
-                  
-        } else {
-          tagIndex[tag] = {}
-          tagIndex[tag]["types"] = new Set([type])
-          tagIndex[tag]["grades"] = new Set()
-          for(let grade of grades){
-            tagIndex[tag]["grades"].add(grade)
-          }
-        }
-      }
-      previewIndex[id] = {}
-      previewIndex[id]["grades"] = new Set(index[id]["grades"])
-      previewIndex[id]["type"] = new Set([type])
-      previewIndex[id]["tags"] = new Set(index[id]["tags"])
-    
-      
-      let gradesString = ''
-      for(let grade of index[id]["grades"]) {
-        gradesString += `<span class="preview-grade">${grade}</span>`
-      }
-      preview.innerHTML += '<p>' + tagsString + '</p>'
-      preview.innerHTML += '<p>' + gradesString + '</p>'
-
-      previewContainer.appendChild(preview)
-      preview.addEventListener("click", view)
+    const tagButtons = document.getElementsByClassName("tag-button")
+    for(let tagButton of tagButtons) {
+        tagButton.addEventListener("click", filterTags)
     }
-  }
 
+    const gradeButtons = document.getElementsByClassName("grade-button")
+    for(let gradeButton of gradeButtons) {
+        gradeButton.addEventListener("click", filterGrades)
+    }
 
-  const tagsFilter = document.getElementById("tags-filter")
-  for(let tag of allTags) {
-    let tagButton = document.createElement("button")
-    tagButton.setAttribute("class", "tag-button hide")
-    tagButton.innerText = `${tag}`
-    tagButton.dataset.tag = tag
-    tagsFilter.appendChild(tagButton)
-    tagButton.addEventListener("click", filterTags)
-  }
-
-  const gradesFilter = document.getElementById("grades-filter")
-  for(let grade of ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "1P", "2P", "1T", "R1", "R2"]) {
-    let gradeButton = document.createElement("button")
-    gradeButton.innerHTML = grade
-    gradeButton.dataset.grade = grade
-    gradesFilter.appendChild(gradeButton)
-    gradeButton.addEventListener("click", filterGrades)
-  }
-
-
-  function addToFilter({type=null, grade=null, tag=null}) {
+    function addToFilter({type=null, grade=null, tag=null}) {
     if(type) {
         filter["types"].add(type)
     }
@@ -356,7 +425,7 @@
     update()
   }
 
-  function update(){
+    function update(){
     if (filter["tags"].size === 0 && filter["types"].size === 0 && filter["grades"].size === 0) {
       document.getElementById("tags-filter").hidden = true
       document.getElementById("preview-container").hidden = true
@@ -403,6 +472,7 @@
             gradesOk = false
           }
       }
+      
       if(filter["types"].size > 0) {
         if(filter["types"].intersection(previewIndex[previewButton.dataset.id]["type"]).size == 0){
           typeOk = false
@@ -414,9 +484,11 @@
         previewButton.classList.remove("show")
       }  
     }
-}
+    }
 
-  function filterTags() {
+    update()
+
+    function filterTags() {
     if (this.classList.contains("active")) {
       removeFromFilter({tag: this.dataset.tag})
     } else {
@@ -445,95 +517,9 @@
     this.classList.toggle("active")
   }
 
-  function view() {
-      document.getElementById("start-container").hidden = true
-      let id = this.dataset.id
-      let type = [...previewIndex[id]["type"]][0]
-      let container
-      let index
-      let attatchments 
-      if(type === "task") {
-        container = document.getElementById("task-container")
-        container.hidden = false
-        index = tasks
-      }
-      if(type === "teaching") {
-        container = document.getElementById("teaching-container")
-        container.hidden = false
-        attatchments = container.querySelector(".attatchments")
-        index = teachings
-      }
-      const title = container.querySelector(".title")
-      const content = container.querySelector(".content")
-      const solution = container.querySelector(".solution")
-
-      title.innerHTML = index[id]["title"]
-      if (index[id]["solution"]) {
-        solution.innerHTML = index[id]["solution"]
-        container.querySelector(".solution-button").style.display = "true"
-      } else {
-        container.querySelector(".solution-button").style.display = "none"
-      }
-      if (index[id]["attatchments"]) {
-        attatchments.innerHTML = index[id]["attatchments"]
-      }    
-      content.innerHTML = index[id]["content"]
-    }
-  
-
-  function show(id, type) {
-      document.getElementById("teaching-container").hidden = false
-      let container
-      let index
-      let attatchments 
-      if(type === "task") {
-        container = document.getElementById("task-container")
-        index = tasks
-      }
-      if(type === "teaching") {
-        container = document.getElementById("teaching-container")
-        attatchments = container.querySelector(".attatchments")
-        index = teachings
-      }
-
-      const title = container.querySelector(".title")
-      const content = container.querySelector(".content")
-      const solution = container.querySelector(".solution")
-
-
-      title.innerHTML = index[id]["title"]
-      if (index[id]["solution"]) {
-        solution.innerHTML = index[id]["solution"]
-        container.querySelector(".solution-button").style.display = "true"
-      } else {
-        container.querySelector(".solution-button").style.display = "none"
-      }
-      if (index[id]["attatchments"]) {
-        attatchments.innerHTML = index[id]["attatchments"]
-      }    
-      content.innerHTML = index[id]["content"]
-    }
-
-  update()
-
+ 
 </script>
 
-<script id="menu-script">
-  let reference = document.getElementsByTagName("title")[0].dataset.reference + "-link"
-  for (let menuButton of document.getElementsByClassName("menu-button")){
-    if (menuButton.id === reference) {
-      menuButton.classList.toggle("active")
-    } else if (menuButton.classList.contains("active")){
-      menuButton.classList.toggle("active")
-    }
-  }
-  const menuIcon = document.getElementById("menu-icon")
-  menuIcon.addEventListener("click", menuIconClicked)
 
-  function menuIconClicked() {
-    document.getElementById("menu").classList.toggle("responsive")
-    document.getElementById("project-title").classList.toggle("responsive")
-  }
-</script>
 
 </html>

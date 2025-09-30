@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<div id="main">
+<button id="task-button" class="accordion active">Oppgave</button>
+<div id="task" class="hide show">
+<h2 class="title">
+  Andregradsfunksjonens symmetriegenskaper 2
+</h2>
+<div class="content">
+  <p>
+    Gitt funksjonen 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>
+      <mo>=</mo>
+      <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+      <mo>+</mo><mi>b</mi><mi>x</mi>
+      <mo>+</mo><mi>c</mi>
+    </math>.
+    I oppgaven <i>Andregradfunksjonens symmetriegenskaper 1</i> viste vi at 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>
+    er symmetrisk om linja 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>x</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mo>&#x2212;</mo><mi>b</mi></mrow>
+        <mrow><mn>2</mn><mi>a</mi></mrow>
+      </mfrac>
+    </math>.
+    Da følger det at for alle tall
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> er
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>&#x00B1;</mo><mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mfrac>
+          <mi>b</mi>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><msup><mi>k</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo>
+            <msup><mi>b</mi><mn>2</mn></msup>
+          </mrow>
+          <mrow><mn>4</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mi>c</mi>
+      </mrow>
+    </math>
+  </div>
+
+  <p>
+    Bruk dette til å utlede 
+    <i>abc</i>-formelen.
+  </p>
+</div>
+</div>
+<button class="solution-button accordion">Løsningsforslag</button>
+<div class="solution hide">
+  <p>
+    Hvis 
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>
+      <mo>=</mo>
+      <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+      <mo>+</mo><mi>b</mi><mi>x</mi>
+      <mo>+</mo><mi>c</mi>
+      <mo>=</mo><mn>0</mn>
+    </math>, har vi for et tall 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> at
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>&#x00B1;</mo><mi>k</mi>
+        <mo>&#x2212;</mo>
+        <mfrac><mi>b</mi><mrow><mn>2</mn><mi>a</mi></mrow></mfrac>
+        <mo>)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn>4</mn><msup><mi>a</mi><mn>2</mn></msup><msup><mi>k</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo><msup><mi>b</mi><mn>2</mn></msup>
+          </mrow>
+          <mrow><mn>4</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>+</mo><mi>c</mi>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>
+  </div>
+
+  <p>
+    Løser vi denne ligningen med hensyn på 
+    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>, får vi at
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>k</mi>
+        <mo>=</mo>
+        <mo>&#x00B1;</mo>
+        <mfrac>
+          <msqrt>
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo>
+            <mn>4</mn><mi>a</mi><mi>c</mi>
+          </msqrt>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+      </mrow>
+    </math>
+  </div>
+
+  <p>
+    Dette betyr at
+  </p>
+
+  <div class="display math">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mrow>
+        <mi>f</mi>
+        <mo>(</mo>
+        <mo>&#x00B1;</mo>
+        <mfrac>
+          <msqrt>
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>&#x2212;</mo>
+            <mn>4</mn><mi>a</mi><mi>c</mi>
+          </msqrt>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+        <mo>&#x2212;</mo>
+        <mfrac><mi>b</mi><mrow><mn>2</mn><mi>a</mi></mrow></mfrac>
+        <mo>)</mo>
+        <mo>=</mo><mn>0</mn>
+      </mrow>
+    </math>
+  </div>
+</div>
+</div>
+
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
+</html>
