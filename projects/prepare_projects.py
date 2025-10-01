@@ -74,7 +74,7 @@ for idd in preview_index:
     
 
 
-f = open("/home/sindre/web/mathweb/projects/neww.html", "r")
+f = open("/home/sindre/web/mathweb/projects/projects.html", "r")
 content = f.read()
 
 tags_html = f"""{''.join([f'<button class="tag-button hide" data-tag="{tag}">{tag}</button> \n' for tag in all_tags])}"""
@@ -97,7 +97,7 @@ text_handler = re.compile(substitution[0], re.DOTALL)
 content = text_handler.sub(substitution[1], content)
 
 f.close()
-f = open("neww.html", "w")
+f = open("projects.html", "w")
 f.write(content)
 f.close()
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='no'>
+<head id="general">
+        <link rel="stylesheet" href="../../../styles/menu_styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div id="menu">
+      <a href="/index.html" class="menu-button" id="index-link">Om</a>
+      <a href="/books/books.html" class="menu-button" id="books-link">Bøker</a>
+      <a href="/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
+      <a href="/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
+      <a href="/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <span id="project-title">OPENMATHBOOKS</span>
+      <button id="menu-icon">
+        Meny
+      </button>
+    </div>
+
+<head id="local">
+  <link rel="stylesheet" href="../../../styles/projects_styles.css">
+</head>
+
+<div id="main">
+<button id="teaching-button" class="accordion active">Opplegg</button>
+<div class="hide show">
+<h2 class="title">Gjett tallet</h2>
+<div class="content"></div>
+<p>
+  Se vedlegg "Utdelingsark". Hver elev får dette arket utlevert, mens lærer presenterer
+det på tavla. Lærer krysser av en rute. Elevene skal komme frem til hvilket tall som skal stå i ruta.
+</p>  
+<p>
+Diskusjonspunkt:
+<ul>
+  <li>Hvordan kan man finne tallet uten å måtte telle alle rutene?</li>
+  <li>Med den avkryssede ruten som utgangspunkt, hvilket tall er å finne én rute til høyre, til venstre, over og under?</li>
+</ul> 
+</p>
+<p> Etter hvert kan man også snu på oppgaven. Lærer oppgir et tall, elevene skal plassere
+  det i riktig rute.
+</p>
+</div>
+<button id="attatchments-button" class="accordion">Vedlegg</button>
+<div class="attatchments hide">
+  <a href="./100ark.pdf" target="_blank">Utdelingsark</a>
+  <a href="./100ark_sol.pdf">Løsning</a>
+</div>
+</div>
+
+<script id="projects-script">
+function showAndHide() {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show")
+  }
+
+  for (let bt of document.getElementsByClassName("accordion")) {
+    bt.addEventListener("click", showAndHide);
+}
+</script>
+
+</html>
