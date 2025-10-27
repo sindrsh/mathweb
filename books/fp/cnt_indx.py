@@ -153,6 +153,9 @@ index = {
     },
     "defof1": {
         "footnote": "Her definerer vi enerlengden større enn tidligere."
+    },
+    "digits": {
+        "footnote": "Sifrene regnes som matematiske symboler."
     }
 }
 
