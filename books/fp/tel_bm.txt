@@ -11,7 +11,7 @@ Som navnet tilsier, viser <span class="outline">likhetstegnet</span>
 <span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
 til at noe er likt. I hvilken grad og når man kan si at noe er likt er en filosofisk diskusjon, så i starten er vi prisgitt dette: <span class="slant">Hvilken likhet
 <span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
-sikter til må bli forstått ut ifra konteksten tegnet blir brukt i </span>. Slik kan vi studere noen grunnleggende egenskaper for tallene våre, og så komme tilbake til mer presise betydninger av tegnet. 
+sikter til må bli forstått ut fra konteksten tegnet blir brukt i </span>. Slik kan vi studere noen grunnleggende egenskaper for tallene våre, og så komme tilbake til mer presise betydninger av tegnet. 
 <div class="language-box"><h4>Språkboksen</h4>
 Vanlige måter å si 
 <span class='symbol'><math class='inline-math'><mo>=</mo></math></span>
@@ -23,27 +23,26 @@ på er
 </li></ul>
 </div>
 <h3 class="subsection-title">Mengder og tallinjer</h3>
-Tall kan representere så mangt. I denne boka skal vi holde oss til to måter å tolke tallene på; tall som en <span class="slant">mengde </span> og tall som en <span class="slant">plassering på en linje </span>. Alle representasjoner av tall tar utganspunkt i hva forståelsen er av tallene 0 og 1.
+I denne boka skal vi bruke to måter å representere tallene på; tall som en <span class="slant">mengde </span> og tall som en <span class="slant">plassering på en linje </span>. Alle representasjoner av tall tar utgangspunkt i forståelsen av tallene 0 og 1.
 
-\subsubsection*{Tall som mengde}
-	Når vi snakkar om en mengde, vil tallet 0 være
+<span id="numbersasamounts"><h4 class="subsubsection-title">Tall som mengde</h4>
+	Når vi snakker om en mengde, vil tallet 0 bety
 	<button class="footnote-button" data-reference="0interpretations">*</button><div class="footnote" id="0interpretations" hidden>I <span class="reference-chapter" data-reference="Rekneartane"> </span> skal vi se at det også er andre tolkninger av 0.</div>
-	knyttet til ''ingenting''. En figur der det ikke er noe til stede vil slik være det samme som 0:
+	''ingenting''. En figur der det ikke er noe til stede vil slik være det samme som 0:
 	<math class="display-math" display="block"><mo>=</mo><mn>0</mn></math>
 	1 vil vi tegne som en rute:
 	<div class="figure"> <img src="./fig/rut1.svg"> </div>
-
-Andre tall vil da være definert ut ifra hvor mange ''enerruter'' (''enere'') vi har:
+Andre tall vil da være definert ut fra hvor mange enerruter ('enere') vi har: 
 	<div class="figure"> <img src="./fig/rut2.svg"> </div>
-	<div class="figure"> <img src="./fig/rut3.svg"> </div>
-	
-\subsubsection*{Tall som plassering på ei linje}
-	Når vi plasserer tall på en linje, vil 0 være utgangspunket vårt:
+	<div class="figure"> <img src="./fig/rut3.svg"> </div></span>
+<h4 class="subsubsection-title">Tall som plassering på ei linje</h4>
+	Når vi plasserer tall på ei linje, vil 0 være utgangspunket vårt:
 	<div class="figure"> <img src="./fig/lin0a.svg"> </div>
 	Så plasserer vi 1 en viss lengde til høyre for 0:
 	<div class="figure"> <img src="./fig/lin0b.svg"> </div>
-	Andre tall vil da være definert ut ifra hvor mange enerlengder (enere) vi er unna 0:
+	Andre tall vil da være definert ut fra hvor mange enerlengder ('enere') vi er unna 0:
 	<div class="figure"> <img src="./fig/lin1.svg"> </div>
+
 <h3 class="subsection-title">Positive heltall</h3>
 Vi skal straks se at tall ikke nødvendigvis trenger å være <span class="slant">hele </span> antall enere, men tallene som <span class="slant">er </span> det har et eget navn:
 
@@ -70,9 +69,110 @@ Positive heltall blir også kalt <span class="outline">naturlige tal</span>.
 Noen forfattere inkluderer også 0 i begrepet naturlige tal. I noen sammenhenger vil dette lønne seg, i andre ikke.
 </div>
 
+<h4 class="subsubsection-title">Ulikhetstegn</h4>
+Vi har også symboler som viser at verdier <span class="slant">ikke </span> er like. Noen ganger er det nok å si at de ikke er like, andre ganger er det også behov for å si hvilken av verdiene som er størst (og minst).
+<div class="language-box"><h4>Språkboksen</h4> 
+	<math class="display-math" display="block"><div style="text-align: center;">
+    <table style="margin: 0 auto; border-collapse: collapse;">
+      <style>
+        td { padding: 4px 8px; }            /* similar to rraystretch{1.2} */
+        td.spacer { width: 0.4cm; }
+      </style>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>≠</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er ikke like''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>&lt;</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er mindre enn''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>&gt;</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er større enn''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>≤</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er mindre enn eller lik''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>≥</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er større enn eller lik''</td>
+      </tr>
+    </table>
+  </div></math>
+</div> 
+
+<div class="example"> 
+<math class="display-math" display="block"><mtable columnalign="center left">
+    <mtr>
+      <mtd><mn>0</mn></mtd>
+      <mtd><mo>≠</mo><mn>1</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mn>7</mn></mtd>
+      <mtd><mo>&lt;</mo><mn>9</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mn>5</mn></mtd>
+      <mtd><mo>&gt;</mo><mn>2</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mtext>positive partall</mtext></mtd>
+      <mtd><mo>≥</mo><mn>2</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mn>3</mn></mtd>
+      <mtd><mo>≤</mo><mtext>positive oddetall</mtext></mtd>
+    </mtr>
+  </mtable></math>
+</div>
+<div class="info"> <h4>Leseretning</h4> 
+Strengt tatt har vi bare tre symboler for ulikhet, nemlig 
+<math class="inline-math"><span class='symbol'><math class='inline-math'><mo>≠</mo></math></span></math>
+, 
+<math class="inline-math"><span class='symbol'><math class='inline-math'><mo><</mo></math></span></math>
+ og 
+<math class="inline-math"><span class='symbol'><math class='inline-math'><mo>≤</mo></math></span></math>
+. De to sistnevnte symbolene krever leseretning fra venstre mot høyre. Ulikheten
+<math class="inline-math"><math><mn>3</mn><mo><</mo><mn>5</mn></math></math>
+leser vi som ''3 er mindre enn 5''. Men vi kan også si at 
+<math class="inline-math"><span class='symbol'><math class='inline-math'><mo><</mo></math></span></math>
+er et symbol med retning, hvor den spisse enden skal peke mot den minste verdien. Dette betyr at vi kan lese 
+<math class="inline-math"><math><mn>3</mn><mo><</mo><mn>5</mn></math></math>
+fra høyre som ''5 er større enn 3''. Det at vi i tillegg bruker symbolene 
+<math class="inline-math"><span class='symbol'><math class='inline-math'><mo>></mo></math></span></math>
+og 
+<math class="inline-math"><span class='symbol'><math class='inline-math'><mo>≥</mo></math></span></math>
+er et resultat av at vi noen ganger ønsker å si ''større enn'' også når vi leser fra venstre.
+</div>
 
 
-</section><section><h2 class="section-title">Tall, siffer og verdi</h2>
+</section><section><h2 class="section-title">Tall, siffer og verdi </h2>
 Tallene våre er bygd opp av <span class="outline">sifrene</span> 
 0, 1, 2, 3, 4, 5, 6, 7, 8 og 9, og <span class="slant">plasseringen </span> av dem. Sifrene og deres plassering definerer
 <button class="footnote-button" data-reference="10pos">*</button><div class="footnote" id="10pos" hidden>Etter hvert skal vi også se at <i>fortegn</i> er med på å definere verdien til tallet (se <span class='reference-chapter' data-reference='Negtal'>).</div>
@@ -80,26 +180,28 @@ Tallene våre er bygd opp av <span class="outline">sifrene</span>
 <h3 class="subsection-title">Heltall større enn 9</h3>
 La oss som et eksempel skrive tallet 'fjorten' ved hjelp av sifrene våre.
 <div class="figure"> <img src="./fig/tel.svg"> </div>
-En gruppe med ti enere kaller vi en ''tier''. Av fjorten kan vi lage 1 tier, og i tillegg har vi da 4 enere. Da skriver vi 'fjorten' slik:
-<math class="display-math" display="block"><mn>14</mn></math>
-<div class="figure"> <img src="./fig/tel2_bm.svg"> </div>
+En gruppe med ti 'enere' kaller vi en 'tier'. Av 'fjorten' kan vi lage 1 'tier', og i tillegg har vi da 4 'enere'. Da skriver vi 'fjorten' slik:
+<math class="display-math" display="block"><mtext>fjorten</mtext><mo>=</mo><mn>14</mn></math>
+<div class="amounts"> <div class="figure"> <img src="./fig/tel2_bm.svg"> </div> <span>Mengde</span></div> 
+<div class="number-line"> <div class="figure"> <img src="./fig/tel2t.svg"> </div> <span>Tallinje</span></div>
 
-<div class="figure"> <img src="./fig/tel2t.svg"> </div>
+
 
 <h3 class="subsection-title">Desimaltall</h3>
-I mange tilfeller har vi ikke et helt antall enere, og da vil det være behov for å dele 1 inn i mindre biter. La oss starte med å tegne en ener:
-<div class="figure"> <img src="./fig/maal.svg"> </div>
-<div class="figure"> <img src="./fig/des1.svg"> </div>
+I mange tilfeller har vi ikke et helt antall enere, og da vil det være behov for å dele 1 inn i mindre biter. La oss starte med å tegne en ener
+<button class="footnote-button" data-reference="defof1">*</button><div class="footnote" id="defof1" hidden>Her definerer vi enerlengden større enn tidligere.</div>
+<div class="amounts"> <div class="figure"> <img src="./fig/maal.svg"> </div>  <span>Mengde</span></div> 
+<div class="number-line"> <div class="figure"> <img src="./fig/des1.svg"> </div> <span>Tallinje</span></div>
 Så deler vi eneren vår inn i 10 mindre biter:
-<div class="figure"> <img src="./fig/maal1.svg"> </div>
-<div class="figure"> <img src="./fig/des1a.svg"> </div>
-Siden vi har delt 1 inn i 10 biter, kaller vi en slik bit for ''en tidel'':
-<div class="figure"> <img src="./fig/maal1a_bm.svg"> </div>
-<div class="figure"> <img src="./fig/des1b_bm.svg"> </div>
+<div class="amounts"> <div class="figure"> <img src="./fig/maal1.svg"> </div>  <span>Mengde</span></div> 
+<div class="number-line"> <div class="figure"> <img src="./fig/des1a.svg"> </div> <span>Tallinje</span></div>
+Siden vi har delt 1 inn i 10 biter, kaller vi en slik bit for en 'tidel':
+<div class="amounts"> <div class="figure"> <img src="./fig/maal1a_bm.svg"> </div>  <span>Mengde</span></div> 
+<div class="number-line"> <div class="figure"> <img src="./fig/des1b_bm.svg"> </div>  <span>Tallinje</span></div>
 
 Tideler skriver vi ved hjelp av  <span class="outline">desimaltegnet</span> <span class="symbol"> ,</span>  :
-<div class="figure"> <img src="./fig/maal1b.svg"> </div>
-<div class="figure"> <img src="./fig/des1c.svg"> </div>
+<div class="amounts"> <div class="figure"> <img src="./fig/maal1b.svg"> </div>  <span>Mengde</span></div> 
+<div class="number-line"> <div class="figure"> <img src="./fig/des1c.svg"> </div>  <span>Tallinje</span></div>
 <div class="example"> 
 	<div class="figure"> <img src="./fig/maal2a.svg"> </div>
 	<div class="figure"> <img src="./fig/des3.svg"> </div>
@@ -107,16 +209,20 @@ Tideler skriver vi ved hjelp av  <span class="outline">desimaltegnet</span> <spa
 <div class="language-box"><h4>Språkboksen</h4>
 På engelsk bruker man punktum <span class="symbol"> .</span> som desimaltegn:
 <table style='margin: auto'><tr><td>3,5</td><td>(norsk)</tr><tr><td>3.5</td><td>(engelsk)</tr></table>
+Når vi kombinerer matematiske symboler
+<id>digits</id>
+, får vi det vi kaller et matematisk <span class="outline">uttrykk</span>.
 </div>
+
 
 <h3 class="subsection-title">Titallsystemet</h3>
 Vi har nå sett hvordan vi kan uttrykke verdien til tall ved å plassere siffer etter antall tiere, enere og tideler, og det stopper selvsagt ikke der: 
 
 <div class="rule"><h4>Titallsystemet </h4> 
-Verdien til et tall er gitt av sifrene 0, 1, 2, 3, 4, 5, 6, 7, 8 og 9, og plasseringen av dem. Med sifferet som angir enere som utgangspunkt vil
+Verdien til et tall er gitt av sifrene 0, 1, 2, 3, 4, 5, 6, 7, 8 og 9, og plasseringen av dem. Med sifferet som viser enere som utgangspunkt vil
 <ul>
-	<li>siffer til venstre (i rekkefølge) indikere antall tiere, hundrere, tusener og så videre.
-	</li><li>siffer til høyre (i rekkefølge) indikere antall tideler, hundredeler, tusendeler og så videre.
+	<li>siffer til venstre (i rekkefølge) vise antall tiere, hundrere, tusener og så videre.
+	</li><li>siffer til høyre (i rekkefølge) vise antall tideler, hundredeler, tusendeler og så videre.
 </li></ul>
 </div>
 <div class="example"> 
@@ -143,22 +249,32 @@ De ti første (positive) oddetallene er
 I mange tilfeller er det nyttig å bruke to tallinjer samtidig. Dette kaller vi et <span class="outline">koordinatsystem</span>
 <button class="footnote-button" data-reference="coord">*</button><div class="footnote" id="coord" hidden>Strengt tatt finnes det mange typer koordinatsystem, men i denne boka bruker vi ordet om bare én sort, nemlig det <span class="outline">kartesiske koordinatsystem</span>. Det er oppkalt etter den franske filosofen og matematikeren René Descartes.</div>
 . Vi plasserer da én tallinje (en akse) som går <span class="slant">horisontalt </span> og én som går <span class="slant">vertikalt </span>. En plassering i et koordinatsystem kaller vi et <span class="outline">punkt</span>. 
-<div class="statement">Et punkt skriver vi som to tall inni en parentes. De to tallene blir kalt <span class="outline">førstekoordinaten</span> og <span class="outline">andrekoordinaten</span> til punktet.
-	<ul>
-		<li>Førstekoordinaten forteller oss hvor langt vi skal gå langs horisontalaksen.
-		</li><li>Andrekoordinaten forteller oss hvor langt vi skal gå langs vertikalaksen.
-</li></ul>
+<div class="rule definition"><h4>Koordinatsystem</h4>Et punkt skriver vi som to tall inni en parentes. De to tallene blir kalt <span class="outline">førstekoordinaten</span> og <span class="outline">andrekoordinaten</span> til punktet. </br>
+	
+Førstekoordinaten viser punktets plassering langs horisontal-aksen.</br>
+
+Andrekoordinaten viser punktets plassering langs vertikalaksen.
+</div>
+<div class="example">
 I figuren ser vi punktene 
 <math class="inline-math"><mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>)</mo></math>
 ,
 <math class="inline-math"><mo>(</mo><mn>5</mn><mo>,</mo><mn>1</mn><mo>)</mo></math>
- og 
+og 
 <math class="inline-math"><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo></math>
 .
-Punktet der aksene møtes, altså
-<math class="inline-math"><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo></math>
-, kalles <span class="outline">origo</span>.
 <div class="figure"> <img src="./fig/kord.svg"> </div>
 </div>
+<div class="language-box"><h4>Språkboksen</h4>
+Punktet der aksene møtes, altså
+<math class="inline-math"><mo>(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo></math>
+, kalles <span class="outline">origo</span>.	
+</div>
 
+<div class="info"> <h4>Merk</h4> 
+Størrelsen av en enerlengde kan være forskjellige på de to aksene.
+</div>
+<div class="example">
+<div class="figure"> <img src="./fig/kord2.svg"> </div>
+</div>
 </section>

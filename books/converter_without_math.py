@@ -1,15 +1,16 @@
 import sys
 import re
-filename = "rekar_bm"
+filename = "tel_bm"
 book = "fp"
 sys.path.append("/home/sindre/web/mathweb/books/"+ book)
-from  rekar_indx import *
+from  cnt_indx import *
 
-f = open("/home/sindre/openmathbooks/MB/rekar/"+filename+".tex", "r")
+f = open("/home/sindre/openmathbooks/MB/tel/"+filename+".tex", "r")
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 substitutes = [
     ['\\\\label{ ( [^}]* ) }', ''],
     ['\\\\vspace{ ( [^}]* ) }', ''],
+    ['\\\\os', '</br>'],
     ['\\\\section{ ( [^}]* ) }', r'<h2 class="section-title">\1</h2>'],
     ['\\\\subsection[*]{ ( [^}]* ) }', r'<h3 class="subsection-title">\1</h3>'],
     ['\\\\subsubsection{ ( [^}]* ) }', r'<h4 class="subsubsection-title">\1</h4>'],
@@ -27,6 +28,8 @@ substitutes = [
     ['\\\\sym{ ( [^}]* ) }', r'<span class="symbol"> \1</span>'],
     ['%\\\\fig{ ( [^}]* ) }', ''],
     ['\\\\fig{ ( [^}]* ) }', r'<div class="figure"> <img src="./fig/\1.svg"> </div>'],
+    ['\\\\amounts{ ( [^}]* ) }', r'<div class="amounts"> \1 <span>Mengde</span></div>'],
+    ['\\\\numrline{ ( [^}]* ) }', r'<div class="number-line"> \1 <span>Tallinje</span></div>'],
     ['\\\\begin{itemize} ( [^}]* ) \\\\end{itemize}', r'<ul>\1</ul>'],
     ['\\\\begin{tabular} ( [^}]* ) \\\\end{tabular}', r'<table>\1</table>'],
     ['\\\\begin{comment} ( [^}]* ) \\\\end{comment}', r''],
@@ -52,6 +55,9 @@ content = text_handler.sub( '', content)
 
 text_handler = re.compile(r"%id\{([^}]+)\}\s*(.*?)\s*%\\id", re.DOTALL)
 content = text_handler.sub( r'<id>\1</id>', content)
+
+text_handler = re.compile(r"%span\{([^}]+)\}\s*(.*?)\s*%\\span", re.DOTALL)
+content = text_handler.sub( r'<span id="\1">\2</span>', content)
 
 text_handler = re.compile(r'\\begin\{comment\}(.*?)\\end\{comment\}', re.DOTALL)
 content = text_handler.sub( r'', content)

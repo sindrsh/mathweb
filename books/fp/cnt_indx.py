@@ -22,7 +22,7 @@ index = {
   </mrow>""",
     },
     "14": {
-        "dmath": "<mn>14</mn>",
+        "dmath": "<mtext>fjorten</mtext><mo>=</mo><mn>14</mn>",
     },
     "p23": {
         "math": "<mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>)</mo>"
@@ -52,6 +52,107 @@ index = {
     },
     "10pos": {
         "footnote": "Etter hvert skal vi også se at <i>fortegn</i> er med på å definere verdien til tallet (se <span class='reference-chapter' data-reference='Negtal'>)."
+    },
+    "posinterpre": "",
+    "unequals": {
+        "dmath": """<div style="text-align: center;">
+    <table style="margin: 0 auto; border-collapse: collapse;">
+      <style>
+        td { padding: 4px 8px; }            /* similar to \arraystretch{1.2} */
+        td.spacer { width: 0.4cm; }
+      </style>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>≠</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er ikke like''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>&lt;</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er mindre enn''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>&gt;</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er større enn''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>≤</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er mindre enn eller lik''</td>
+      </tr>
+      <tr>
+        <td>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>≥</mo>
+          </math>
+        </td>
+        <td class="spacer"></td>
+        <td>''er større enn eller lik''</td>
+      </tr>
+    </table>
+  </div>"""
+    },
+    "unequalexample": {
+        "dmath": """<mtable columnalign="center left">
+    <mtr>
+      <mtd><mn>0</mn></mtd>
+      <mtd><mo>≠</mo><mn>1</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mn>7</mn></mtd>
+      <mtd><mo>&lt;</mo><mn>9</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mn>5</mn></mtd>
+      <mtd><mo>&gt;</mo><mn>2</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mtext>positive partall</mtext></mtd>
+      <mtd><mo>≥</mo><mn>2</mn></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mn>3</mn></mtd>
+      <mtd><mo>≤</mo><mtext>positive oddetall</mtext></mtd>
+    </mtr>
+  </mtable>"""
+    },
+    "neq": {
+        "math": "<span class='symbol'><math class='inline-math'><mo>≠</mo></math></span>"
+    },
+    "<": {
+        "math": "<span class='symbol'><math class='inline-math'><mo><</mo></math></span>"
+    },
+    "leq": {
+        "math": "<span class='symbol'><math class='inline-math'><mo>≤</mo></math></span>"
+    },
+    "3<5": {
+        "math": "<math><mn>3</mn><mo><</mo><mn>5</mn></math>"
+    },
+    "geq": {
+        "math": "<span class='symbol'><math class='inline-math'><mo>≥</mo></math></span>"
+    },
+    ">": {
+        "math": "<span class='symbol'><math class='inline-math'><mo>></mo></math></span>"
+    },
+    "defof1": {
+        "footnote": "Her definerer vi enerlengden større enn tidligere."
     }
 }
 
