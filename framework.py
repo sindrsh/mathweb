@@ -56,11 +56,12 @@ def write_html(path):
       <a href="%s/corruculum/corruculum.html" class="menu-button" id="curriculum-link">Pensum</a>
       <a href="%s/exams/exams.html" class="menu-button" id="exams-link">Eksamener</a>
       <a href="%s/projects/projects.html" class="menu-button" id="projects-link">Ressursbank</a>
+      <a href="%s/skilltraining/skilltraining.html" class="menu-button" id="projects-link">Ferdighetstrening</a>
       <span id="project-title">OPENMATHBOOKS</span>
       <button id="menu-icon">
         Meny
       </button>
-    </div>""" % (build, build, build, build, build)
+    </div>""" % (build, build, build, build, build, build)
 
     
     substitution = ['<div id="menu">(.*?)</div>', menu]
