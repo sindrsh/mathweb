@@ -110,7 +110,10 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
   }
-  #menu.responsive {position: relative;}
+  #menu.responsive {
+    height: auto;
+    position: relative;
+    }
   #menu.responsive #menu-icon {
     position: absolute;
     right: 0;
