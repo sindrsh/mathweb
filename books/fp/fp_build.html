@@ -31,23 +31,6 @@
 	async function createBook(chapter) {
 		const response = await fetch(chapter);
 		const text = await response.text()
-		//document.getElementsByTagName("body")[0].innerHTML = text
-
-		for(let footbtn of document.getElementsByClassName("footnote-button")) {
-			console.log(footbtn)
-			footbtn.addEventListener("click", toggleFootNote)
-		}
-
-		function toggleFootNote() {
-			let footnote = document.getElementById(this.dataset.reference)
-			
-			if (footnote.hidden == true) {
-				footnote.hidden = false
-			} else {
-				console.log(footnote.hidden)
-				footnote.hidden = true
-			}
-		}
 		makeChapter(text)
 }
 
@@ -103,12 +86,12 @@ function makeChapter(text) {
 		book.appendChild(chapterTitle)
 	}
 	
-	createTitle("Tall og telling")
+	//createTitle("Tall og telling")
 	await createBook("tel_bm.txt")
 	//createTitle("Regneartene")
 	//await createBook("rekar_bm.txt")
 	//createTitle("Regnerekkefølge")
-	//createBook("rrek_bm.txt")
+	createBook("rrek_bm.txt")
 	</script>
 </html>
 

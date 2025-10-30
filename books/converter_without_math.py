@@ -1,11 +1,11 @@
 import sys
 import re
-filename = "tel_bm"
+filename = "rekar_bm"
 book = "fp"
 sys.path.append("/home/sindre/web/mathweb/books/"+ book)
-from  cnt_indx import *
+from  rekar_indx import *
 
-f = open("/home/sindre/openmathbooks/MB/tel/"+filename+".tex", "r")
+f = open("/home/sindre/openmathbooks/MB/rekar/"+filename+".tex", "r")
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 substitutes = [
     ['\\\\label{ ( [^}]* ) }', ''],

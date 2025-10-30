@@ -293,6 +293,22 @@ Størrelsen av en enerlengde kan være forskjellige på de to aksene.
 	  bodyElement.append(paragraph)
   }
 
+  for(let footbtn of document.getElementsByClassName("footnote-button")) {
+			console.log(footbtn)
+			footbtn.addEventListener("click", toggleFootNote)
+		}
+
+		function toggleFootNote() {
+			let footnote = document.getElementById(this.dataset.reference)
+			
+			if (footnote.hidden == true) {
+				footnote.hidden = false
+			} else {
+				console.log(footnote.hidden)
+				footnote.hidden = true
+			}
+		}
+
 </script>
 
 
